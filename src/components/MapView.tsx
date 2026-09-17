@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useMemo, useRef } from "react";
 import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
 import MarkerClusterGroup from "react-leaflet-cluster";
 import L from "leaflet";
@@ -55,10 +55,18 @@ function InvalidateSizeOnVisible({ visible }: { visible: boolean }) {
 }
 
 // Zooms the map to fit the currently filtered region whenever the region
-// filter changes; resets to the whole-country view when it's cleared.
+// filter itself changes; resets to the whole-country view when it's
+// cleared. Deliberately depends only on filterRegion (not the stores
+// array) — selecting/deselecting a store on the map re-renders MapView
+// with a fresh `storesWithCoords` array on every render, and if that array
+// were a dependency here, opening or closing a store would keep re-firing
+// this effect and flying the map back to the whole-country view instead of
+// leaving it where the user had zoomed/panned it.
 function FitToRegion({ stores }: { stores: Store[] }) {
   const map = useMap();
   const filterRegion = useAppStore((s) => s.filterRegion);
+  const storesRef = useRef(stores);
+  storesRef.current = stores;
 
   useEffect(() => {
     try {
@@ -66,7 +74,7 @@ function FitToRegion({ stores }: { stores: Store[] }) {
         map.flyToBounds(GREECE_BOUNDS, { padding: [20, 20], duration: 0.6 });
         return;
       }
-      const points = stores
+      const points = storesRef.current
         .map((s): [number, number] => [s.lat as number, s.lng as number])
         .filter(([lat, lng]) => Number.isFinite(lat) && Number.isFinite(lng));
       if (points.length === 0) return;
@@ -76,7 +84,8 @@ function FitToRegion({ stores }: { stores: Store[] }) {
       // Never let a bad coordinate crash the whole map view.
       console.error("FitToRegion failed:", err);
     }
-  }, [filterRegion, stores, map]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [filterRegion, map]);
 
   return null;
 }
@@ -88,8 +97,9 @@ export default function MapView({ visible = true }: { visible?: boolean }) {
   const markerRefs = useRef<Record<string, L.Marker | null>>({});
   const clusterGroupRef = useRef<L.MarkerClusterGroup | null>(null);
 
-  const storesWithCoords = filteredStores.filter(
-    (s) => Number.isFinite(s.lat) && Number.isFinite(s.lng)
+  const storesWithCoords = useMemo(
+    () => filteredStores.filter((s) => Number.isFinite(s.lat) && Number.isFinite(s.lng)),
+    [filteredStores]
   );
 
   // A selected marker may be hidden inside a collapsed cluster — a plain
