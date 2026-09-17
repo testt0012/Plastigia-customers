@@ -25,6 +25,18 @@ body {
   font-family: inherit;
 }
 
+/* iOS Safari auto-zooms the whole page when a focused form control has a
+   computed font-size under 16px. We also disable native pinch/double-tap
+   zoom (see viewport in layout.tsx) so Leaflet's own touch handling owns
+   zooming the map — but that makes this rule load-bearing: without it,
+   focusing any input on mobile would still force an unwanted zoom-in that
+   the disabled native zoom could no longer undo by pinching back out. */
+input,
+select,
+textarea {
+  font-size: 16px;
+}
+
 /* custom scrollbar for the store list */
 .custom-scroll::-webkit-scrollbar {
   width: 8px;

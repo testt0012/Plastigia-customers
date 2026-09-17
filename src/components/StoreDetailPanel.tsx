@@ -129,7 +129,7 @@ export default function StoreDetailPanel() {
           <button
             onClick={() => selectStore(null)}
             aria-label="Κλείσιμο"
-            className="rounded-full p-1.5 text-neutral-400 hover:bg-neutral-100 hover:text-neutral-700"
+            className="rounded-full p-2.5 text-neutral-400 hover:bg-neutral-100 hover:text-neutral-700"
           >
             ✕
           </button>
