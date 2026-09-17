@@ -1,9 +1,10 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import { useAppStore } from "@/store/useAppStore";
 import { GREEK_REGIONS } from "@/lib/regions";
 import { normalizeWebsiteUrl } from "@/lib/url";
+import { normalizeText } from "@/lib/text";
 
 type Tab = "manual" | "smart";
 
@@ -30,6 +31,7 @@ const EMPTY_FORM: FormState = {
 export default function AddStoreModal({ onClose }: { onClose: () => void }) {
   const addStore = useAppStore((s) => s.addStore);
   const selectStore = useAppStore((s) => s.selectStore);
+  const stores = useAppStore((s) => s.stores);
 
   const [tab, setTab] = useState<Tab>("smart");
   const [form, setForm] = useState<FormState>(EMPTY_FORM);
@@ -44,6 +46,15 @@ export default function AddStoreModal({ onClose }: { onClose: () => void }) {
   const [saveError, setSaveError] = useState<string | null>(null);
 
   const fileInputRef = useRef<HTMLInputElement>(null);
+
+  const possibleDuplicate = useMemo(() => {
+    const name = normalizeText(form.name.trim());
+    const city = normalizeText(form.city.trim());
+    if (!name || !city) return null;
+    return stores.find(
+      (s) => normalizeText(s.name) === name && normalizeText(s.city) === city
+    ) ?? null;
+  }, [form.name, form.city, stores]);
 
   function updateField<K extends keyof FormState>(key: K, value: FormState[K]) {
     setForm((prev) => ({ ...prev, [key]: value }));
@@ -238,6 +249,25 @@ export default function AddStoreModal({ onClose }: { onClose: () => void }) {
                 <p className="rounded-lg bg-green-50 px-3 py-2 text-sm text-green-700">
                   Τα στοιχεία εξήχθησαν με AI — ελέγξτε τα πριν την αποθήκευση.
                 </p>
+              )}
+
+              {possibleDuplicate && (
+                <div className="flex flex-col gap-2 rounded-lg bg-yellow-50 px-3 py-2 text-sm text-yellow-800">
+                  <span>
+                    ⚠️ Υπάρχει ήδη κατάστημα <strong>&quot;{possibleDuplicate.name}&quot;</strong> στην{" "}
+                    {possibleDuplicate.city}.
+                  </span>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      selectStore(possibleDuplicate.id);
+                      onClose();
+                    }}
+                    className="self-start rounded-md border border-yellow-400 px-2 py-1 text-xs font-medium hover:bg-yellow-100"
+                  >
+                    Άνοιγμα υπάρχοντος καταστήματος
+                  </button>
+                </div>
               )}
 
               <label className="flex flex-col gap-1 text-sm">

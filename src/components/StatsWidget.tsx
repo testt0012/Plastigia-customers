@@ -3,7 +3,7 @@
 import { useMemo } from "react";
 import { useAppStore } from "@/store/useAppStore";
 
-export default function StatsWidget() {
+export default function StatsWidget({ onClick }: { onClick?: () => void }) {
   const stores = useAppStore((s) => s.stores);
 
   const { total, active, percentage } = useMemo(() => {
@@ -14,7 +14,10 @@ export default function StatsWidget() {
   }, [stores]);
 
   return (
-    <div className="flex items-center gap-3 rounded-xl border border-neutral-200 bg-white px-3 py-2 shadow-sm sm:gap-4 sm:px-4">
+    <button
+      onClick={onClick}
+      title="Δες αναλυτικά στατιστικά ανά διαμέρισμα/κατηγορία"
+      className="flex items-center gap-3 rounded-xl border border-neutral-200 bg-white px-3 py-2 shadow-sm transition hover:border-neutral-300 hover:shadow sm:gap-4 sm:px-4">
       <div className="flex flex-col">
         <span className="text-[10px] font-medium uppercase tracking-wide text-neutral-500 sm:text-xs">
           Διείσδυση Αγοράς
@@ -32,6 +35,6 @@ export default function StatsWidget() {
           από <span className="font-semibold text-neutral-900">{total}</span> καταστήματα
         </span>
       </div>
-    </div>
+    </button>
   );
 }
