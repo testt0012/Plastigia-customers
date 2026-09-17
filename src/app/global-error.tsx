@@ -33,6 +33,17 @@ export default function GlobalError({
           >
             Δοκιμή Ξανά
           </button>
+          <div className="mt-4 max-w-sm rounded-lg bg-neutral-100 p-3 text-left">
+            <p className="mb-1 text-xs font-semibold uppercase text-neutral-500">
+              Τεχνικές λεπτομέρειες (για αναφορά σφάλματος)
+            </p>
+            <p className="break-words font-mono text-xs text-neutral-700">
+              {error.message || "(χωρίς μήνυμα)"}
+            </p>
+            {error.digest && (
+              <p className="mt-1 font-mono text-xs text-neutral-400">digest: {error.digest}</p>
+            )}
+          </div>
         </div>
       </body>
     </html>
