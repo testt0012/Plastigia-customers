@@ -13,6 +13,7 @@ function StoreCard({ store }: { store: Store }) {
   const isSelected = selectedStoreId === store.id;
   const styles = STATUS_STYLES[store.status];
   const overdue = isOverdue(store.next_contact_date);
+  const noCoords = !Number.isFinite(store.lat) || !Number.isFinite(store.lng);
 
   return (
     <button
@@ -24,11 +25,21 @@ function StoreCard({ store }: { store: Store }) {
     >
       <div className="flex items-start justify-between gap-2">
         <span className="font-semibold leading-tight">{store.name}</span>
-        {overdue && (
-          <span className="shrink-0 rounded-full bg-red-600 px-1.5 py-0.5 text-[10px] font-semibold text-white">
-            ⏰ εκπρόθεσμο
-          </span>
-        )}
+        <div className="flex shrink-0 gap-1">
+          {noCoords && (
+            <span
+              title="Λείπουν έγκυρες συντεταγμένες — δεν εμφανίζεται στον χάρτη"
+              className="rounded-full bg-green-600 px-1.5 py-0.5 text-[10px] font-semibold text-white"
+            >
+              📍 έλεγξε τοποθεσία
+            </span>
+          )}
+          {overdue && (
+            <span className="rounded-full bg-red-600 px-1.5 py-0.5 text-[10px] font-semibold text-white">
+              ⏰ εκπρόθεσμο
+            </span>
+          )}
+        </div>
       </div>
       <div className="mt-0.5 text-xs opacity-80">
         {store.city} · {store.region}
