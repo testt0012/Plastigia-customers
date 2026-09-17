@@ -10,6 +10,8 @@ export default function FilterBar() {
   const setSearchQuery = useAppStore((s) => s.setSearchQuery);
   const filterRegion = useAppStore((s) => s.filterRegion);
   const setFilterRegion = useAppStore((s) => s.setFilterRegion);
+  const filterPrefecture = useAppStore((s) => s.filterPrefecture);
+  const setFilterPrefecture = useAppStore((s) => s.setFilterPrefecture);
   const filterStatus = useAppStore((s) => s.filterStatus);
   const setFilterStatus = useAppStore((s) => s.setFilterStatus);
   const filterCategory = useAppStore((s) => s.filterCategory);
@@ -28,6 +30,18 @@ export default function FilterBar() {
       (a, b) => a.localeCompare(b, "el")
     );
   }, [stores]);
+
+  const prefectures = useMemo(() => {
+    if (filterRegion === "all") return [];
+    return Array.from(
+      new Set(
+        stores
+          .filter((s) => s.region === filterRegion)
+          .map((s) => s.prefecture)
+          .filter((p): p is string => !!p)
+      )
+    ).sort((a, b) => a.localeCompare(b, "el"));
+  }, [stores, filterRegion]);
 
   return (
     <div className="flex flex-col gap-2 border-b border-neutral-200 bg-white p-3 sm:flex-row sm:items-center">
@@ -51,6 +65,20 @@ export default function FilterBar() {
             </option>
           ))}
         </select>
+        {filterRegion !== "all" && prefectures.length > 0 && (
+          <select
+            value={filterPrefecture}
+            onChange={(e) => setFilterPrefecture(e.target.value)}
+            className="w-full rounded-lg border border-neutral-300 px-2 py-2 text-sm outline-none focus:border-red-500 focus:ring-1 focus:ring-red-500 sm:w-auto sm:px-3"
+          >
+            <option value="all">Όλοι οι νομοί</option>
+            {prefectures.map((prefecture) => (
+              <option key={prefecture} value={prefecture}>
+                {prefecture}
+              </option>
+            ))}
+          </select>
+        )}
         <select
           value={filterStatus}
           onChange={(e) =>

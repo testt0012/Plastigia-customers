@@ -3,6 +3,7 @@ export type StoreStatus = "not_client" | "active" | "in_progress" | "rejected";
 export interface Store {
   id: string;
   region: string;
+  prefecture: string | null;
   city: string;
   name: string;
   category: string | null;

@@ -13,6 +13,7 @@ create type store_status as enum ('not_client', 'active', 'in_progress', 'reject
 create table if not exists public.stores (
   id                  text primary key,          -- stable slug, e.g. "attiki-0001"
   region              text not null,              -- Γεωγραφικό Διαμέρισμα
+  prefecture          text,                        -- Νομός (derived automatically from lat/lng)
   city                text not null,              -- Πόλη / Νησί
   name                text not null,              -- Επωνυμία
   category            text,                       -- Κατηγορία
@@ -48,6 +49,7 @@ create index if not exists store_notes_store_id_idx on public.store_notes (store
 create extension if not exists pg_trgm;
 
 create index if not exists stores_region_idx on public.stores (region);
+create index if not exists stores_prefecture_idx on public.stores (prefecture);
 create index if not exists stores_status_idx on public.stores (status);
 create index if not exists stores_name_trgm_idx on public.stores using gin (name gin_trgm_ops);
 

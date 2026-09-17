@@ -10,6 +10,7 @@ interface AppState {
   selectedStoreId: string | null;
   searchQuery: string;
   filterRegion: string;
+  filterPrefecture: string;
   filterStatus: StoreStatus | "all";
   filterCategory: string;
   showOverdueOnly: boolean;
@@ -18,6 +19,7 @@ interface AppState {
   selectStore: (id: string | null) => void;
   setSearchQuery: (q: string) => void;
   setFilterRegion: (region: string) => void;
+  setFilterPrefecture: (prefecture: string) => void;
   setFilterStatus: (status: StoreStatus | "all") => void;
   setFilterCategory: (category: string) => void;
   setShowOverdueOnly: (value: boolean) => void;
@@ -54,6 +56,7 @@ export const useAppStore = create<AppState>((set, get) => ({
   selectedStoreId: null,
   searchQuery: "",
   filterRegion: "all",
+  filterPrefecture: "all",
   filterStatus: "all",
   filterCategory: "all",
   showOverdueOnly: false,
@@ -74,7 +77,8 @@ export const useAppStore = create<AppState>((set, get) => ({
 
   selectStore: (id) => set({ selectedStoreId: id }),
   setSearchQuery: (q) => set({ searchQuery: q }),
-  setFilterRegion: (region) => set({ filterRegion: region }),
+  setFilterRegion: (region) => set({ filterRegion: region, filterPrefecture: "all" }),
+  setFilterPrefecture: (prefecture) => set({ filterPrefecture: prefecture }),
   setFilterStatus: (status) => set({ filterStatus: status }),
   setFilterCategory: (category) => set({ filterCategory: category }),
   setShowOverdueOnly: (value) => set({ showOverdueOnly: value }),
@@ -173,6 +177,7 @@ export const useAppStore = create<AppState>((set, get) => ({
   addStore: async (input) => {
     let lat: number | null = null;
     let lng: number | null = null;
+    let prefecture: string | null = null;
     try {
       const geocodeRes = await fetch(
         `/api/geocode?${new URLSearchParams({ city: input.city, region: input.region })}`
@@ -181,6 +186,7 @@ export const useAppStore = create<AppState>((set, get) => ({
         const coords = await geocodeRes.json();
         lat = coords.lat;
         lng = coords.lng;
+        prefecture = coords.prefecture ?? null;
       }
     } catch {
       // Non-fatal: the store is still saved, just without a map pin yet.
@@ -189,6 +195,7 @@ export const useAppStore = create<AppState>((set, get) => ({
     const newStore = {
       id: crypto.randomUUID(),
       region: input.region,
+      prefecture,
       city: input.city,
       name: input.name,
       category: input.category,
@@ -203,11 +210,20 @@ export const useAppStore = create<AppState>((set, get) => ({
       notes: "",
     };
 
-    const { data, error } = await supabase
+    let { data, error } = await supabase
       .from("stores")
       .insert(newStore)
       .select()
       .single();
+
+    // Backward-compat: if this database hasn't had migration 004
+    // (prefecture column) applied yet, retry without that field instead of
+    // failing the whole "add store" action outright.
+    if (error?.code === "PGRST204" || error?.message?.includes("prefecture")) {
+      const { prefecture: _drop, ...withoutPrefecture } = newStore;
+      void _drop;
+      ({ data, error } = await supabase.from("stores").insert(withoutPrefecture).select().single());
+    }
 
     if (error) throw error;
 
