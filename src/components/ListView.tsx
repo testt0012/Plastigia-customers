@@ -22,11 +22,6 @@ function StoreCard({ store }: { store: Store }) {
     >
       <div className="flex items-start justify-between gap-2">
         <span className="font-semibold leading-tight">{store.name}</span>
-        {store.google_rating != null && (
-          <span className="shrink-0 rounded-full bg-black/10 px-1.5 py-0.5 text-xs font-medium">
-            ★ {store.google_rating.toFixed(1)}
-          </span>
-        )}
       </div>
       <div className="mt-0.5 text-xs opacity-80">
         {store.city} · {store.region}

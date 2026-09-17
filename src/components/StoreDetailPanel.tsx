@@ -125,22 +125,6 @@ export default function StoreDetailPanel() {
                 </dd>
               </div>
             )}
-            {store.google_rating != null && (
-              <div>
-                <dt className="text-xs font-medium uppercase text-neutral-400">
-                  Βαθμολογία Google
-                </dt>
-                <dd className="text-neutral-800">
-                  ★ {store.google_rating.toFixed(1)}
-                  {store.google_review_count != null && (
-                    <span className="text-neutral-500">
-                      {" "}
-                      ({store.google_review_count} κριτικές)
-                    </span>
-                  )}
-                </dd>
-              </div>
-            )}
           </dl>
 
           <div className="mt-5">
