@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "CRM Καταστημάτων | Store Locator",
+  title: "Plastigia Customers",
   description:
     "Διαχείριση πελατών και υποψήφιων πελατών για καταστήματα ειδών υγιεινής & οικοδομικών σε όλη την Ελλάδα.",
 };
