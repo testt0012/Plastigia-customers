@@ -5,20 +5,44 @@ import { useAppStore } from "@/store/useAppStore";
 import type { NewStoreInput } from "@/store/useAppStore";
 import { parseSpreadsheetFile } from "@/lib/importParser";
 import { normalizeWebsiteUrl } from "@/lib/url";
+import { normalizeText } from "@/lib/text";
+import type { Store } from "@/lib/types";
 
 interface Row {
   input: NewStoreInput;
   selected: boolean;
+  duplicate: boolean;
 }
 
 function isValidRow(input: NewStoreInput): boolean {
   return input.name.trim() !== "" && input.city.trim() !== "" && input.region.trim() !== "";
 }
 
+function dupKey(name: string, city: string): string {
+  return `${normalizeText(name)}::${normalizeText(city)}`;
+}
+
+// Flags a row as a duplicate when a store with the same (normalized) name
+// and city already exists in the database, or already appeared earlier in
+// this same file — so re-importing the same list twice, or a file that
+// itself contains repeats, doesn't create duplicate entries.
+function markDuplicates(inputs: NewStoreInput[], existing: Store[]): Row[] {
+  const existingKeys = new Set(existing.map((s) => dupKey(s.name, s.city)));
+  const seenInFile = new Set<string>();
+
+  return inputs.map((input) => {
+    const key = dupKey(input.name, input.city);
+    const duplicate = key !== "::" && (existingKeys.has(key) || seenInFile.has(key));
+    seenInFile.add(key);
+    return { input, duplicate, selected: isValidRow(input) && !duplicate };
+  });
+}
+
 const SPREADSHEET_EXTENSIONS = [".xlsx", ".xls", ".csv"];
 
 export default function ImportStoresModal({ onClose }: { onClose: () => void }) {
   const addStoresBulk = useAppStore((s) => s.addStoresBulk);
+  const existingStores = useAppStore((s) => s.stores);
 
   const [rows, setRows] = useState<Row[] | null>(null);
   const [unmatchedHeaders, setUnmatchedHeaders] = useState<string[]>([]);
@@ -47,11 +71,11 @@ export default function ImportStoresModal({ onClose }: { onClose: () => void }) 
         const data = await res.json();
         if (!res.ok) throw new Error(data.error ?? "Η εξαγωγή απέτυχε.");
 
-        const parsedRows: Row[] = (data.stores as NewStoreInput[]).map((input) => {
-          const normalized = { ...input, website: normalizeWebsiteUrl(input.website) };
-          return { input: normalized, selected: isValidRow(normalized) };
-        });
-        setRows(parsedRows);
+        const normalizedInputs = (data.stores as NewStoreInput[]).map((input) => ({
+          ...input,
+          website: normalizeWebsiteUrl(input.website),
+        }));
+        setRows(markDuplicates(normalizedInputs, existingStores));
         if (data.truncated) {
           setParseError("Το αρχείο περιείχε πολλά καταστήματα — εξήχθησαν μόνο τα πρώτα 300.");
         }
@@ -64,12 +88,11 @@ export default function ImportStoresModal({ onClose }: { onClose: () => void }) 
         if (parsed.length === 0) {
           throw new Error("Δεν βρέθηκαν γραμμές δεδομένων στο αρχείο.");
         }
-        setRows(
-          parsed.map((input) => {
-            const normalized = { ...input, website: normalizeWebsiteUrl(input.website) };
-            return { input: normalized, selected: isValidRow(normalized) };
-          })
-        );
+        const normalizedInputs = parsed.map((input) => ({
+          ...input,
+          website: normalizeWebsiteUrl(input.website),
+        }));
+        setRows(markDuplicates(normalizedInputs, existingStores));
         setUnmatchedHeaders(unmatched);
       }
     } catch (err) {
@@ -90,6 +113,7 @@ export default function ImportStoresModal({ onClose }: { onClose: () => void }) 
   }
 
   const selectedCount = rows?.filter((r) => r.selected).length ?? 0;
+  const duplicateCount = rows?.filter((r) => r.duplicate).length ?? 0;
 
   async function handleImport() {
     if (!rows) return;
@@ -182,6 +206,9 @@ export default function ImportStoresModal({ onClose }: { onClose: () => void }) 
                 <span className="text-neutral-600">
                   Βρέθηκαν <span className="font-semibold text-neutral-900">{rows.length}</span> καταστήματα
                   — <span className="font-semibold text-neutral-900">{selectedCount}</span> επιλεγμένα
+                  {duplicateCount > 0 && (
+                    <span className="text-neutral-400"> ({duplicateCount} ήδη υπάρχουν)</span>
+                  )}
                 </span>
                 <div className="flex gap-2">
                   <button onClick={() => toggleAll(true)} className="text-red-600 hover:underline">
@@ -194,7 +221,7 @@ export default function ImportStoresModal({ onClose }: { onClose: () => void }) 
               </div>
 
               <div className="overflow-x-auto rounded-lg border border-neutral-200">
-                <table className="w-full min-w-[680px] text-left text-xs">
+                <table className="w-full min-w-[760px] text-left text-xs">
                   <thead className="bg-neutral-50 text-neutral-500">
                     <tr>
                       <th className="p-2"></th>
@@ -204,6 +231,7 @@ export default function ImportStoresModal({ onClose }: { onClose: () => void }) 
                       <th className="p-2">Κατηγορία</th>
                       <th className="p-2">Τηλέφωνο</th>
                       <th className="p-2">Ιστοσελίδα</th>
+                      <th className="p-2"></th>
                     </tr>
                   </thead>
                   <tbody>
@@ -212,7 +240,9 @@ export default function ImportStoresModal({ onClose }: { onClose: () => void }) 
                       return (
                         <tr
                           key={i}
-                          className={`border-t border-neutral-100 ${!valid ? "bg-neutral-50 text-neutral-400" : ""}`}
+                          className={`border-t border-neutral-100 ${
+                            !valid || r.duplicate ? "bg-neutral-50 text-neutral-400" : ""
+                          }`}
                         >
                           <td className="p-2">
                             <input
@@ -230,6 +260,13 @@ export default function ImportStoresModal({ onClose }: { onClose: () => void }) 
                           <td className="p-2">{r.input.category || "—"}</td>
                           <td className="p-2">{r.input.phone || "—"}</td>
                           <td className="max-w-[160px] truncate p-2">{r.input.website || "—"}</td>
+                          <td className="p-2">
+                            {r.duplicate && (
+                              <span className="whitespace-nowrap rounded-full bg-neutral-200 px-2 py-0.5 text-[10px] font-medium text-neutral-600">
+                                υπάρχει ήδη
+                              </span>
+                            )}
+                          </td>
                         </tr>
                       );
                     })}
@@ -237,7 +274,8 @@ export default function ImportStoresModal({ onClose }: { onClose: () => void }) 
                 </table>
               </div>
               <p className="text-xs text-neutral-400">
-                Γραμμές χωρίς Επωνυμία, Πόλη ή Διαμέρισμα αποεπιλέγονται αυτόματα.
+                Γραμμές χωρίς Επωνυμία, Πόλη ή Διαμέρισμα, καθώς και καταστήματα που υπάρχουν ήδη
+                (ίδια επωνυμία + πόλη), αποεπιλέγονται αυτόματα — μπορείτε να τα επιλέξετε ξανά αν θέλετε.
               </p>
 
               {importing && progress && (

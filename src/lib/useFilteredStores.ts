@@ -1,13 +1,7 @@
 import { useMemo } from "react";
 import { useAppStore } from "@/store/useAppStore";
+import { normalizeText as normalize } from "./text";
 import type { Store } from "./types";
-
-function normalize(text: string): string {
-  return text
-    .toLowerCase()
-    .normalize("NFD")
-    .replace(/[̀-ͯ]/g, "");
-}
 
 export function useFilteredStores(): Store[] {
   const stores = useAppStore((s) => s.stores);
