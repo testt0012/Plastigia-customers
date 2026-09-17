@@ -11,6 +11,13 @@ import type { Store } from "@/lib/types";
 
 const GREECE_CENTER: [number, number] = [38.9, 23.7];
 const GREECE_DEFAULT_ZOOM = 6;
+const GREECE_MIN_ZOOM = 6;
+// Slightly wider than Greece's landmass so panning to the edges (Crete,
+// the Ionian islands, Evros) still leaves some breathing room.
+const GREECE_BOUNDS: L.LatLngBoundsExpression = [
+  [34.0, 18.8],
+  [42.2, 29.8],
+];
 
 function makeIcon(status: Store["status"], isSelected: boolean) {
   const color = STATUS_STYLES[status].pin;
@@ -47,6 +54,27 @@ function InvalidateSizeOnVisible({ visible }: { visible: boolean }) {
   return null;
 }
 
+// Zooms the map to fit the currently filtered region whenever the region
+// filter changes; resets to the whole-country view when it's cleared.
+function FitToRegion({ stores }: { stores: Store[] }) {
+  const map = useMap();
+  const filterRegion = useAppStore((s) => s.filterRegion);
+
+  useEffect(() => {
+    if (filterRegion === "all") {
+      map.flyToBounds(GREECE_BOUNDS, { padding: [20, 20], duration: 0.6 });
+      return;
+    }
+    if (stores.length === 0) return;
+    const bounds = L.latLngBounds(
+      stores.map((s) => [s.lat as number, s.lng as number])
+    );
+    map.flyToBounds(bounds, { padding: [40, 40], maxZoom: 12, duration: 0.6 });
+  }, [filterRegion, stores, map]);
+
+  return null;
+}
+
 export default function MapView({ visible = true }: { visible?: boolean }) {
   const filteredStores = useFilteredStores();
   const selectedStoreId = useAppStore((s) => s.selectedStoreId);
@@ -79,6 +107,9 @@ export default function MapView({ visible = true }: { visible?: boolean }) {
     <MapContainer
       center={GREECE_CENTER}
       zoom={GREECE_DEFAULT_ZOOM}
+      minZoom={GREECE_MIN_ZOOM}
+      maxBounds={GREECE_BOUNDS}
+      maxBoundsViscosity={1.0}
       className="h-full w-full"
       scrollWheelZoom
     >
@@ -87,6 +118,7 @@ export default function MapView({ visible = true }: { visible?: boolean }) {
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
       <InvalidateSizeOnVisible visible={visible} />
+      <FitToRegion stores={storesWithCoords} />
       <MarkerClusterGroup ref={clusterGroupRef} chunkedLoading maxClusterRadius={60}>
         {storesWithCoords.map((store) => (
           <Marker
