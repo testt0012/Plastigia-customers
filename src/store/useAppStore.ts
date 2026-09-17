@@ -20,6 +20,10 @@ interface AppState {
   updateStatus: (id: string, status: StoreStatus) => Promise<void>;
   updateNotes: (id: string, notes: string) => Promise<void>;
   addStore: (input: NewStoreInput) => Promise<Store>;
+  addStoresBulk: (
+    inputs: NewStoreInput[],
+    onProgress?: (done: number, total: number) => void
+  ) => Promise<{ succeeded: Store[]; failed: number }>;
   deleteStore: (id: string) => Promise<void>;
 }
 
@@ -136,6 +140,23 @@ export const useAppStore = create<AppState>((set, get) => ({
     const inserted = data as Store;
     set({ stores: [...get().stores, inserted] });
     return inserted;
+  },
+
+  addStoresBulk: async (inputs, onProgress) => {
+    const succeeded: Store[] = [];
+    let failed = 0;
+
+    for (let i = 0; i < inputs.length; i++) {
+      try {
+        const created = await get().addStore(inputs[i]);
+        succeeded.push(created);
+      } catch {
+        failed++;
+      }
+      onProgress?.(i + 1, inputs.length);
+    }
+
+    return { succeeded, failed };
   },
 
   deleteStore: async (id) => {

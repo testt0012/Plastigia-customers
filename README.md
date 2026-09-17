@@ -26,23 +26,26 @@ customers/
     │   ├── page.tsx          # κεντρική σελίδα: Header, FilterBar, List, Map, Detail
     │   └── globals.css
     ├── api/
-    │   ├── extract-store/route.ts  # Vision AI (Claude Opus 5) → δομημένα στοιχεία από φωτογραφία
-    │   └── geocode/route.ts        # server-side proxy προς Nominatim (νέα καταστήματα → pin στον χάρτη)
+    │   ├── extract-store/route.ts      # Vision AI (Claude Opus 5) → δομημένα στοιχεία από φωτογραφία
+    │   ├── extract-stores-pdf/route.ts # Vision AI → λίστα καταστημάτων από PDF
+    │   └── geocode/route.ts            # server-side proxy προς Nominatim (νέα καταστήματα → pin στον χάρτη)
     ├── components/
     │   ├── Header.tsx
     │   ├── StatsWidget.tsx    # % διείσδυση αγοράς
     │   ├── FilterBar.tsx      # αναζήτηση + φίλτρα διαμερίσματος/κατάστασης
     │   ├── ListView.tsx       # λίστα καταστημάτων με χρωματική κωδικοποίηση
     │   ├── MapView.tsx        # χάρτης react-leaflet με χρωματιστά pins
-    │   ├── StoreDetailPanel.tsx  # modal: στοιχεία, status buttons, σημειώσεις
-    │   └── AddStoreModal.tsx  # modal: χειροκίνητη καταχώρηση + "Έξυπνη Προσθήκη" με AI
+    │   ├── StoreDetailPanel.tsx    # modal: στοιχεία, status buttons, σημειώσεις, διαγραφή
+    │   ├── AddStoreModal.tsx       # modal: χειροκίνητη καταχώρηση + "Έξυπνη Προσθήκη" με AI
+    │   └── ImportStoresModal.tsx   # modal: μαζική εισαγωγή από Excel/CSV/PDF
     ├── lib/
-    │   ├── types.ts            # τύποι Store/StoreStatus + χρωματικοί κανόνες
+    │   ├── types.ts             # τύποι Store/StoreStatus + χρωματικοί κανόνες
     │   ├── regions.ts           # σταθερή λίστα γεωγραφικών διαμερισμάτων
+    │   ├── importParser.ts      # client-side parsing Excel/CSV (SheetJS) + column mapping
     │   ├── supabaseClient.ts
     │   └── useFilteredStores.ts
     └── store/
-        └── useAppStore.ts       # Zustand store (κεντρικό state Map ↔ List ↔ Add)
+        └── useAppStore.ts       # Zustand store (κεντρικό state Map ↔ List ↔ Add ↔ Import)
 ```
 
 ## Χρωματική κωδικοποίηση κατάστασης
@@ -111,6 +114,36 @@ customers/
 
 Χρειάζεται `ANTHROPIC_API_KEY` στο `.env.local` μόνο για το Smart Add — η
 χειροκίνητη καταχώρηση δουλεύει χωρίς αυτό.
+
+## Μαζική εισαγωγή από αρχείο
+
+Το κουμπί **"📁 Εισαγωγή Αρχείου"** ανοίγει το
+[`ImportStoresModal`](src/components/ImportStoresModal.tsx), που δέχεται:
+
+- **Excel (.xlsx/.xls) ή CSV** — γίνεται parsing 100% στο browser με τη
+  βιβλιοθήκη SheetJS (`src/lib/importParser.ts`), χωρίς να στέλνεται το
+  αρχείο πουθενά. Οι στήλες αναγνωρίζονται αυτόματα μέσω λίστας ελληνικών/
+  αγγλικών συνωνύμων (π.χ. "Επωνυμία"/"Name", "Πόλη/Νησί"/"City",
+  "Γεωγραφικό Διαμέρισμα"/"Region") — δεν χρειάζεται να ταιριάζουν ακριβώς
+  με τις στήλες του αρχικού dataset.
+- **PDF** — στέλνεται στο [`/api/extract-stores-pdf`](src/app/api/extract-stores-pdf/route.ts),
+  που καλεί το Claude Opus 5 με το PDF ως document input και έναν forced
+  tool call (`extract_store_list`, `strict: true`) που επιστρέφει έναν
+  πίνακα έως 300 καταστημάτων σε δομημένο JSON.
+
+Και στις δύο περιπτώσεις εμφανίζεται **preview πίνακας** πριν την εισαγωγή:
+γραμμές χωρίς Επωνυμία/Πόλη/Διαμέρισμα αποεπιλέγονται αυτόματα, ο χρήστης
+μπορεί να αποεπιλέξει κι άλλες, και μόνο οι επιλεγμένες εισάγονται. Η
+εισαγωγή γίνεται γραμμή-γραμμή μέσω του ήδη υπάρχοντος `addStore` action
+(άρα κάθε νέο κατάστημα γεωκωδικοποιείται αυτόματα μέσω `/api/geocode`
+πριν αποθηκευτεί) με progress bar· αποτυχίες μεμονωμένων γραμμών δεν
+σταματούν την υπόλοιπη εισαγωγή.
+
+Το SheetJS (`xlsx`) είναι βαριά βιβλιοθήκη (~200KB) — το modal φορτώνεται
+με `next/dynamic` ώστε να μην επιβαρύνει το αρχικό bundle της εφαρμογής για
+όσους δεν χρησιμοποιούν ποτέ αυτό το feature. Σημείωση: το πακέτο `xlsx`
+εγκαθίσταται από το επίσημο CDN της SheetJS (`cdn.sheetjs.com`), όχι από το
+npm registry — η εκδοχή στο npm έχει γνωστά ανεπιδιόρθωτα security advisories.
 
 ## Εγκατάσταση & εκτέλεση
 

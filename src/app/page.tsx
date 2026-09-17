@@ -18,12 +18,17 @@ const MapView = dynamic(() => import("@/components/MapView"), {
   ),
 });
 
+// Code-split: pulls in the ~200KB xlsx (SheetJS) parser, so keep it out of
+// the initial page bundle and only load it when the import modal opens.
+const ImportStoresModal = dynamic(() => import("@/components/ImportStoresModal"));
+
 export default function Home() {
   const fetchStores = useAppStore((s) => s.fetchStores);
   const loading = useAppStore((s) => s.loading);
   const error = useAppStore((s) => s.error);
   const selectedStoreId = useAppStore((s) => s.selectedStoreId);
   const [addModalOpen, setAddModalOpen] = useState(false);
+  const [importModalOpen, setImportModalOpen] = useState(false);
   const [mobileView, setMobileView] = useState<"list" | "map">("list");
 
   useEffect(() => {
@@ -88,6 +93,13 @@ export default function Home() {
       </main>
 
       <button
+        onClick={() => setImportModalOpen(true)}
+        className="fixed right-5 bottom-[calc(max(1.25rem,env(safe-area-inset-bottom))+3.25rem)] z-[900] flex items-center gap-2 rounded-full bg-white px-4 py-2.5 text-sm font-medium text-neutral-700 shadow-lg ring-1 ring-neutral-200 transition hover:bg-neutral-50"
+      >
+        📁 Εισαγωγή Αρχείου
+      </button>
+
+      <button
         onClick={() => setAddModalOpen(true)}
         className="fixed right-5 bottom-[max(1.25rem,env(safe-area-inset-bottom))] z-[900] flex items-center gap-2 rounded-full bg-red-600 px-4 py-3 text-sm font-medium text-white shadow-lg transition hover:bg-red-700"
       >
@@ -96,6 +108,7 @@ export default function Home() {
 
       {selectedStoreId && <StoreDetailPanel />}
       {addModalOpen && <AddStoreModal onClose={() => setAddModalOpen(false)} />}
+      {importModalOpen && <ImportStoresModal onClose={() => setImportModalOpen(false)} />}
     </div>
   );
 }
