@@ -8,10 +8,13 @@ import { normalizeWebsiteUrl } from "@/lib/url";
 import { normalizeText } from "@/lib/text";
 import type { Store } from "@/lib/types";
 
+type RowAction = "insert" | "update-website" | "skip";
+
 interface Row {
   input: NewStoreInput;
   selected: boolean;
-  duplicate: boolean;
+  action: RowAction;
+  matchedStoreId: string | null;
 }
 
 function isValidRow(input: NewStoreInput): boolean {
@@ -22,19 +25,43 @@ function dupKey(name: string, city: string): string {
   return `${normalizeText(name)}::${normalizeText(city)}`;
 }
 
-// Flags a row as a duplicate when a store with the same (normalized) name
-// and city already exists in the database, or already appeared earlier in
-// this same file — so re-importing the same list twice, or a file that
-// itself contains repeats, doesn't create duplicate entries.
-function markDuplicates(inputs: NewStoreInput[], existing: Store[]): Row[] {
-  const existingKeys = new Set(existing.map((s) => dupKey(s.name, s.city)));
+// Classifies each row against stores already in the database (matched by
+// normalized name + city) and against earlier rows in the same file:
+//   - no match                                -> insert (new store)
+//   - matches an existing store, brings a new
+//     website value that store doesn't have    -> update-website
+//   - matches an existing store, nothing new,
+//     or repeats an earlier row in this file    -> skip
+// This means re-importing the same list (e.g. now with a Website column
+// added) enriches existing stores instead of being skipped outright or
+// creating duplicate rows.
+function classifyRows(inputs: NewStoreInput[], existing: Store[]): Row[] {
+  const existingByKey = new Map<string, Store>();
+  for (const s of existing) existingByKey.set(dupKey(s.name, s.city), s);
   const seenInFile = new Set<string>();
 
   return inputs.map((input) => {
     const key = dupKey(input.name, input.city);
-    const duplicate = key !== "::" && (existingKeys.has(key) || seenInFile.has(key));
-    seenInFile.add(key);
-    return { input, duplicate, selected: isValidRow(input) && !duplicate };
+    const validKey = key !== "::";
+    const match = validKey ? existingByKey.get(key) : undefined;
+    const seenBefore = validKey && seenInFile.has(key);
+    if (validKey) seenInFile.add(key);
+
+    if (match) {
+      const hasNewWebsite = !!input.website && input.website !== match.website;
+      return {
+        input,
+        matchedStoreId: match.id,
+        action: hasNewWebsite ? "update-website" : "skip",
+        selected: hasNewWebsite,
+      };
+    }
+
+    if (seenBefore) {
+      return { input, matchedStoreId: null, action: "skip", selected: false };
+    }
+
+    return { input, matchedStoreId: null, action: "insert", selected: isValidRow(input) };
   });
 }
 
@@ -42,6 +69,7 @@ const SPREADSHEET_EXTENSIONS = [".xlsx", ".xls", ".csv"];
 
 export default function ImportStoresModal({ onClose }: { onClose: () => void }) {
   const addStoresBulk = useAppStore((s) => s.addStoresBulk);
+  const updateWebsite = useAppStore((s) => s.updateWebsite);
   const existingStores = useAppStore((s) => s.stores);
 
   const [rows, setRows] = useState<Row[] | null>(null);
@@ -51,7 +79,9 @@ export default function ImportStoresModal({ onClose }: { onClose: () => void }) 
 
   const [importing, setImporting] = useState(false);
   const [progress, setProgress] = useState<{ done: number; total: number } | null>(null);
-  const [result, setResult] = useState<{ succeeded: number; failed: number } | null>(null);
+  const [result, setResult] = useState<{ inserted: number; updated: number; failed: number } | null>(
+    null
+  );
 
   const fileInputRef = useRef<HTMLInputElement>(null);
 
@@ -75,7 +105,7 @@ export default function ImportStoresModal({ onClose }: { onClose: () => void }) 
           ...input,
           website: normalizeWebsiteUrl(input.website),
         }));
-        setRows(markDuplicates(normalizedInputs, existingStores));
+        setRows(classifyRows(normalizedInputs, existingStores));
         if (data.truncated) {
           setParseError("Το αρχείο περιείχε πολλά καταστήματα — εξήχθησαν μόνο τα πρώτα 300.");
         }
@@ -92,7 +122,7 @@ export default function ImportStoresModal({ onClose }: { onClose: () => void }) 
           ...input,
           website: normalizeWebsiteUrl(input.website),
         }));
-        setRows(markDuplicates(normalizedInputs, existingStores));
+        setRows(classifyRows(normalizedInputs, existingStores));
         setUnmatchedHeaders(unmatched);
       }
     } catch (err) {
@@ -113,22 +143,44 @@ export default function ImportStoresModal({ onClose }: { onClose: () => void }) 
   }
 
   const selectedCount = rows?.filter((r) => r.selected).length ?? 0;
-  const duplicateCount = rows?.filter((r) => r.duplicate).length ?? 0;
+  const skipCount = rows?.filter((r) => r.action === "skip").length ?? 0;
+  const updateCount = rows?.filter((r) => r.action === "update-website").length ?? 0;
 
   async function handleImport() {
     if (!rows) return;
-    const toImport = rows.filter((r) => r.selected).map((r) => r.input);
-    if (toImport.length === 0) return;
+    const selectedRows = rows.filter((r) => r.selected);
+    if (selectedRows.length === 0) return;
+
+    const toInsert = selectedRows.filter((r) => r.action === "insert").map((r) => r.input);
+    const toUpdate = selectedRows.filter((r) => r.action === "update-website");
+    const total = toInsert.length + toUpdate.length;
 
     setImporting(true);
-    setProgress({ done: 0, total: toImport.length });
+    setProgress({ done: 0, total });
 
-    const { succeeded, failed } = await addStoresBulk(toImport, (done, total) =>
-      setProgress({ done, total })
-    );
+    let inserted = 0;
+    let failed = 0;
+
+    if (toInsert.length > 0) {
+      const res = await addStoresBulk(toInsert, (done) => setProgress({ done, total }));
+      inserted = res.succeeded.length;
+      failed += res.failed;
+    }
+
+    let updated = 0;
+    for (let i = 0; i < toUpdate.length; i++) {
+      const row = toUpdate[i];
+      try {
+        await updateWebsite(row.matchedStoreId as string, row.input.website as string);
+        updated++;
+      } catch {
+        failed++;
+      }
+      setProgress({ done: toInsert.length + i + 1, total });
+    }
 
     setImporting(false);
-    setResult({ succeeded: succeeded.length, failed });
+    setResult({ inserted, updated, failed });
   }
 
   return (
@@ -154,9 +206,19 @@ export default function ImportStoresModal({ onClose }: { onClose: () => void }) 
           {result ? (
             <div className="flex flex-col items-center gap-2 py-10 text-center">
               <span className="text-3xl">✅</span>
-              <p className="text-base font-medium text-neutral-900">
-                Εισήχθησαν {result.succeeded} από {result.succeeded + result.failed} καταστήματα
-              </p>
+              {result.inserted > 0 && (
+                <p className="text-base font-medium text-neutral-900">
+                  Προστέθηκαν {result.inserted} νέα καταστήματα
+                </p>
+              )}
+              {result.updated > 0 && (
+                <p className="text-base font-medium text-neutral-900">
+                  Ενημερώθηκαν {result.updated} καταστήματα με ιστοσελίδα
+                </p>
+              )}
+              {result.inserted === 0 && result.updated === 0 && result.failed === 0 && (
+                <p className="text-base font-medium text-neutral-900">Δεν υπήρχε τίποτα νέο προς εισαγωγή.</p>
+              )}
               {result.failed > 0 && (
                 <p className="text-sm text-red-600">{result.failed} απέτυχαν — δοκιμάστε τα ξανά ξεχωριστά.</p>
               )}
@@ -206,8 +268,11 @@ export default function ImportStoresModal({ onClose }: { onClose: () => void }) 
                 <span className="text-neutral-600">
                   Βρέθηκαν <span className="font-semibold text-neutral-900">{rows.length}</span> καταστήματα
                   — <span className="font-semibold text-neutral-900">{selectedCount}</span> επιλεγμένα
-                  {duplicateCount > 0 && (
-                    <span className="text-neutral-400"> ({duplicateCount} ήδη υπάρχουν)</span>
+                  {updateCount > 0 && (
+                    <span className="text-neutral-400"> ({updateCount} ενημέρωση ιστοσελίδας)</span>
+                  )}
+                  {skipCount > 0 && (
+                    <span className="text-neutral-400"> ({skipCount} χωρίς αλλαγή)</span>
                   )}
                 </span>
                 <div className="flex gap-2">
@@ -237,13 +302,14 @@ export default function ImportStoresModal({ onClose }: { onClose: () => void }) 
                   <tbody>
                     {rows.map((r, i) => {
                       const valid = isValidRow(r.input);
+                      const rowStyle =
+                        r.action === "update-website"
+                          ? "bg-green-50"
+                          : r.action === "skip" || !valid
+                            ? "bg-neutral-50 text-neutral-400"
+                            : "";
                       return (
-                        <tr
-                          key={i}
-                          className={`border-t border-neutral-100 ${
-                            !valid || r.duplicate ? "bg-neutral-50 text-neutral-400" : ""
-                          }`}
-                        >
+                        <tr key={i} className={`border-t border-neutral-100 ${rowStyle}`}>
                           <td className="p-2">
                             <input
                               type="checkbox"
@@ -261,7 +327,12 @@ export default function ImportStoresModal({ onClose }: { onClose: () => void }) 
                           <td className="p-2">{r.input.phone || "—"}</td>
                           <td className="max-w-[160px] truncate p-2">{r.input.website || "—"}</td>
                           <td className="p-2">
-                            {r.duplicate && (
+                            {r.action === "update-website" && (
+                              <span className="whitespace-nowrap rounded-full bg-green-200 px-2 py-0.5 text-[10px] font-medium text-green-800">
+                                ενημέρωση site
+                              </span>
+                            )}
+                            {r.action === "skip" && (
                               <span className="whitespace-nowrap rounded-full bg-neutral-200 px-2 py-0.5 text-[10px] font-medium text-neutral-600">
                                 υπάρχει ήδη
                               </span>
@@ -274,8 +345,9 @@ export default function ImportStoresModal({ onClose }: { onClose: () => void }) 
                 </table>
               </div>
               <p className="text-xs text-neutral-400">
-                Γραμμές χωρίς Επωνυμία, Πόλη ή Διαμέρισμα, καθώς και καταστήματα που υπάρχουν ήδη
-                (ίδια επωνυμία + πόλη), αποεπιλέγονται αυτόματα — μπορείτε να τα επιλέξετε ξανά αν θέλετε.
+                Καταστήματα που υπάρχουν ήδη (ίδια επωνυμία + πόλη) δεν προστίθενται ξανά· αν το αρχείο
+                φέρνει καινούργια ιστοσελίδα γι&apos; αυτά, ενημερώνεται αυτόματα το υπάρχον κατάστημα
+                αντί να δημιουργηθεί διπλότυπο. Γραμμές χωρίς Επωνυμία, Πόλη ή Διαμέρισμα αποεπιλέγονται.
               </p>
 
               {importing && progress && (
@@ -318,7 +390,7 @@ export default function ImportStoresModal({ onClose }: { onClose: () => void }) 
                   disabled={selectedCount === 0 || importing}
                   className="rounded-lg bg-neutral-900 px-4 py-2 text-sm font-medium text-white transition hover:bg-neutral-800 disabled:cursor-not-allowed disabled:opacity-50"
                 >
-                  {importing ? "Εισαγωγή…" : `Εισαγωγή ${selectedCount} Καταστημάτων`}
+                  {importing ? "Επεξεργασία…" : `Εφαρμογή σε ${selectedCount} Καταστήματα`}
                 </button>
               )}
             </>
