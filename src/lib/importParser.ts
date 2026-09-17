@@ -10,6 +10,7 @@ const FIELD_SYNONYMS: Record<keyof NewStoreInput, string[]> = {
   category: ["κατηγορια", "τυπος", "ειδος", "category", "type"],
   address: ["διευθυνση", "οδος", "address", "street"],
   phone: ["τηλεφωνο", "τηλ", "phone", "telephone", "mobile"],
+  website: ["ιστοσελιδα", "site", "website", "url", "domain"],
   city: ["πολη", "νησι", "city", "town"],
   region: ["διαμερισμα", "περιοχη", "region", "area", "prefecture"],
 };
@@ -71,6 +72,7 @@ export async function parseSpreadsheetFile(file: File): Promise<ParsedImportResu
       category: cell(row, "category") || null,
       address: cell(row, "address") || null,
       phone: cell(row, "phone") || null,
+      website: cell(row, "website") || null,
       city: cell(row, "city"),
       region: cell(row, "region"),
     });

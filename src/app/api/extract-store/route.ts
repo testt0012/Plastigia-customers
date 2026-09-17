@@ -20,6 +20,7 @@ interface ExtractedStoreInfo {
   category: string;
   address: string;
   phone: string;
+  website: string;
   city: string;
   region: string;
 }
@@ -90,6 +91,10 @@ export async function POST(request: Request) {
                 type: "string",
                 description: "Phone number if visible, as printed.",
               },
+              website: {
+                type: "string",
+                description: "Website URL or domain if visible (e.g. on a sign, card, or receipt footer).",
+              },
               city: {
                 type: "string",
                 description: "City or town in Greek, if identifiable.",
@@ -101,7 +106,7 @@ export async function POST(request: Request) {
                 enum: [...GREEK_REGIONS, ""],
               },
             },
-            required: ["name", "category", "address", "phone", "city", "region"],
+            required: ["name", "category", "address", "phone", "website", "city", "region"],
             additionalProperties: false,
           },
           strict: true,
@@ -122,7 +127,7 @@ export async function POST(request: Request) {
             },
             {
               type: "text",
-              text: "Extract the store's contact details from this image using the extract_store_info tool.",
+              text: "Extract the store's contact details (including a website URL if visible) from this image using the extract_store_info tool.",
             },
           ],
         },

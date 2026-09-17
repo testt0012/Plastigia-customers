@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useAppStore } from "@/store/useAppStore";
 import { STATUS_OPTIONS, STATUS_STYLES } from "@/lib/types";
 import type { StoreStatus } from "@/lib/types";
+import { normalizeWebsiteUrl } from "@/lib/url";
 
 export default function StoreDetailPanel() {
   const selectedStoreId = useAppStore((s) => s.selectedStoreId);
@@ -11,6 +12,7 @@ export default function StoreDetailPanel() {
   const stores = useAppStore((s) => s.stores);
   const updateStatus = useAppStore((s) => s.updateStatus);
   const updateNotes = useAppStore((s) => s.updateNotes);
+  const updateWebsite = useAppStore((s) => s.updateWebsite);
   const deleteStore = useAppStore((s) => s.deleteStore);
 
   const store = stores.find((s) => s.id === selectedStoreId) ?? null;
@@ -19,10 +21,16 @@ export default function StoreDetailPanel() {
   const [saved, setSaved] = useState(false);
   const [deleting, setDeleting] = useState(false);
 
+  const [websiteDraft, setWebsiteDraft] = useState("");
+  const [savingWebsite, setSavingWebsite] = useState(false);
+  const [websiteSaved, setWebsiteSaved] = useState(false);
+
   useEffect(() => {
     setNotesDraft(store?.notes ?? "");
     setSaved(false);
-  }, [store?.id, store?.notes]);
+    setWebsiteDraft(store?.website ?? "");
+    setWebsiteSaved(false);
+  }, [store?.id, store?.notes, store?.website]);
 
   if (!store) return null;
 
@@ -33,6 +41,15 @@ export default function StoreDetailPanel() {
     await updateNotes(store.id, notesDraft);
     setSaving(false);
     setSaved(true);
+  };
+
+  const websiteDirty = websiteDraft !== (store.website ?? "");
+
+  const handleSaveWebsite = async () => {
+    setSavingWebsite(true);
+    await updateWebsite(store.id, normalizeWebsiteUrl(websiteDraft) ?? "");
+    setSavingWebsite(false);
+    setWebsiteSaved(true);
   };
 
   const handleDelete = async () => {
@@ -93,6 +110,21 @@ export default function StoreDetailPanel() {
                 </dd>
               </div>
             )}
+            {store.website && (
+              <div>
+                <dt className="text-xs font-medium uppercase text-neutral-400">Ιστοσελίδα</dt>
+                <dd>
+                  <a
+                    href={store.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-red-600 hover:underline"
+                  >
+                    Επίσκεψη Ιστοσελίδας ↗
+                  </a>
+                </dd>
+              </div>
+            )}
             {store.google_rating != null && (
               <div>
                 <dt className="text-xs font-medium uppercase text-neutral-400">
@@ -133,6 +165,38 @@ export default function StoreDetailPanel() {
                   </button>
                 );
               })}
+            </div>
+          </div>
+
+          <div className="mt-5">
+            <label
+              htmlFor="website"
+              className="mb-2 block text-xs font-medium uppercase text-neutral-400"
+            >
+              Ιστοσελίδα
+            </label>
+            <input
+              id="website"
+              type="text"
+              value={websiteDraft}
+              onChange={(e) => {
+                setWebsiteDraft(e.target.value);
+                setWebsiteSaved(false);
+              }}
+              placeholder="www.example.gr"
+              className="w-full rounded-lg border border-neutral-300 p-2.5 text-sm outline-none focus:border-red-500 focus:ring-1 focus:ring-red-500"
+            />
+            <div className="mt-2 flex items-center justify-end gap-3">
+              {websiteSaved && !websiteDirty && (
+                <span className="text-xs text-green-600">Αποθηκεύτηκε ✓</span>
+              )}
+              <button
+                onClick={handleSaveWebsite}
+                disabled={!websiteDirty || savingWebsite}
+                className="rounded-lg bg-neutral-900 px-4 py-1.5 text-sm font-medium text-white transition disabled:cursor-not-allowed disabled:opacity-40"
+              >
+                {savingWebsite ? "Αποθήκευση…" : "Αποθήκευση Ιστοσελίδας"}
+              </button>
             </div>
           </div>
 

@@ -8,6 +8,7 @@ export interface Store {
   category: string | null;
   address: string | null;
   phone: string | null;
+  website: string | null;
   google_rating: number | null;
   google_review_count: number | null;
   lat: number | null;

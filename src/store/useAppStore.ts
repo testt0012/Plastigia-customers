@@ -19,6 +19,7 @@ interface AppState {
   setFilterStatus: (status: StoreStatus | "all") => void;
   updateStatus: (id: string, status: StoreStatus) => Promise<void>;
   updateNotes: (id: string, notes: string) => Promise<void>;
+  updateWebsite: (id: string, website: string) => Promise<void>;
   addStore: (input: NewStoreInput) => Promise<Store>;
   addStoresBulk: (
     inputs: NewStoreInput[],
@@ -32,6 +33,7 @@ export interface NewStoreInput {
   category: string | null;
   address: string | null;
   phone: string | null;
+  website: string | null;
   city: string;
   region: string;
 }
@@ -97,6 +99,22 @@ export const useAppStore = create<AppState>((set, get) => ({
     }
   },
 
+  updateWebsite: async (id, website) => {
+    const previous = get().stores;
+    set({
+      stores: previous.map((s) => (s.id === id ? { ...s, website } : s)),
+    });
+
+    const { error } = await supabase
+      .from("stores")
+      .update({ website, updated_at: new Date().toISOString() })
+      .eq("id", id);
+
+    if (error) {
+      set({ stores: previous, error: error.message });
+    }
+  },
+
   addStore: async (input) => {
     let lat: number | null = null;
     let lng: number | null = null;
@@ -121,6 +139,7 @@ export const useAppStore = create<AppState>((set, get) => ({
       category: input.category,
       address: input.address,
       phone: input.phone,
+      website: input.website,
       google_rating: null,
       google_review_count: null,
       lat,

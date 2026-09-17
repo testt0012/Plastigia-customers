@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import { useAppStore } from "@/store/useAppStore";
 import type { NewStoreInput } from "@/store/useAppStore";
 import { parseSpreadsheetFile } from "@/lib/importParser";
+import { normalizeWebsiteUrl } from "@/lib/url";
 
 interface Row {
   input: NewStoreInput;
@@ -46,10 +47,10 @@ export default function ImportStoresModal({ onClose }: { onClose: () => void }) 
         const data = await res.json();
         if (!res.ok) throw new Error(data.error ?? "Η εξαγωγή απέτυχε.");
 
-        const parsedRows: Row[] = (data.stores as NewStoreInput[]).map((input) => ({
-          input,
-          selected: isValidRow(input),
-        }));
+        const parsedRows: Row[] = (data.stores as NewStoreInput[]).map((input) => {
+          const normalized = { ...input, website: normalizeWebsiteUrl(input.website) };
+          return { input: normalized, selected: isValidRow(normalized) };
+        });
         setRows(parsedRows);
         if (data.truncated) {
           setParseError("Το αρχείο περιείχε πολλά καταστήματα — εξήχθησαν μόνο τα πρώτα 300.");
@@ -63,7 +64,12 @@ export default function ImportStoresModal({ onClose }: { onClose: () => void }) 
         if (parsed.length === 0) {
           throw new Error("Δεν βρέθηκαν γραμμές δεδομένων στο αρχείο.");
         }
-        setRows(parsed.map((input) => ({ input, selected: isValidRow(input) })));
+        setRows(
+          parsed.map((input) => {
+            const normalized = { ...input, website: normalizeWebsiteUrl(input.website) };
+            return { input: normalized, selected: isValidRow(normalized) };
+          })
+        );
         setUnmatchedHeaders(unmatched);
       }
     } catch (err) {
@@ -154,7 +160,7 @@ export default function ImportStoresModal({ onClose }: { onClose: () => void }) 
                   {parsing ? "Επεξεργασία αρχείου…" : "Επιλογή Excel, CSV ή PDF"}
                 </span>
                 <span className="text-xs text-neutral-400">
-                  Excel/CSV: στήλες Επωνυμία, Κατηγορία, Διεύθυνση, Τηλέφωνο, Πόλη, Διαμέρισμα
+                  Excel/CSV: στήλες Επωνυμία, Κατηγορία, Διεύθυνση, Τηλέφωνο, Ιστοσελίδα, Πόλη, Διαμέρισμα
                 </span>
               </button>
               {parseError && (
@@ -188,7 +194,7 @@ export default function ImportStoresModal({ onClose }: { onClose: () => void }) 
               </div>
 
               <div className="overflow-x-auto rounded-lg border border-neutral-200">
-                <table className="w-full min-w-[560px] text-left text-xs">
+                <table className="w-full min-w-[680px] text-left text-xs">
                   <thead className="bg-neutral-50 text-neutral-500">
                     <tr>
                       <th className="p-2"></th>
@@ -197,6 +203,7 @@ export default function ImportStoresModal({ onClose }: { onClose: () => void }) 
                       <th className="p-2">Διαμέρισμα</th>
                       <th className="p-2">Κατηγορία</th>
                       <th className="p-2">Τηλέφωνο</th>
+                      <th className="p-2">Ιστοσελίδα</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -222,6 +229,7 @@ export default function ImportStoresModal({ onClose }: { onClose: () => void }) 
                           <td className="p-2">{r.input.region || "—"}</td>
                           <td className="p-2">{r.input.category || "—"}</td>
                           <td className="p-2">{r.input.phone || "—"}</td>
+                          <td className="max-w-[160px] truncate p-2">{r.input.website || "—"}</td>
                         </tr>
                       );
                     })}

@@ -13,6 +13,7 @@ interface ExtractedStore {
   category: string;
   address: string;
   phone: string;
+  website: string;
   city: string;
   region: string;
 }
@@ -71,6 +72,7 @@ export async function POST(request: Request) {
                     },
                     address: { type: "string", description: "Full street address if present, in Greek." },
                     phone: { type: "string", description: "Phone number if present, as printed." },
+                    website: { type: "string", description: "Website URL or domain if present for this store." },
                     city: { type: "string", description: "City or town in Greek, if identifiable." },
                     region: {
                       type: "string",
@@ -79,7 +81,7 @@ export async function POST(request: Request) {
                       enum: [...GREEK_REGIONS, ""],
                     },
                   },
-                  required: ["name", "category", "address", "phone", "city", "region"],
+                  required: ["name", "category", "address", "phone", "website", "city", "region"],
                   additionalProperties: false,
                 },
               },

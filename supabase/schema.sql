@@ -18,6 +18,7 @@ create table if not exists public.stores (
   category            text,                       -- Κατηγορία
   address             text,                       -- Διεύθυνση
   phone               text,                       -- Τηλέφωνο
+  website             text,                       -- Ιστοσελίδα
   google_rating       numeric(2,1),                -- Βαθμολογία Google
   google_review_count integer,                     -- Αρ. Κριτικών
   lat                 double precision,

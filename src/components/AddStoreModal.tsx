@@ -3,6 +3,7 @@
 import { useRef, useState } from "react";
 import { useAppStore } from "@/store/useAppStore";
 import { GREEK_REGIONS } from "@/lib/regions";
+import { normalizeWebsiteUrl } from "@/lib/url";
 
 type Tab = "manual" | "smart";
 
@@ -11,6 +12,7 @@ interface FormState {
   category: string;
   address: string;
   phone: string;
+  website: string;
   city: string;
   region: string;
 }
@@ -20,6 +22,7 @@ const EMPTY_FORM: FormState = {
   category: "",
   address: "",
   phone: "",
+  website: "",
   city: "",
   region: "",
 };
@@ -80,6 +83,7 @@ export default function AddStoreModal({ onClose }: { onClose: () => void }) {
         category: data.category ?? "",
         address: data.address ?? "",
         phone: data.phone ?? "",
+        website: data.website ?? "",
         city: data.city ?? "",
         region: GREEK_REGIONS.includes(data.region) ? data.region : "",
       });
@@ -107,6 +111,7 @@ export default function AddStoreModal({ onClose }: { onClose: () => void }) {
         category: form.category.trim() || null,
         address: form.address.trim() || null,
         phone: form.phone.trim() || null,
+        website: normalizeWebsiteUrl(form.website),
         city: form.city.trim(),
         region: form.region.trim(),
       });
@@ -273,6 +278,16 @@ export default function AddStoreModal({ onClose }: { onClose: () => void }) {
                   onChange={(e) => updateField("phone", e.target.value)}
                   className="rounded-lg border border-neutral-300 px-3 py-2 text-sm outline-none focus:border-red-500 focus:ring-1 focus:ring-red-500"
                   placeholder="+30 21 0000 0000"
+                />
+              </label>
+
+              <label className="flex flex-col gap-1 text-sm">
+                <span className="font-medium text-neutral-700">Ιστοσελίδα</span>
+                <input
+                  value={form.website}
+                  onChange={(e) => updateField("website", e.target.value)}
+                  className="rounded-lg border border-neutral-300 px-3 py-2 text-sm outline-none focus:border-red-500 focus:ring-1 focus:ring-red-500"
+                  placeholder="www.example.gr"
                 />
               </label>
 
