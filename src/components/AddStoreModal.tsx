@@ -33,7 +33,7 @@ export default function AddStoreModal({ onClose }: { onClose: () => void }) {
   const selectStore = useAppStore((s) => s.selectStore);
   const stores = useAppStore((s) => s.stores);
 
-  const [tab, setTab] = useState<Tab>("smart");
+  const [tab, setTab] = useState<Tab>("website");
   const [form, setForm] = useState<FormState>(EMPTY_FORM);
 
   const [imagePreview, setImagePreview] = useState<string | null>(null);
@@ -41,6 +41,10 @@ export default function AddStoreModal({ onClose }: { onClose: () => void }) {
   const [extracting, setExtracting] = useState(false);
   const [extractError, setExtractError] = useState<string | null>(null);
   const [justExtracted, setJustExtracted] = useState(false);
+
+  const [urlInput, setUrlInput] = useState("");
+  const [extractingFromUrl, setExtractingFromUrl] = useState(false);
+  const [urlExtractError, setUrlExtractError] = useState<string | null>(null);
 
   const [saving, setSaving] = useState(false);
   const [saveError, setSaveError] = useState<string | null>(null);
@@ -107,6 +111,41 @@ export default function AddStoreModal({ onClose }: { onClose: () => void }) {
     }
   }
 
+  async function handleExtractFromUrl() {
+    if (!urlInput.trim()) return;
+    setExtractingFromUrl(true);
+    setUrlExtractError(null);
+
+    try {
+      const res = await fetch("/api/extract-store-from-url", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ url: urlInput.trim() }),
+      });
+      const data = await res.json();
+
+      if (!res.ok) {
+        throw new Error(data.error ?? "Η εξαγωγή απέτυχε.");
+      }
+
+      setForm({
+        name: data.name ?? "",
+        category: data.category ?? "",
+        address: data.address ?? "",
+        phone: data.phone ?? "",
+        website: data.website ?? urlInput.trim(),
+        city: data.city ?? "",
+        region: GREEK_REGIONS.includes(data.region) ? data.region : "",
+      });
+      setJustExtracted(true);
+      setTab("manual");
+    } catch (err) {
+      setUrlExtractError(err instanceof Error ? err.message : "Η εξαγωγή απέτυχε.");
+    } finally {
+      setExtractingFromUrl(false);
+    }
+  }
+
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (!form.name.trim() || !form.city.trim() || !form.region.trim()) {
@@ -142,7 +181,7 @@ export default function AddStoreModal({ onClose }: { onClose: () => void }) {
           <div>
             <h2 className="text-lg font-bold text-neutral-900">Νέο Κατάστημα</h2>
             <p className="text-sm text-neutral-500">
-              Προσθέστε ένα κατάστημα χειροκίνητα ή με φωτογραφία μέσω AI
+              Προσθέστε ένα κατάστημα από ιστοσελίδα, φωτογραφία ή χειροκίνητα
             </p>
           </div>
           <button
@@ -155,6 +194,16 @@ export default function AddStoreModal({ onClose }: { onClose: () => void }) {
         </div>
 
         <div className="flex border-b border-neutral-200 px-4">
+          <button
+            onClick={() => setTab("website")}
+            className={`border-b-2 px-3 py-2.5 text-sm font-medium transition ${
+              tab === "website"
+                ? "border-red-500 text-red-600"
+                : "border-transparent text-neutral-500 hover:text-neutral-800"
+            }`}
+          >
+            🌐 Από Ιστοσελίδα
+          </button>
           <button
             onClick={() => setTab("smart")}
             className={`border-b-2 px-3 py-2.5 text-sm font-medium transition ${
@@ -182,6 +231,47 @@ export default function AddStoreModal({ onClose }: { onClose: () => void }) {
           onSubmit={handleSubmit}
           className="custom-scroll flex-1 overflow-y-auto p-4"
         >
+          <div hidden={tab !== "website"} className="flex flex-col gap-3">
+              <p className="text-sm text-neutral-600">
+                Βάλτε τη διεύθυνση της ιστοσελίδας του καταστήματος. Το AI θα διαβάσει
+                την ιστοσελίδα (και τη σελίδα επικοινωνίας, αν βρεθεί) και θα συμπληρώσει
+                αυτόματα επωνυμία, διεύθυνση, τηλέφωνο, κατηγορία και πόλη — θα μπορείτε
+                να τα ελέγξετε πριν την αποθήκευση.
+              </p>
+
+              <label className="flex flex-col gap-1 text-sm">
+                <span className="font-medium text-neutral-700">Ιστοσελίδα</span>
+                <input
+                  type="text"
+                  value={urlInput}
+                  onChange={(e) => setUrlInput(e.target.value)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter") {
+                      e.preventDefault();
+                      handleExtractFromUrl();
+                    }
+                  }}
+                  placeholder="www.example.gr"
+                  className="rounded-lg border border-neutral-300 px-3 py-2 text-sm outline-none focus:border-red-500 focus:ring-1 focus:ring-red-500"
+                />
+              </label>
+
+              <button
+                type="button"
+                onClick={handleExtractFromUrl}
+                disabled={!urlInput.trim() || extractingFromUrl}
+                className="rounded-lg bg-red-600 px-3 py-2 text-sm font-medium text-white transition hover:bg-red-700 disabled:cursor-not-allowed disabled:opacity-50"
+              >
+                {extractingFromUrl ? "Ανάγνωση ιστοσελίδας…" : "Εξαγωγή Στοιχείων με AI"}
+              </button>
+
+              {urlExtractError && (
+                <p className="rounded-lg bg-red-50 px-3 py-2 text-sm text-red-700">
+                  {urlExtractError}
+                </p>
+              )}
+          </div>
+
           <div hidden={tab !== "smart"} className="flex flex-col gap-3">
               <p className="text-sm text-neutral-600">
                 Ανεβάστε ή τραβήξτε φωτογραφία μιας επιχειρηματικής κάρτας, πινακίδας
