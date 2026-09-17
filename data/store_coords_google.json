@@ -1,0 +1,4424 @@
+{
+  "-0001": {
+    "lat": 38.05004,
+    "lng": 23.7511503,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Ιφιγενείας 75, Νέα Ιωνία 142 31, Ελλάδα"
+  },
+  "-0002": {
+    "lat": 38.02720000000001,
+    "lng": 23.7425435,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Λεωφ. Ηρακλείου 130, Αθήνα 111 42, Ελλάδα"
+  },
+  "-0003": {
+    "lat": 37.9233702,
+    "lng": 23.7505499,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Λεωφ. Ελ. Βενιζέλου 200, Ηλιούπολη 163 41, Ελλάδα"
+  },
+  "-0004": {
+    "lat": 37.9683146,
+    "lng": 23.7583784,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Λεωφόρος Εθνικής Αντιστάσεως 72, Καισαριανή 161 21, Ελλάδα"
+  },
+  "-0005": {
+    "lat": 37.9552368,
+    "lng": 23.7601381,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Νέας Ελβετίας 54, Βύρωνας 162 33, Ελλάδα"
+  },
+  "-0006": {
+    "lat": 38.0111232,
+    "lng": 23.6616171,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Κορυτσάς 5, Χαϊδάρι 124 61, Ελλάδα"
+  },
+  "-0007": {
+    "lat": 37.987568,
+    "lng": 23.7255756,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Μάγερ 23, Αθήνα 104 38, Ελλάδα"
+  },
+  "-0008": {
+    "lat": 38.0150852,
+    "lng": 23.7196788,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Νιρβάνα 94, Αθήνα 111 45, Ελλάδα"
+  },
+  "-0009": {
+    "lat": 38.011773,
+    "lng": 23.7099041,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Σολωμού 12, Αθήνα 121 33, Ελλάδα"
+  },
+  "-0010": {
+    "lat": 38.0306082,
+    "lng": 23.6832948,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Περικλέους 10, Πετρούπολη 132 31, Ελλάδα"
+  },
+  "-0011": {
+    "lat": 37.9679016,
+    "lng": 23.6365235,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Ἡφαίστου 40, Νίκαια 184 51, Ελλάδα"
+  },
+  "-0012": {
+    "lat": 37.9598806,
+    "lng": 23.6554611,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Θηβών 78, Πειραιάς 185 41, Ελλάδα"
+  },
+  "-0013": {
+    "lat": 37.8662486,
+    "lng": 23.7613558,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Λεωφόρος Βουλιαγμένης 111, Γλυφάδα 166 74, Ελλάδα"
+  },
+  "-0014": {
+    "lat": 37.9484968,
+    "lng": 23.69437,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Ξενοφώντος 97, Καλλιθέα 176 74, Ελλάδα"
+  },
+  "-0015": {
+    "lat": 37.9372418,
+    "lng": 23.7579037,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Λεωφ. Πρωτόπαπα 17, λ π, Ηλιούπολη 163 45, Ελλάδα"
+  },
+  "-0016": {
+    "lat": 37.9753377,
+    "lng": 23.763699,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Γρ. Αυξεντίου 62, Ζωγράφου 157 71, Ελλάδα"
+  },
+  "-0017": {
+    "lat": 38.0090401,
+    "lng": 23.8066773,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Λεωφ. Μεσογείων 318, Αγ. Παρασκευή 153 41, Ελλάδα"
+  },
+  "-0018": {
+    "lat": 38.019349,
+    "lng": 23.7238432,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "ΕΟ Αθηνών Λαμίας, Ελλάδα"
+  },
+  "-0019": {
+    "lat": 37.9650151,
+    "lng": 23.678503,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Λεωφ. Κηφισού 40, Αγ. Ιωάννης Ρέντης 182 33, Ελλάδα"
+  },
+  "-0020": {
+    "lat": 37.9553898,
+    "lng": 23.7041791,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Γρυπάρη 137, Καλλιθέα 176 72, Ελλάδα"
+  },
+  "-0021": {
+    "lat": 37.9796497,
+    "lng": 23.7069359,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Αγίου Πολυκάρπου 9, Αθήνα 118 55, Ελλάδα"
+  },
+  "-0022": {
+    "lat": 37.9985865,
+    "lng": 23.7373561,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Κεφαλληνίας 8, Αθήνα 113 61, Ελλάδα"
+  },
+  "-0023": {
+    "lat": 37.961216,
+    "lng": 23.710089,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Λεωφ. Ελ. Βενιζέλου 61, Καλλιθέα 176 71, Ελλάδα"
+  },
+  "-0024": {
+    "lat": 38.0135001,
+    "lng": 23.6706395,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Φαβιέρου 38, Χαϊδάρι 124 61, Ελλάδα"
+  },
+  "-0025": {
+    "lat": 37.9448897,
+    "lng": 23.6506174,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Ελ. Βενιζέλου 45, Πειραιάς 185 32, Ελλάδα"
+  },
+  "-0026": {
+    "lat": 38.0129091,
+    "lng": 23.6578454,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Λεωφ. Αθηνών 278, Χαϊδάρι 124 62, Ελλάδα"
+  },
+  "-0027": {
+    "lat": 37.96132610000001,
+    "lng": 23.7343437,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Λεωφόρος Βουλιαγμένης 83, Αθήνα 116 36, Ελλάδα"
+  },
+  "-0028": {
+    "lat": 37.9474131,
+    "lng": 23.6474267,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Πλατεία Ιπποδαμείας, Πειραιάς 185 31, Ελλάδα"
+  },
+  "-0029": {
+    "lat": 38.0927799,
+    "lng": 23.7958569,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Ελαιών 46, Κηφισιά 145 64, Ελλάδα"
+  },
+  "-0030": {
+    "lat": 38.019349,
+    "lng": 23.7238432,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "ΕΟ Αθηνών Λαμίας, Ελλάδα"
+  },
+  "-0031": {
+    "lat": 37.9539798,
+    "lng": 23.7527232,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Αγίας Σοφίας 115, Βύρωνας 162 32, Ελλάδα"
+  },
+  "-0032": {
+    "lat": 38.0131075,
+    "lng": 23.6888773,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Λεωνίδου 5, 153, Περιστέρι 121 34, Ελλάδα"
+  },
+  "-0033": {
+    "lat": 38.0110447,
+    "lng": 23.8095134,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Λεωφ. Μεσογείων 365, Χαλάνδρι 152 31, Ελλάδα"
+  },
+  "-0034": {
+    "lat": 37.9010907,
+    "lng": 23.8726016,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Κορωπί 194 00, Ελλάδα"
+  },
+  "-0035": {
+    "lat": 37.9785798,
+    "lng": 23.7268176,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Αθηνάς 20, Αθήνα 105 51, Ελλάδα"
+  },
+  "-0036": {
+    "lat": 37.9740091,
+    "lng": 23.6969457,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Πόντου 22, Ταύρος Αττικής 177 78, Ελλάδα"
+  },
+  "-0037": {
+    "lat": 37.9721413,
+    "lng": 23.7560007,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Ευφρονίου 81, Αθήνα 161 21, Ελλάδα"
+  },
+  "-0038": {
+    "lat": 38.0324045,
+    "lng": 23.8564177,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Κλεισθένους 279, Γέρακας 153 44, Ελλάδα"
+  },
+  "-0039": {
+    "lat": 38.035738,
+    "lng": 23.7118447,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Αχιλλέως 36, Ίλιον 131 22, Ελλάδα"
+  },
+  "-0040": {
+    "lat": 37.9125408,
+    "lng": 23.7543283,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Αργυρουπόλεως 67, Αργυρούπολη 164 51, Ελλάδα"
+  },
+  "-0041": {
+    "lat": 38.0943881,
+    "lng": 23.7239293,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Αναπαύσεως 4, Αχαρνές 136 74, Ελλάδα"
+  },
+  "-0042": {
+    "lat": 37.8749448,
+    "lng": 23.7572318,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Παρ. Λεωφ. Βουλιαγμένης 71, Γλυφάδα 166 74, Ελλάδα"
+  },
+  "-0043": {
+    "lat": 38.0582252,
+    "lng": 23.7443368,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Λαϊκών Αγώνων 71, Αχαρνές 136 71, Ελλάδα"
+  },
+  "-0044": {
+    "lat": 37.9536585,
+    "lng": 23.7120842,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Λεωφ. Ανδρέα Συγγρού 208, Αθήνα 176 72, Ελλάδα"
+  },
+  "-0045": {
+    "lat": 38.019349,
+    "lng": 23.7238432,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "ΕΟ Αθηνών Λαμίας, Ελλάδα"
+  },
+  "-0046": {
+    "lat": 37.9783226,
+    "lng": 23.7528219,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Παπαδιαμαντοπούλου 3, Αθήνα 115 28, Ελλάδα"
+  },
+  "-0047": {
+    "lat": 38.0150006,
+    "lng": 23.7255793,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Νιρβάνα 34, Αθήνα 111 45, Ελλάδα"
+  },
+  "-0048": {
+    "lat": 38.0473125,
+    "lng": 23.530326,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Ηρ. Πολυτεχνείου 111, Ελευσίνα 192 00, Ελλάδα"
+  },
+  "-0049": {
+    "lat": 38.0640601,
+    "lng": 23.5308456,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Afon Kipreou 128, Ελευσίνα 192 00, Ελλάδα"
+  },
+  "-0050": {
+    "lat": 38.0373806,
+    "lng": 23.8028275,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Αιγιαλείας 52, Μαρούσι 151 25, Ελλάδα"
+  },
+  "-0051": {
+    "lat": 38.0838226,
+    "lng": 23.7974895,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Γεωρ. Λύρα 51, Κηφισιά 145 64, Ελλάδα"
+  },
+  "-0052": {
+    "lat": 38.0315948,
+    "lng": 23.7101756,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Ιδομενέως 21, Ίλιον 131 22, Ελλάδα"
+  },
+  "-0053": {
+    "lat": 37.8836007,
+    "lng": 23.7528684,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Λεωφόρος Βουλιαγμένης 21, Γλυφάδα 166 75, Ελλάδα"
+  },
+  "-0054": {
+    "lat": 37.916169,
+    "lng": 23.875741,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Λεωφ. Βασιλέως Κωνσταντίνου 1, Κορωπί 194 41, Ελλάδα"
+  },
+  "-0055": {
+    "lat": 37.9975028,
+    "lng": 23.700488,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Παππού 15, Αθήνα 104 42, Ελλάδα"
+  },
+  "-0056": {
+    "lat": 37.998481,
+    "lng": 23.6914582,
+    "location_type": "RANGE_INTERPOLATED",
+    "formatted_address": "Λεωφ. Αθηνών 22, Περιστέρι 121 31, Ελλάδα"
+  },
+  "-0057": {
+    "lat": 38.0377276,
+    "lng": 23.7154011,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Καπετάν Βέρα 6, Ίλιον 131 22, Ελλάδα"
+  },
+  "-0058": {
+    "lat": 37.9905818,
+    "lng": 23.6418994,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Ποταμού & Μενελάου, Κορυδαλλός 181 22, Ελλάδα"
+  },
+  "-0059": {
+    "lat": 38.0799184,
+    "lng": 23.7299427,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Αριστοτέλους 5, Αχαρνές 136 71, Ελλάδα"
+  },
+  "-0060": {
+    "lat": 37.9463612,
+    "lng": 23.739655,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Εθ. Αντιστάσεως 120, Αγ. Δημήτριος Αττικής 172 36, Ελλάδα"
+  },
+  "-0061": {
+    "lat": 38.0535934,
+    "lng": 23.5352534,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Ελ. Βενιζέλου 118, Ελευσίνα 192 00, Ελλάδα"
+  },
+  "-0062": {
+    "lat": 37.8444279,
+    "lng": 23.7708081,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Παρ. Λεωφ. Βουλιαγμένης, Βούλα 166 73, Ελλάδα"
+  },
+  "-0063": {
+    "lat": 38.0441485,
+    "lng": 23.7946194,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Ανδρέα Παπανδρέου 29, λ, Μαρούσι 151 24, Ελλάδα"
+  },
+  "-0064": {
+    "lat": 37.9768724,
+    "lng": 23.6648361,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Γρ. Λαμπράκη 27, Νίκαια 184 54, Ελλάδα"
+  },
+  "-0065": {
+    "lat": 37.9895073,
+    "lng": 23.6890488,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Ιερά Οδός 174, Αιγάλεω 122 42, Ελλάδα"
+  },
+  "-0066": {
+    "lat": 37.9877797,
+    "lng": 23.6505258,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Ηπείρου 194, Κορυδαλλός 181 21, Ελλάδα"
+  },
+  "-0067": {
+    "lat": 37.8919268,
+    "lng": 23.8841956,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Λεωφ. Κορωπίου Μαρκόπουλου 1, Κορωπί 194 00, Ελλάδα"
+  },
+  "-0068": {
+    "lat": 37.9978516,
+    "lng": 23.8664889,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Λεωφ. Σπάτων 126, Παλλήνη 153 51, Ελλάδα"
+  },
+  "-0069": {
+    "lat": 37.8350905,
+    "lng": 23.7919707,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Πανός 10, Βάρη 166 72, Ελλάδα"
+  },
+  "-0070": {
+    "lat": 37.9523329,
+    "lng": 23.6596766,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Ερμουπόλεως 24, Πειραιάς 185 41, Ελλάδα"
+  },
+  "-0071": {
+    "lat": 37.9815119,
+    "lng": 23.7640957,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Παπαδιαμαντοπούλου 111, Αθήνα 115 27, Ελλάδα"
+  },
+  "-0072": {
+    "lat": 38.0033225,
+    "lng": 23.8565632,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Λεωφ. Σπάτων 55, Γέρακας 153 44, Ελλάδα"
+  },
+  "-0073": {
+    "lat": 38.0566238,
+    "lng": 23.7707342,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Λεωφ. Ηρακλείου 445, 141 22, Αθήνα 141 22, Ελλάδα"
+  },
+  "-0074": {
+    "lat": 37.9544451,
+    "lng": 23.6447613,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Παλαμηδίου 28, Πειραιάς 185 43, Ελλάδα"
+  },
+  "-0075": {
+    "lat": 37.8768047,
+    "lng": 23.756257,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Παρ. Λεωφ. Βουλιαγμένης 65, Γλυφάδα 166 75, Ελλάδα"
+  },
+  "-0076": {
+    "lat": 37.8933044,
+    "lng": 23.7611794,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Δημ. Γούναρη 17, Γλυφάδα 165 62, Ελλάδα"
+  },
+  "-0077": {
+    "lat": 37.9491509,
+    "lng": 23.6493947,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Δήμητρας, Πειραιάς 185 40, Ελλάδα"
+  },
+  "-0078": {
+    "lat": 38.0098251,
+    "lng": 23.8446437,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Λεωφ. Λαυρίου 5, Γλυκά Νερά 153 54, Ελλάδα"
+  },
+  "-0079": {
+    "lat": 38.0525884,
+    "lng": 23.7478202,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Αναγεννήσεως 19, Νέα Φιλαδέλφεια Αττικής 143 42, Ελλάδα"
+  },
+  "-0080": {
+    "lat": 38.0355964,
+    "lng": 23.7981172,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Λεωφ. Κηφισίας 10-12, Μαρούσι 152 33, Ελλάδα"
+  },
+  "-0081": {
+    "lat": 38.0816493,
+    "lng": 23.7627617,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Λεωφ. Κωνσταντίνου Καραμανλή 198, Αχαρνές 136 71, Ελλάδα"
+  },
+  "-0082": {
+    "lat": 38.057306,
+    "lng": 23.7138754,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Φυλής 18, Καματερό 134 51, Ελλάδα"
+  },
+  "-0083": {
+    "lat": 38.0636416,
+    "lng": 23.7584717,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Πάρνηθος 16, Μεταμόρφωση 144 52, Ελλάδα"
+  },
+  "-0084": {
+    "lat": 37.9942157,
+    "lng": 23.6994329,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Αντιγόνης 10, Αθήνα 104 42, Ελλάδα"
+  },
+  "-0085": {
+    "lat": 38.09948929999999,
+    "lng": 23.7454791,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Λεωφ. Κωνσταντίνου Καραμανλή 69, Αχαρνές 136 72, Ελλάδα"
+  },
+  "-0086": {
+    "lat": 38.0484706,
+    "lng": 23.5545777,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "ΕΟ Αθηνών Κορίνθου, Ελευσίνα, Ελλάδα"
+  },
+  "-0087": {
+    "lat": 37.9599136,
+    "lng": 23.8561744,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Λεωφ. Λαυρίου, Παιανία, Ελλάδα"
+  },
+  "-0088": {
+    "lat": 37.9838096,
+    "lng": 23.7275388,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Αθήνα, Ελλάδα"
+  },
+  "-0089": {
+    "lat": 39.366584,
+    "lng": 22.9506769,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Βόλος, Ελλάδα"
+  },
+  "-0090": {
+    "lat": 38.0506253,
+    "lng": 23.8356896,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Κυκλάδων 1, Μελίσσια 151 27, Ελλάδα"
+  },
+  "-0091": {
+    "lat": 37.9990376,
+    "lng": 23.6943925,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Κολωνού 3, Περιστέρι 121 31, Ελλάδα"
+  },
+  "-0092": {
+    "lat": 35.3301534,
+    "lng": 25.1389628,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Λεωφ. Εθ. Αντιστάσεως 29, Ηράκλειο 713 06, Ελλάδα"
+  },
+  "-0093": {
+    "lat": 37.92533239999999,
+    "lng": 23.7249566,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Λεωφ. Αγίου Δημητρίου 275, Αγ. Δημήτριος Αττικής 173 42, Ελλάδα"
+  },
+  "-0094": {
+    "lat": 38.0777374,
+    "lng": 23.496299,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Αθηνασ, Μάνδρα 196 00, Ελλάδα"
+  },
+  "-0095": {
+    "lat": 37.9867464,
+    "lng": 23.7263526,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Μάρνη 39, Αθήνα 104 32, Ελλάδα"
+  },
+  "-0096": {
+    "lat": 38.0759227,
+    "lng": 23.7045851,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Φυλής 120, Άνω Λιόσια 133 41, Ελλάδα"
+  },
+  "-0097": {
+    "lat": 38.0011609,
+    "lng": 23.775639,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Αδριανού 21, Νέο Ψυχικό 154 51, Ελλάδα"
+  },
+  "-0098": {
+    "lat": 37.9838096,
+    "lng": 23.7275388,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Αθήνα, Ελλάδα"
+  },
+  "-0099": {
+    "lat": 38.075824,
+    "lng": 23.5672603,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Λεωφ. Νατο & Γενοκτονίας, Ασπρόπυργος 192 00, Ελλάδα"
+  },
+  "-0100": {
+    "lat": 37.9952107,
+    "lng": 23.345307,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Μέγαρα 191 00, Ελλάδα"
+  },
+  "-0101": {
+    "lat": 37.8084553,
+    "lng": 23.9776802,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Αθηνών Σουνίου, Κερατέα 190 01, Ελλάδα"
+  },
+  "-0102": {
+    "lat": 38.05607450000001,
+    "lng": 23.5909792,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Μεγαρίδος 6, Ασπρόπυργος 193 00, Ελλάδα"
+  },
+  "-0103": {
+    "lat": 37.8944353,
+    "lng": 23.7595924,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Πλάτωνος 13, Ελληνικό 167 77, Ελλάδα"
+  },
+  "-0104": {
+    "lat": 38.8871142,
+    "lng": 22.4387948,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Αθηνών, Λαμία 351 00, Ελλάδα"
+  },
+  "-0105": {
+    "lat": 37.9655118,
+    "lng": 23.5011135,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Λεωφ. Σαλαμίνος 250, Σαλαμίνα 189 00, Ελλάδα"
+  },
+  "-0106": {
+    "lat": 37.9672961,
+    "lng": 23.4849245,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Λεωφ. Φανερωμένης 168, Σαλαμίνα 189 00, Ελλάδα"
+  },
+  "-0107": {
+    "lat": 37.9648818,
+    "lng": 23.4504299,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Αγίου Γεωργίου 267-269, Σαλαμίνα 189 00, Ελλάδα"
+  },
+  "-0108": {
+    "lat": 37.9648308,
+    "lng": 23.4948562,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Λεωφ. Φανερωμένης 28, Σαλαμίνα 189 00, Ελλάδα"
+  },
+  "-0109": {
+    "lat": 37.961811,
+    "lng": 23.4759163,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Αγίου Νικολάου 43, λ, Σαλαμίνα 189 00, Ελλάδα"
+  },
+  "-0110": {
+    "lat": 37.9279024,
+    "lng": 23.542881,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Ακτή Θεμιστοκλέους, Αμπελάκια 189 02, Ελλάδα"
+  },
+  "-0111": {
+    "lat": 37.7454329,
+    "lng": 23.4462446,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Αφαίας, Αίγινα 180 10, Ελλάδα"
+  },
+  "-0112": {
+    "lat": 37.7422159,
+    "lng": 23.4380026,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Φανερωμένης, Αίγινα 180 10, Ελλάδα"
+  },
+  "-0113": {
+    "lat": 37.7543637,
+    "lng": 23.4489084,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Βασ. Κωνσταντίνου 55, Κυψέλη 180 10, Ελλάδα"
+  },
+  "-0114": {
+    "lat": 37.7481602,
+    "lng": 23.4381411,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Αγίας Παρασκευής, Αίγινα 180 10, Ελλάδα"
+  },
+  "-0115": {
+    "lat": 37.7423921,
+    "lng": 23.4336082,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Αίγινα 180 10, Ελλάδα"
+  },
+  "-0116": {
+    "lat": 37.4970338,
+    "lng": 23.4481136,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Παραλιακή οδός, Πόρος - Γαλατάς 180 20, Γαλατάς 180 20, Ελλάδα"
+  },
+  "-0117": {
+    "lat": 37.5448611,
+    "lng": 23.3728401,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Τακτικούπολη 180 20, Ελλάδα"
+  },
+  "-0118": {
+    "lat": 37.3494757,
+    "lng": 23.4683552,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Σαχτούρη, Ύδρα 180 40, Ελλάδα"
+  },
+  "-0119": {
+    "lat": 37.3470389,
+    "lng": 23.4670153,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Μιαούλη, Ύδρα 180 40, Ελλάδα"
+  },
+  "-0120": {
+    "lat": 37.2674416,
+    "lng": 23.1562018,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Dapia, Σπέτσες 180 50, Ελλάδα"
+  },
+  "-0121": {
+    "lat": 37.7098431,
+    "lng": 23.345659,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Αγκίστρι, Ελλάδα"
+  },
+  "-0122": {
+    "lat": 38.4842649,
+    "lng": 23.5472227,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Δροσιά 341 00, Ελλάδα"
+  },
+  "-0123": {
+    "lat": 38.4649384,
+    "lng": 23.6179492,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Ληλαντίων 152, Χαλκίδα 341 00, Ελλάδα"
+  },
+  "-0124": {
+    "lat": 38.4807467,
+    "lng": 23.6280308,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Λεωφόρος Γεωργίου Παπανδρέου & Μηλιάς, Χαλκίδα 341 00, Ελλάδα"
+  },
+  "-0125": {
+    "lat": 38.4686919,
+    "lng": 23.6228734,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Χαλκίδα 341 00, Ελλάδα"
+  },
+  "-0126": {
+    "lat": 38.4592263,
+    "lng": 23.5959236,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Σιώκου 26, Χαλκίδα 341 00, Ελλάδα"
+  },
+  "-0127": {
+    "lat": 38.4686919,
+    "lng": 23.6228734,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Χαλκίδα 341 00, Ελλάδα"
+  },
+  "-0128": {
+    "lat": 38.4599294,
+    "lng": 23.5970009,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Σπυρ. Καπνίση 7, Χαλκίδα 341 00, Ελλάδα"
+  },
+  "-0129": {
+    "lat": 38.3169593,
+    "lng": 23.3233678,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Οπλαρχηγού Βόγκλη 73, Θήβα 322 00, Ελλάδα"
+  },
+  "-0130": {
+    "lat": 38.3269136,
+    "lng": 23.3085558,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Καβείρων 36, Θήβα 322 00, Ελλάδα"
+  },
+  "-0131": {
+    "lat": 38.32855259999999,
+    "lng": 23.3042987,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Αγίου Αθανασίου 123, Θήβα 322 00, Ελλάδα"
+  },
+  "-0132": {
+    "lat": 38.322579,
+    "lng": 23.3204309,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Θήβα 322 00, Ελλάδα"
+  },
+  "-0133": {
+    "lat": 38.3291797,
+    "lng": 23.3066263,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Αγίου Αθανασίου 72, Θήβα 322 00, Ελλάδα"
+  },
+  "-0134": {
+    "lat": 38.4382021,
+    "lng": 22.8789768,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Λιβαδειά 321 00, Ελλάδα"
+  },
+  "-0135": {
+    "lat": 38.4408617,
+    "lng": 22.8889187,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Παπασπύρου 105, Λιβαδειά 321 00, Ελλάδα"
+  },
+  "-0136": {
+    "lat": 38.4418289,
+    "lng": 22.8657417,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Δελφών, Λιβαδειά 321 00, Ελλάδα"
+  },
+  "-0137": {
+    "lat": 38.4412021,
+    "lng": 22.87243,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Γαλαξιδίου 9, Λιβαδειά 321 00, Ελλάδα"
+  },
+  "-0138": {
+    "lat": 38.4401547,
+    "lng": 22.8855374,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Παπασπύρου 66, Λιβαδειά 321 00, Ελλάδα"
+  },
+  "-0139": {
+    "lat": 39.5811061,
+    "lng": 22.480864,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "ΕΟ1, Ελλάδα"
+  },
+  "-0140": {
+    "lat": 38.9233464,
+    "lng": 22.4217281,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Λαρίσης 96, Λαμία 351 31, Ελλάδα"
+  },
+  "-0141": {
+    "lat": 38.9010545,
+    "lng": 22.4455522,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Σαρανταπόρου 1, Λαμία 351 00, Ελλάδα"
+  },
+  "-0142": {
+    "lat": 38.871624,
+    "lng": 22.2413653,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Υπάτη 350 16, Ελλάδα"
+  },
+  "-0143": {
+    "lat": 38.8871142,
+    "lng": 22.4387948,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Αθηνών, Λαμία 351 00, Ελλάδα"
+  },
+  "-0144": {
+    "lat": 40.6875315,
+    "lng": 22.8426988,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Νέα Μαγνησία, Ιωνία 570 08, Ελλάδα"
+  },
+  "-0145": {
+    "lat": 38.8946039,
+    "lng": 22.4432732,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Βασιλικών 25, Λαμία 351 00, Ελλάδα"
+  },
+  "-0146": {
+    "lat": 38.877565,
+    "lng": 22.4396727,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Αθηνών 203, Λαμία 351 00, Ελλάδα"
+  },
+  "-0147": {
+    "lat": 38.8834384,
+    "lng": 22.450788,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Αγίου Τρύφωνος 18, Λαμία 351 00, Ελλάδα"
+  },
+  "-0148": {
+    "lat": 38.6236757,
+    "lng": 21.4048719,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Αγίου Δημητρίου, Αγρίνιο 301 31, Ελλάδα"
+  },
+  "-0149": {
+    "lat": 38.6115216,
+    "lng": 21.4432703,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "ΕΟ Αγρινίου Θέρμου, Αγρίνιο 301 31, Ελλάδα"
+  },
+  "-0150": {
+    "lat": 38.6387804,
+    "lng": 21.400503,
+    "location_type": "RANGE_INTERPOLATED",
+    "formatted_address": "Ιωαννίνων 53, Αγ. Κωνσταντίνος 300 27, Ελλάδα"
+  },
+  "-0151": {
+    "lat": 38.628933,
+    "lng": 21.393689,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "ΚΟΜΒΟΣ ΣΤΑΔΙΟΥ & ΚΑΠΟΔΙΣΤΡΙΟΥ, Αγρίνιο 300 27, Ελλάδα"
+  },
+  "-0152": {
+    "lat": 38.6274242,
+    "lng": 21.3979993,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Μεγάλης Χώρας 89, Αγ. Κωνσταντίνος 300 27, Ελλάδα"
+  },
+  "-0153": {
+    "lat": 38.6121461,
+    "lng": 21.4127581,
+    "location_type": "ROOFTOP",
+    "formatted_address": "ΕΟ Ρίου Αγρινίου 47, Αγρίνιο 301 00, Ελλάδα"
+  },
+  "-0154": {
+    "lat": 38.3686977,
+    "lng": 21.4304085,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Σταυροπουλου 1, Μεσολόγγι 302 00, Ελλάδα"
+  },
+  "-0155": {
+    "lat": 38.3686739,
+    "lng": 21.430415,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Μεσολόγγι 302 00, Ελλάδα"
+  },
+  "-0156": {
+    "lat": 38.3710083,
+    "lng": 21.4322964,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Σπύρου Μουστακλή 25, Μεσολόγγι 302 00, Ελλάδα"
+  },
+  "-0157": {
+    "lat": 38.3686739,
+    "lng": 21.430415,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Μεσολόγγι 302 00, Ελλάδα"
+  },
+  "-0158": {
+    "lat": 38.3740262,
+    "lng": 21.4348317,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Ναυπάκτου 35, Μεσολόγγι 302 00, Ελλάδα"
+  },
+  "-0159": {
+    "lat": 38.374863,
+    "lng": 21.4434557,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Ναυπάκτου 129, Μεσολόγγι 302 00, Ελλάδα"
+  },
+  "-0160": {
+    "lat": 38.3800537,
+    "lng": 21.7941866,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Παλαιοπαναγιά 303 00, Ελλάδα"
+  },
+  "-0161": {
+    "lat": 38.3922409,
+    "lng": 21.8198052,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Ασημακοπούλου 29, Ναύπακτος 303 00, Ελλάδα"
+  },
+  "-0162": {
+    "lat": 38.371197,
+    "lng": 21.7256936,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Αντίρριο, Ελλάδα"
+  },
+  "-0163": {
+    "lat": 38.3937757,
+    "lng": 21.8310504,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Νόβα 1, Ναύπακτος 303 00, Ελλάδα"
+  },
+  "-0164": {
+    "lat": 38.3926277,
+    "lng": 21.8198012,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Θέρμου, Ναύπακτος 303 00, Ελλάδα"
+  },
+  "-0165": {
+    "lat": 38.9049104,
+    "lng": 22.1295609,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Ινάχου 3, Σπερχειάδα 350 03, Ελλάδα"
+  },
+  "-0166": {
+    "lat": 38.5262147,
+    "lng": 22.3844033,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Λεωφ. Κωνσταντίνου Καραμανλή 29, Άμφισσα 331 00, Ελλάδα"
+  },
+  "-0167": {
+    "lat": 38.6079741,
+    "lng": 22.7133309,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Κάτω Τιθορέα 350 15, Ελλάδα"
+  },
+  "-0168": {
+    "lat": 38.6079741,
+    "lng": 22.7133309,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Κάτω Τιθορέα 350 15, Ελλάδα"
+  },
+  "-0169": {
+    "lat": 38.5274407,
+    "lng": 22.3771846,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Γάτου 18, Άμφισσα 331 00, Ελλάδα"
+  },
+  "-0170": {
+    "lat": 38.9075001,
+    "lng": 21.8183252,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "ΕΟ Λαμίας Καρπενησίου, Καρπενήσι, Ελλάδα"
+  },
+  "-0171": {
+    "lat": 38.9157262,
+    "lng": 21.7947161,
+    "location_type": "RANGE_INTERPOLATED",
+    "formatted_address": "ΕΟ Λαμίας Καρπενησίου 4, Καρπενήσι 361 00, Ελλάδα"
+  },
+  "-0172": {
+    "lat": 38.91157580000001,
+    "lng": 21.7997494,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Χαρ. Τρικούπη 65, Καρπενήσι 361 00, Ελλάδα"
+  },
+  "-0173": {
+    "lat": 38.2679092,
+    "lng": 21.754798,
+    "location_type": "RANGE_INTERPOLATED",
+    "formatted_address": "Ν.Ε.Ο. Πατρών - Αθηνών 67, Πάτρα 264 42, Ελλάδα"
+  },
+  "-0174": {
+    "lat": 38.2082492,
+    "lng": 21.7351006,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Βασιλείου Αδαμοπούλου 64, Πάτρα 263 34, Ελλάδα"
+  },
+  "-0175": {
+    "lat": 38.2605304,
+    "lng": 21.748862,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Ν.Ε.Ο. Πατρών - Αθηνών 15, Πάτρα 264 41, Ελλάδα"
+  },
+  "-0176": {
+    "lat": 38.25829299999999,
+    "lng": 21.7412729,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Θεσσαλονικησ 36, Πάτρα 264 41, Ελλάδα"
+  },
+  "-0177": {
+    "lat": 38.2151125,
+    "lng": 21.7409182,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Ακρωτηρίου 223, Πάτρα 263 34, Ελλάδα"
+  },
+  "-0178": {
+    "lat": 38.2282486,
+    "lng": 21.740642,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Μυκηνών 2-4, Πάτρα 263 32, Ελλάδα"
+  },
+  "-0179": {
+    "lat": 38.2147521,
+    "lng": 21.7402534,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Ακρωτηρίου 204, Πάτρα 263 32, Ελλάδα"
+  },
+  "-0180": {
+    "lat": 38.3019603,
+    "lng": 21.7809193,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Ρίο 265 04, Ελλάδα"
+  },
+  "-0181": {
+    "lat": 38.2207737,
+    "lng": 21.7366312,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Πάτρα 263 32, Ελλάδα"
+  },
+  "-0182": {
+    "lat": 38.2821308,
+    "lng": 21.7685227,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Ν.Ε.Ο. Πατρών - Αθηνών 205, Πάτρα 264 43, Ελλάδα"
+  },
+  "-0183": {
+    "lat": 38.2142843,
+    "lng": 21.7220869,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Σίσυφου, Πάτρα 263 32, Ελλάδα"
+  },
+  "-0184": {
+    "lat": 38.21839180000001,
+    "lng": 21.7413413,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Ακρωτηρίου 169, Πάτρα 263 32, Ελλάδα"
+  },
+  "-0185": {
+    "lat": 38.1458124,
+    "lng": 21.5526599,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Πατρών Πύργου, Δύμη 252 00, Ελλάδα"
+  },
+  "-0186": {
+    "lat": 37.9340867,
+    "lng": 22.9273602,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Αργούς, Κόρινθος 201 00, Ελλάδα"
+  },
+  "-0187": {
+    "lat": 37.9371146,
+    "lng": 22.9308978,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Εθ. Αντιστάσεως 41, Κόρινθος 201 00, Ελλάδα"
+  },
+  "-0188": {
+    "lat": 37.9341218,
+    "lng": 22.9117112,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Πατρών 140, Κόρινθος 201 31, Ελλάδα"
+  },
+  "-0189": {
+    "lat": 37.9377945,
+    "lng": 22.9326399,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Ερμού 47, Κόρινθος 201 00, Ελλάδα"
+  },
+  "-0190": {
+    "lat": 37.9367873,
+    "lng": 22.9194636,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Δήμου Πριφτόπουλου 5, Κόρινθος 201 00, Ελλάδα"
+  },
+  "-0191": {
+    "lat": 37.933777,
+    "lng": 22.9115153,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Πατρών 127, Κόρινθος 201 00, Ελλάδα"
+  },
+  "-0192": {
+    "lat": 37.9371203,
+    "lng": 22.9387088,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Λεωφ. Ιωνίας 5, Κόρινθος 201 00, Ελλάδα"
+  },
+  "-0193": {
+    "lat": 37.9396189,
+    "lng": 22.821698,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Άσσος 200 06, Ελλάδα"
+  },
+  "-0194": {
+    "lat": 37.6343437,
+    "lng": 22.7331317,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Άργος 212 00, Ελλάδα"
+  },
+  "-0195": {
+    "lat": 37.6210469,
+    "lng": 22.7304923,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Καρπετόπουλου 95, Άργος 212 00, Ελλάδα"
+  },
+  "-0196": {
+    "lat": 37.6342765,
+    "lng": 22.7324859,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Ναυπλίου 3, Άργος 212 00, Ελλάδα"
+  },
+  "-0197": {
+    "lat": 37.6357249,
+    "lng": 22.7266066,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Τσώκρη 2, Άργος 212 00, Ελλάδα"
+  },
+  "-0198": {
+    "lat": 37.6376283,
+    "lng": 22.7322227,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Ινάχου 150, Άργος 212 00, Ελλάδα"
+  },
+  "-0199": {
+    "lat": 37.6263516,
+    "lng": 22.7421194,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "ΕΟ Άργους - Ναυπλίου, Άργος, Ελλάδα"
+  },
+  "-0200": {
+    "lat": 37.6457259,
+    "lng": 22.7292958,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Κορίνθου 212, 31, Άργος 212 00, Ελλάδα"
+  },
+  "-0201": {
+    "lat": 37.6266171,
+    "lng": 22.7200566,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Ανδρέα Μιαούλη 69, Άργος 212 00, Ελλάδα"
+  },
+  "-0202": {
+    "lat": 37.5831844,
+    "lng": 22.8061665,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "ΕΟ Άργους - Ναυπλίου, Ναύπλιο, Ελλάδα"
+  },
+  "-0203": {
+    "lat": 37.5715487,
+    "lng": 22.8250238,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Λεωφ. Ασκληπιού 116, Ναύπλιο 211 00, Ελλάδα"
+  },
+  "-0204": {
+    "lat": 37.5699861,
+    "lng": 22.8131125,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Λεωφ. Ασκληπιού 45, Ναύπλιο 211 00, Ελλάδα"
+  },
+  "-0205": {
+    "lat": 37.5731218,
+    "lng": 22.8335063,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Λεωφ. Ασκληπιού, Άρια, Ελλάδα"
+  },
+  "-0206": {
+    "lat": 37.5747901,
+    "lng": 22.8060448,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Αιγίου & Μεγάλου Αλεξάνδρου, Ναύπλιο 211 00, Ελλάδα"
+  },
+  "-0207": {
+    "lat": 37.5879743,
+    "lng": 22.740785,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Άργους 1, Νέα Κίος 210 53, Ελλάδα"
+  },
+  "-0208": {
+    "lat": 37.5690446,
+    "lng": 22.8098262,
+    "location_type": "RANGE_INTERPOLATED",
+    "formatted_address": "Αγίου Αδριανού 13, Ναύπλιο 211 00, Ελλάδα"
+  },
+  "-0209": {
+    "lat": 37.524035,
+    "lng": 22.379756,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "ΕΟ Τρίπολης Ολυμπίας, Τρίπολη, Ελλάδα"
+  },
+  "-0210": {
+    "lat": 37.5268479,
+    "lng": 22.3813311,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Καλαβρύτων 127, Τρίπολη 221 00, Ελλάδα"
+  },
+  "-0211": {
+    "lat": 37.5018054,
+    "lng": 22.3768685,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Θωμά Μπαμπουκη, Τρίπολη 221 00, Ελλάδα"
+  },
+  "-0212": {
+    "lat": 37.4986805,
+    "lng": 22.3828876,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Τεγέας 28, Τρίπολη 221 32, Ελλάδα"
+  },
+  "-0213": {
+    "lat": 37.5188057,
+    "lng": 22.3767574,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Καλαβρύτων 51, Τρίπολη 221 00, Ελλάδα"
+  },
+  "-0214": {
+    "lat": 37.2937557,
+    "lng": 22.4192746,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "ΕΟ Τρίπολης Σπάρτης, Ελλάδα"
+  },
+  "-0215": {
+    "lat": 37.5096587,
+    "lng": 22.3705789,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Τρίπολη 221 31, Ελλάδα"
+  },
+  "-0216": {
+    "lat": 37.5089604,
+    "lng": 22.3850574,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Τρίπολη 221 32, Ελλάδα"
+  },
+  "-0217": {
+    "lat": 37.5101357,
+    "lng": 22.372644,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Τρίπολη 221 00, Ελλάδα"
+  },
+  "-0218": {
+    "lat": 37.0603811,
+    "lng": 22.4335081,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Γυθείου 138, Σπάρτη 231 00, Ελλάδα"
+  },
+  "-0219": {
+    "lat": 37.0700005,
+    "lng": 22.4347252,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Χαμαρέτου 31, Σπάρτη 231 00, Ελλάδα"
+  },
+  "-0220": {
+    "lat": 37.0757208,
+    "lng": 22.4342064,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Λεωφ. Λυκούργου 58, Σπάρτη 231 00, Ελλάδα"
+  },
+  "-0221": {
+    "lat": 37.0841986,
+    "lng": 22.4293853,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Ευρώτα, Σπάρτη 231 00, Ελλάδα"
+  },
+  "-0222": {
+    "lat": 37.0646318,
+    "lng": 22.4328706,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "ΕΟ Σπάρτης Γυθείου, Σπάρτη, Ελλάδα"
+  },
+  "-0223": {
+    "lat": 37.0296711,
+    "lng": 22.1021769,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Αρτέμιδος 199, Καλαμάτα 241 00, Ελλάδα"
+  },
+  "-0224": {
+    "lat": 37.04344529999999,
+    "lng": 22.0851589,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Αθηνών 201, Καλαμάτα 241 00, Ελλάδα"
+  },
+  "-0225": {
+    "lat": 37.0305061,
+    "lng": 22.1039624,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Νέδοντος 130, Καλαμάτα 241 00, Ελλάδα"
+  },
+  "-0226": {
+    "lat": 37.0275866,
+    "lng": 22.1421373,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Λακωνικής 303, Καλαμάτα 241 00, Ελλάδα"
+  },
+  "-0227": {
+    "lat": 37.0444438,
+    "lng": 22.0854696,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Αθηνών 222, Καλαμάτα 241 00, Ελλάδα"
+  },
+  "-0228": {
+    "lat": 37.0366386,
+    "lng": 22.1143716,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Καλαμάτα 241 00, Ελλάδα"
+  },
+  "-0229": {
+    "lat": 37.0426617,
+    "lng": 22.1104335,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Μεσσήνης 16, Καλαμάτα 241 00, Ελλάδα"
+  },
+  "-0230": {
+    "lat": 37.0269033,
+    "lng": 22.1162585,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Ακρίτα 119, Καλαμάτα 241 00, Ελλάδα"
+  },
+  "-0231": {
+    "lat": 37.033491,
+    "lng": 22.1304613,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Λακωνικής, Καλαμάτα 241 00, Ελλάδα"
+  },
+  "-0232": {
+    "lat": 37.6708706,
+    "lng": 21.4211225,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Ι. Λάτση 19, Τραγανό 271 00, Ελλάδα"
+  },
+  "-0233": {
+    "lat": 37.681671,
+    "lng": 21.4396806,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Αγίου Γεωργίου, Πύργος 271 31, Ελλάδα"
+  },
+  "-0234": {
+    "lat": 37.6654521,
+    "lng": 21.4563613,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Αλφειού 74, Πύργος 271 00, Ελλάδα"
+  },
+  "-0235": {
+    "lat": 37.6758115,
+    "lng": 21.4326727,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Πατρών, Πύργος 271 00, Ελλάδα"
+  },
+  "-0236": {
+    "lat": 37.670115,
+    "lng": 21.4263163,
+    "location_type": "RANGE_INTERPOLATED",
+    "formatted_address": "Κατακόλου 100, Πύργος 271 00, Ελλάδα"
+  },
+  "-0237": {
+    "lat": 37.67206669999999,
+    "lng": 21.4573308,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Ολυμπίων 76, Πύργος 271 00, Ελλάδα"
+  },
+  "-0238": {
+    "lat": 37.2512312,
+    "lng": 21.6694441,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Κυπαρισσία, Ελλάδα"
+  },
+  "-0239": {
+    "lat": 37.6722718,
+    "lng": 21.4394313,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Πύργος 271 00, Ελλάδα"
+  },
+  "-0240": {
+    "lat": 38.2502589,
+    "lng": 21.9941815,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Γέφυρα 251 00, Ελλάδα"
+  },
+  "-0241": {
+    "lat": 38.2466754,
+    "lng": 22.0912841,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Κορίνθου 13, Αίγιο 251 00, Ελλάδα"
+  },
+  "-0242": {
+    "lat": 36.7613716,
+    "lng": 22.5643086,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Ερμού 16, Γύθειο 232 00, Ελλάδα"
+  },
+  "-0243": {
+    "lat": 36.7779656,
+    "lng": 22.5220286,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "ΕΟ Σπάρτης Γυθείου, Λίμνη, Ελλάδα"
+  },
+  "-0244": {
+    "lat": 36.7769305,
+    "lng": 22.5222779,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Λίμνη 232 00, Ελλάδα"
+  },
+  "-0245": {
+    "lat": 36.75936220000001,
+    "lng": 22.5655532,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Βασ. Παύλου 47, Γύθειο 232 00, Ελλάδα"
+  },
+  "-0246": {
+    "lat": 37.4031702,
+    "lng": 22.1332711,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Αρχαίου Θεάτρου 51, Μεγαλόπολη 222 00, Ελλάδα"
+  },
+  "-0247": {
+    "lat": 37.401244,
+    "lng": 22.1364871,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Μεγαλόπολη 222 00, Ελλάδα"
+  },
+  "-0248": {
+    "lat": 37.4031702,
+    "lng": 22.1332711,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Αρχαίου Θεάτρου 51, Μεγαλόπολη 222 00, Ελλάδα"
+  },
+  "-0249": {
+    "lat": 37.2519125,
+    "lng": 21.6700374,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Unnamed Road, Κυπαρισσία 245 00, Ελλάδα"
+  },
+  "-0250": {
+    "lat": 37.2512312,
+    "lng": 21.6694441,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Κυπαρισσία, Ελλάδα"
+  },
+  "-0251": {
+    "lat": 37.2512312,
+    "lng": 21.6694441,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Κυπαρισσία, Ελλάδα"
+  },
+  "-0252": {
+    "lat": 37.1573835,
+    "lng": 21.5855686,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Φιλιατρά 243 00, Ελλάδα"
+  },
+  "-0253": {
+    "lat": 36.8042572,
+    "lng": 22.855768,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Μολάοι 230 52, Ελλάδα"
+  },
+  "-0254": {
+    "lat": 36.8042572,
+    "lng": 22.855768,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Μολάοι 230 52, Ελλάδα"
+  },
+  "-0255": {
+    "lat": 36.8083759,
+    "lng": 22.8569268,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Βοιών, Μολάοι 230 52, Ελλάδα"
+  },
+  "-0256": {
+    "lat": 36.8042572,
+    "lng": 22.855768,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Μολάοι 230 52, Ελλάδα"
+  },
+  "-0257": {
+    "lat": 37.9657134,
+    "lng": 22.9781535,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Ελ. Βενιζέλου 110, Λουτράκι 203 00, Ελλάδα"
+  },
+  "-0258": {
+    "lat": 37.9588668,
+    "lng": 22.9791146,
+    "location_type": "RANGE_INTERPOLATED",
+    "formatted_address": "Λεωφ. Αθηνων 188, Δήμος Λουτρακίου - Αγίων Θεοδώρων 203 00, Ελλάδα"
+  },
+  "-0259": {
+    "lat": 37.9403465,
+    "lng": 22.9805948,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Argyriou Zervou, Loutraki 203 00, Ελλάδα"
+  },
+  "-0260": {
+    "lat": 36.6660079,
+    "lng": 22.3805151,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Αρεόπολη 230 62, Ελλάδα"
+  },
+  "-0261": {
+    "lat": 39.60711,
+    "lng": 19.86975,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Τρίκλινο, Κομπίτσι 491 00, Ελλάδα"
+  },
+  "-0262": {
+    "lat": 39.6751982,
+    "lng": 19.7081324,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Παλαιοκαστρίτσα 490 83, Ελλάδα"
+  },
+  "-0263": {
+    "lat": 39.6142975,
+    "lng": 19.9086471,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Λεωφ. Επτανήσου, Κέρκυρα 491 00, Ελλάδα"
+  },
+  "-0264": {
+    "lat": 39.5731588,
+    "lng": 19.8928391,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Ποντή, Σουλαίικα 490 84, Ελλάδα"
+  },
+  "-0265": {
+    "lat": 39.6241579,
+    "lng": 19.8909647,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Εθνική Οδός, Παλαιοκαστρίτσας 100, Κέρκυρα 491 32, Ελλάδα"
+  },
+  "-0266": {
+    "lat": 39.6117443,
+    "lng": 19.913345,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "ΕΟ Κέρκυρας - Αχίλλειου, Κέρκυρα, Ελλάδα"
+  },
+  "-0267": {
+    "lat": 39.6142975,
+    "lng": 19.9086471,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Λεωφ. Επτανήσου, Κέρκυρα 491 00, Ελλάδα"
+  },
+  "-0268": {
+    "lat": 39.7465125,
+    "lng": 19.6817228,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Καββαδαδες 490 81, Ελλάδα"
+  },
+  "-0269": {
+    "lat": 39.5923228,
+    "lng": 19.8223341,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Πέλεκας 491 00, Ελλάδα"
+  },
+  "-0270": {
+    "lat": 37.783112,
+    "lng": 20.8676796,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Παστραίικα 291 00, Ελλάδα"
+  },
+  "-0271": {
+    "lat": 37.7891626,
+    "lng": 20.874398,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Επαρ.Οδ. Γαϊτανίου, Ζάκυνθος 291 00, Ελλάδα"
+  },
+  "-0272": {
+    "lat": 37.7434731,
+    "lng": 20.9058976,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "ζακυνθος, Καλαμάκι 291 00, Ελλάδα"
+  },
+  "-0273": {
+    "lat": 37.7787566,
+    "lng": 20.8929679,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Αγίου Λάζαρου, Ζάκυνθος 291 00, Ελλάδα"
+  },
+  "-0274": {
+    "lat": 37.7582938,
+    "lng": 20.8728543,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Αμπελόκηποι 291 00, Ελλάδα"
+  },
+  "-0275": {
+    "lat": 37.7295439,
+    "lng": 20.834956,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "ΕΟ Ζακύνθου Κερίου, Παντοκρατωρας, Ελλάδα"
+  },
+  "-0276": {
+    "lat": 37.7870331,
+    "lng": 20.8998759,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Ζάκυνθος, Ελλάδα"
+  },
+  "-0277": {
+    "lat": 38.1620609,
+    "lng": 20.5063985,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Κούταβος 281 00, Ελλάδα"
+  },
+  "-0278": {
+    "lat": 38.1731682,
+    "lng": 20.4899734,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Αργοστόλι 281 00, Ελλάδα"
+  },
+  "-0279": {
+    "lat": 38.1731682,
+    "lng": 20.4899734,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Αργοστόλι 281 00, Ελλάδα"
+  },
+  "-0280": {
+    "lat": 38.1731682,
+    "lng": 20.4899734,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Αργοστόλι 281 00, Ελλάδα"
+  },
+  "-0281": {
+    "lat": 38.2022209,
+    "lng": 20.4369672,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Ληξούρι, Ελλάδα"
+  },
+  "-0282": {
+    "lat": 38.1731682,
+    "lng": 20.4899734,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Αργοστόλι 281 00, Ελλάδα"
+  },
+  "-0283": {
+    "lat": 38.7099952,
+    "lng": 20.7141164,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Νυδρί, Ελλάδα"
+  },
+  "-0284": {
+    "lat": 38.6800633,
+    "lng": 20.5969341,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Επαρ.Οδ. Λευκάδας - Βασιλίκης, Βασιλικη 310 82, Ελλάδα"
+  },
+  "-0285": {
+    "lat": 38.6292125,
+    "lng": 20.6109191,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Επαρ.Οδ. Λευκάδας - Βασιλικής, Βασιλικη, Ελλάδα"
+  },
+  "-0286": {
+    "lat": 38.8152493,
+    "lng": 20.7087542,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Επαρ.Οδ. Λευκάδας - Βασιλικής, Καλλιγόνι, Ελλάδα"
+  },
+  "-0287": {
+    "lat": 38.7099952,
+    "lng": 20.7141164,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Νυδρί, Ελλάδα"
+  },
+  "-0288": {
+    "lat": 38.8237458,
+    "lng": 20.7075786,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Φιλοσόφων, Λευκάδα 311 00, Ελλάδα"
+  },
+  "-0289": {
+    "lat": 38.3644717,
+    "lng": 20.7167705,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Δουρείου Ίππου, Βαθύ 283 00, Ελλάδα"
+  },
+  "-0290": {
+    "lat": 38.4284603,
+    "lng": 20.6764877,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Ιθάκη, Ελλάδα"
+  },
+  "-0291": {
+    "lat": 39.1973712,
+    "lng": 20.1851948,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Γάιος, Ελλάδα"
+  },
+  "-0292": {
+    "lat": 39.1973712,
+    "lng": 20.1851948,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Γάιος, Ελλάδα"
+  },
+  "-0293": {
+    "lat": 36.2050794,
+    "lng": 22.9746671,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Καρβουναδες 801 00, Ελλάδα"
+  },
+  "-0294": {
+    "lat": 39.6309446,
+    "lng": 20.8637319,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Αθήνας & Ιωαννίνων, Ανατολή 452 21, Ελλάδα"
+  },
+  "-0295": {
+    "lat": 39.6846148,
+    "lng": 20.8317951,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Λεωφ. Γράμμου 65, Ιωάννινα 454 45, Ελλάδα"
+  },
+  "-0296": {
+    "lat": 39.6523467,
+    "lng": 20.8595348,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Ιωάννινα 452 21, Ελλάδα"
+  },
+  "-0297": {
+    "lat": 39.6460783,
+    "lng": 20.8615374,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Νικοπόλεως 18, Ιωάννινα 452 21, Ελλάδα"
+  },
+  "-0298": {
+    "lat": 39.6309446,
+    "lng": 20.8637319,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Αθήνας & Ιωαννίνων, Ανατολή 452 21, Ελλάδα"
+  },
+  "-0299": {
+    "lat": 39.6825446,
+    "lng": 20.8222553,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Μεγ. Αλεξάνδρου 8, Ιωάννινα 455 00, Ελλάδα"
+  },
+  "-0300": {
+    "lat": 39.6309446,
+    "lng": 20.8637319,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Αθήνας & Ιωαννίνων, Ανατολή 452 21, Ελλάδα"
+  },
+  "-0301": {
+    "lat": 39.6615782,
+    "lng": 20.8579519,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Γεωρ. Κύργιου 33, Ιωάννινα 452 21, Ελλάδα"
+  },
+  "-0302": {
+    "lat": 39.6635944,
+    "lng": 20.8520014,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Ιωάννινα, Ελλάδα"
+  },
+  "-0303": {
+    "lat": 39.6309446,
+    "lng": 20.8637319,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Αθήνας & Ιωαννίνων, Ανατολή 452 21, Ελλάδα"
+  },
+  "-0304": {
+    "lat": 39.1658695,
+    "lng": 20.9837099,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Περιφερειακή Οδός Άρτας, Άρτα 471 00, Ελλάδα"
+  },
+  "-0305": {
+    "lat": 39.2434039,
+    "lng": 21.0905968,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "ΕΟ Άρτας Τρικάλων, Άρτα 471 00, Ελλάδα"
+  },
+  "-0306": {
+    "lat": 39.1544382,
+    "lng": 20.9626073,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Ε.Ο. Άρτας Ιωαννίνων, Άρτα 471 00, Ελλάδα"
+  },
+  "-0307": {
+    "lat": 39.1559447,
+    "lng": 20.9817407,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Zαρρα 23, Άρτα 471 00, Ελλάδα"
+  },
+  "-0308": {
+    "lat": 39.1305866,
+    "lng": 20.9820135,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Κεραμάτες 471 00, Ελλάδα"
+  },
+  "-0309": {
+    "lat": 39.1593947,
+    "lng": 20.9837666,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Άρτα 471 32, Ελλάδα"
+  },
+  "-0310": {
+    "lat": 38.9582274,
+    "lng": 20.7494668,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Εθ. Αντίστασης 121, Πρέβεζα 481 00, Ελλάδα"
+  },
+  "-0311": {
+    "lat": 38.9672007,
+    "lng": 20.7483143,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Ιωαννίνων 45, Πρέβεζα 481 00, Ελλάδα"
+  },
+  "-0312": {
+    "lat": 38.9724707,
+    "lng": 20.7472537,
+    "location_type": "RANGE_INTERPOLATED",
+    "formatted_address": "Ιωαννίνων 195, Πρέβεζα 481 00, Ελλάδα"
+  },
+  "-0313": {
+    "lat": 38.9747598,
+    "lng": 20.7468702,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Ιωαννίνων 270, Πρέβεζα 481 00, Ελλάδα"
+  },
+  "-0314": {
+    "lat": 38.9719822,
+    "lng": 20.754259,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Αγίου Σπυρίδωνος, Πρέβεζα 481 00, Ελλάδα"
+  },
+  "-0315": {
+    "lat": 38.9582274,
+    "lng": 20.7494668,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Εθ. Αντίστασης 121, Πρέβεζα 481 00, Ελλάδα"
+  },
+  "-0316": {
+    "lat": 40.683739,
+    "lng": 23.254692,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Εγνατία Οδός, Ελλάδα"
+  },
+  "-0317": {
+    "lat": 39.5114038,
+    "lng": 20.2605444,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Ιωαννίνων, Ηγουμενίτσα 461 00, Ελλάδα"
+  },
+  "-0318": {
+    "lat": 39.5061499,
+    "lng": 20.2655339,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Ηγουμενίτσα 461 00, Ελλάδα"
+  },
+  "-0319": {
+    "lat": 39.4972724,
+    "lng": 20.265421,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Λεωφ. 49 Μαρτύρων, Ηγουμενίτσα 461 00, Ελλάδα"
+  },
+  "-0320": {
+    "lat": 39.5099955,
+    "lng": 20.2617683,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Βορείου Ηπείρου 8, Ηγουμενίτσα 461 00, Ελλάδα"
+  },
+  "-0321": {
+    "lat": 39.6321268,
+    "lng": 22.4115642,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Ηρ. Πολυτεχνείου, Λάρισα 413 34, Ελλάδα"
+  },
+  "-0322": {
+    "lat": 39.6297453,
+    "lng": 22.4339473,
+    "location_type": "RANGE_INTERPOLATED",
+    "formatted_address": "Παλαμιώτη 21, Λάρισα 413 35, Ελλάδα"
+  },
+  "-0323": {
+    "lat": 39.6654207,
+    "lng": 22.3939492,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Γιάννουλη, Ελλάδα"
+  },
+  "-0324": {
+    "lat": 39.6246896,
+    "lng": 22.4212416,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Λάρισα 413 35, Ελλάδα"
+  },
+  "-0325": {
+    "lat": 39.6261037,
+    "lng": 22.4105917,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Καρδίτσης 88, Λάρισα 413 34, Ελλάδα"
+  },
+  "-0326": {
+    "lat": 39.6384962,
+    "lng": 22.4175464,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Λάρισα 412 22, Ελλάδα"
+  },
+  "-0327": {
+    "lat": 39.6373903,
+    "lng": 22.4308573,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Ηρ. Πολυτεχνείου 204, Λάρισα 412 21, Ελλάδα"
+  },
+  "-0328": {
+    "lat": 39.6308026,
+    "lng": 22.4488689,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Βόλου 156, Λάρισα 413 36, Ελλάδα"
+  },
+  "-0329": {
+    "lat": 39.6389268,
+    "lng": 22.4278543,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Γεωρ. Σεφέρη 99, Λάρισα 412 21, Ελλάδα"
+  },
+  "-0330": {
+    "lat": 39.6505024,
+    "lng": 22.4333464,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Σωκράτους 48, Λάρισα 413 36, Ελλάδα"
+  },
+  "-0331": {
+    "lat": 39.3681501,
+    "lng": 22.965935,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Επαρ.Οδ. Βόλου-Άλλης Μεριάς, Βόλος 385 00, Ελλάδα"
+  },
+  "-0332": {
+    "lat": 39.3740484,
+    "lng": 22.9578615,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Ελ. Βενιζέλου 244, Βόλος 383 33, Ελλάδα"
+  },
+  "-0333": {
+    "lat": 39.3658607,
+    "lng": 22.9249237,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Λαρίσης, Βόλος, Ελλάδα"
+  },
+  "-0334": {
+    "lat": 39.3672885,
+    "lng": 22.9205152,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Σπετσών, Βόλος 383 34, Ελλάδα"
+  },
+  "-0335": {
+    "lat": 39.3712972,
+    "lng": 22.9125202,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Λαρίσης 263, Βόλος 384 45, Ελλάδα"
+  },
+  "-0336": {
+    "lat": 39.365571,
+    "lng": 22.9387632,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Κουντουριώτου 15, Βόλος 383 33, Ελλάδα"
+  },
+  "-0337": {
+    "lat": 39.339895,
+    "lng": 22.9241534,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Λεωφ. Αθηνών 123, Βόλος 383 34, Ελλάδα"
+  },
+  "-0338": {
+    "lat": 39.3605401,
+    "lng": 22.943776,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Αργοναυτών, Βόλος 383 33, Ελλάδα"
+  },
+  "-0339": {
+    "lat": 39.3887672,
+    "lng": 22.9350731,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Οδυσσέα Ανδρούτσου 3, Νέα Ιωνία 384 46, Ελλάδα"
+  },
+  "-0340": {
+    "lat": 39.5379082,
+    "lng": 21.7543798,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Πύλης, Τρίκαλα 421 00, Ελλάδα"
+  },
+  "-0341": {
+    "lat": 39.5651337,
+    "lng": 21.7516747,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Καλαμπάκας, Τρίκαλα 421 00, Ελλάδα"
+  },
+  "-0342": {
+    "lat": 39.5623219,
+    "lng": 21.7737227,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Θερμοπυλων 17, Τρίκαλα 421 00, Ελλάδα"
+  },
+  "-0343": {
+    "lat": 39.5619958,
+    "lng": 21.7511832,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Πύργου, Τρίκαλα 421 00, Ελλάδα"
+  },
+  "-0344": {
+    "lat": 39.6125974,
+    "lng": 21.745002,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Επαρ.Οδ. Τρικάλων-Ρίζωματος, Τρίκαλα 421 00, Ελλάδα"
+  },
+  "-0345": {
+    "lat": 39.5453139,
+    "lng": 21.7757734,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Καρδίτσης 57, Τρίκαλα 421 00, Ελλάδα"
+  },
+  "-0346": {
+    "lat": 39.3765122,
+    "lng": 21.9124607,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Τρικάλων 220, Καρδίτσα 431 00, Ελλάδα"
+  },
+  "-0347": {
+    "lat": 39.36459199999999,
+    "lng": 21.921486,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Καρδίτσα 431 00, Ελλάδα"
+  },
+  "-0348": {
+    "lat": 39.3580238,
+    "lng": 21.9109481,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Μητροπόλεως, Καρδίτσα 431 00, Ελλάδα"
+  },
+  "-0349": {
+    "lat": 39.3665007,
+    "lng": 21.925444,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Σταμούλη 17, Καρδίτσα 431 00, Ελλάδα"
+  },
+  "-0350": {
+    "lat": 39.36459199999999,
+    "lng": 21.921486,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Καρδίτσα 431 00, Ελλάδα"
+  },
+  "-0351": {
+    "lat": 39.3717063,
+    "lng": 21.9168339,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Τρικάλων 162, Καρδίτσα 431 00, Ελλάδα"
+  },
+  "-0352": {
+    "lat": 40.6340859,
+    "lng": 22.9481177,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Εγνατία 83, Θεσσαλονίκη 546 35, Ελλάδα"
+  },
+  "-0353": {
+    "lat": 40.66766399999999,
+    "lng": 22.8586129,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Οδός Διαβατών, Δέλτα 570 08, Ελλάδα"
+  },
+  "-0354": {
+    "lat": 40.6785779,
+    "lng": 22.9350535,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Εθ. Αντιστάσεως, Σταυρούπολη 564 30, Ελλάδα"
+  },
+  "-0355": {
+    "lat": 40.6002754,
+    "lng": 22.9752597,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Γιάννη Αγγέλου 34, Θεσσαλονίκη 542 50, Ελλάδα"
+  },
+  "-0356": {
+    "lat": 40.49877,
+    "lng": 22.9122276,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Νέοι Επιβάτες 570 19, Ελλάδα"
+  },
+  "-0357": {
+    "lat": 40.688877,
+    "lng": 22.7807567,
+    "location_type": "RANGE_INTERPOLATED",
+    "formatted_address": "Οικοδομικό Τετράγωνο 17, Δέλτα 570 22, Ελλάδα"
+  },
+  "-0358": {
+    "lat": 40.666153,
+    "lng": 22.9230165,
+    "location_type": "RANGE_INTERPOLATED",
+    "formatted_address": "Λαγκαδά 140, Εύοσμος 562 24, Ελλάδα"
+  },
+  "-0359": {
+    "lat": 40.6589774,
+    "lng": 22.9744183,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Λεωφ. Παπανικολάου 28, Πεύκα 570 10, Ελλάδα"
+  },
+  "-0360": {
+    "lat": 40.6717164,
+    "lng": 22.8015174,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Σίνδος, Ελλάδα"
+  },
+  "-0361": {
+    "lat": 40.6571357,
+    "lng": 22.9025535,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Μοναστηρίου 321, Θεσσαλονίκη 546 28, Ελλάδα"
+  },
+  "-0362": {
+    "lat": 40.6416121,
+    "lng": 22.8592604,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Μακεδονομάχων 10, Καλοχώρι 570 09, Ελλάδα"
+  },
+  "-0363": {
+    "lat": 40.59579979999999,
+    "lng": 22.9717874,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Αλ. Παπαναστασίου 209, Θεσσαλονίκη 542 50, Ελλάδα"
+  },
+  "-0364": {
+    "lat": 40.6015101,
+    "lng": 22.9525926,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Θεσσαλονίκη 546 45, Ελλάδα"
+  },
+  "-0365": {
+    "lat": 40.5906177,
+    "lng": 22.9584428,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Λεωφ. Βασιλίσσης Όλγας 214, Θεσσαλονίκη 551 33, Ελλάδα"
+  },
+  "-0366": {
+    "lat": 40.6664679,
+    "lng": 22.9347302,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Σταυρούπολη 564 30, Ελλάδα"
+  },
+  "-0367": {
+    "lat": 40.6363947,
+    "lng": 22.9379601,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Εδέσσης 3, Θεσσαλονίκη 546 25, Ελλάδα"
+  },
+  "-0368": {
+    "lat": 40.66640330000001,
+    "lng": 22.919388,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Καραολή και Δημητρίου 154, Εύοσμος 562 24, Ελλάδα"
+  },
+  "-0369": {
+    "lat": 40.9366961,
+    "lng": 24.4148129,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Καβάλα, Ελλάδα"
+  },
+  "-0370": {
+    "lat": 40.5063483,
+    "lng": 22.9270237,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Ανθέων 25, Περαία 570 19, Ελλάδα"
+  },
+  "-0371": {
+    "lat": 40.6769397,
+    "lng": 22.9236673,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Ιθάκης 62, Σταυρούπολη 564 31, Ελλάδα"
+  },
+  "-0372": {
+    "lat": 40.7088517,
+    "lng": 22.9310374,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Θεσσαλονίκης 113, Ωραιόκαστρο 570 13, Ελλάδα"
+  },
+  "-0373": {
+    "lat": 40.5476373,
+    "lng": 23.0254157,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Χαρ. Θέρμης 5, Θέρμη 570 01, Ελλάδα"
+  },
+  "-0374": {
+    "lat": 40.5788591,
+    "lng": 22.9549223,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Αγίου Ζαχαρίου 13, Καλαμαριά 551 32, Ελλάδα"
+  },
+  "-0375": {
+    "lat": 40.6431416,
+    "lng": 22.8539917,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Πρωτομαγιάς, Καλοχώρι 570 09, Ελλάδα"
+  },
+  "-0376": {
+    "lat": 40.6701195,
+    "lng": 22.8746487,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Παλαιά Συμμαχική Οδός, Ελλάδα"
+  },
+  "-0377": {
+    "lat": 40.6071193,
+    "lng": 22.9754427,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Απόλλωνος 37, Θεσσαλονίκη 544 54, Ελλάδα"
+  },
+  "-0378": {
+    "lat": 40.5805042,
+    "lng": 22.9506134,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Ι. Πασαλίδη 56, Καλαμαριά 551 32, Ελλάδα"
+  },
+  "-0379": {
+    "lat": 40.67118139999999,
+    "lng": 22.7983467,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Κομνηνών 46, Σίνδος 574 00, Ελλάδα"
+  },
+  "-0380": {
+    "lat": 40.707811,
+    "lng": 22.9503994,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Αγίου Ελευθερίου, Παύλος Μελάς 564 29, Ελλάδα"
+  },
+  "-0381": {
+    "lat": 40.5959045,
+    "lng": 22.9607146,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Βούλγαρη 21-23, Θεσσαλονίκη 542 48, Ελλάδα"
+  },
+  "-0382": {
+    "lat": 40.5943535,
+    "lng": 22.9593132,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Βούλγαρη 5, Θεσσαλονίκη 546 55, Ελλάδα"
+  },
+  "-0383": {
+    "lat": 40.666153,
+    "lng": 22.9230165,
+    "location_type": "RANGE_INTERPOLATED",
+    "formatted_address": "Λαγκαδά 148, Εύοσμος 562 24, Ελλάδα"
+  },
+  "-0384": {
+    "lat": 40.6717164,
+    "lng": 22.8015174,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Σίνδος, Ελλάδα"
+  },
+  "-0385": {
+    "lat": 40.6634724,
+    "lng": 22.9017919,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Καραολή και Δημητρίου 8, Εύοσμος 562 24, Ελλάδα"
+  },
+  "-0386": {
+    "lat": 40.55042570000001,
+    "lng": 23.0206101,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Υψηλάντου 43, Θέρμη 570 01, Ελλάδα"
+  },
+  "-0387": {
+    "lat": 40.6547371,
+    "lng": 22.8833695,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Δημοσθένους 41, Θεσσαλονίκη 546 28, Ελλάδα"
+  },
+  "-0388": {
+    "lat": 40.6727485,
+    "lng": 22.9233244,
+    "location_type": "ROOFTOP",
+    "formatted_address": "25ης Μαρτίου 131, Εύοσμος 562 24, Ελλάδα"
+  },
+  "-0389": {
+    "lat": 40.6439786,
+    "lng": 22.9222668,
+    "location_type": "RANGE_INTERPOLATED",
+    "formatted_address": "Παρ. Σταθμού 72, Θεσσαλονίκη 546 27, Ελλάδα"
+  },
+  "-0390": {
+    "lat": 40.6709559,
+    "lng": 22.930921,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Στρ. Μακρυγιάννη 17, 6, Σταυρούπολη 564 31, Ελλάδα"
+  },
+  "-0391": {
+    "lat": 40.5836085,
+    "lng": 22.9626414,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Μεγ. Αλεξάνδρου 48, Καλαμαριά 551 33, Ελλάδα"
+  },
+  "-0392": {
+    "lat": 40.6516233,
+    "lng": 22.9013632,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "26ης Οκτωβρίου, Αμπελόκηποι-Μενεμένη 546 28, Ελλάδα"
+  },
+  "-0393": {
+    "lat": 40.464007,
+    "lng": 23.216977,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "ΕΟ Θεσσαλονίκης Πολυγύρου, Ελλάδα"
+  },
+  "-0394": {
+    "lat": 40.7023315,
+    "lng": 22.9123849,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Συμμαχική, Ωραιόκαστρο 570 13, Ελλάδα"
+  },
+  "-0395": {
+    "lat": 40.6406593,
+    "lng": 22.9428693,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Ἁγ. Δημητρίου 52, Θεσσαλονίκη 546 30, Ελλάδα"
+  },
+  "-0396": {
+    "lat": 40.6664679,
+    "lng": 22.9347302,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Σταυρούπολη 564 30, Ελλάδα"
+  },
+  "-0397": {
+    "lat": 40.61289,
+    "lng": 22.9820022,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Γρ. Λαμπράκη 181, Θεσσαλονίκη 543 52, Ελλάδα"
+  },
+  "-0398": {
+    "lat": 40.6560116,
+    "lng": 22.9351477,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Ζάκκα 8, Νεάπολη 567 27, Ελλάδα"
+  },
+  "-0399": {
+    "lat": 40.6601241,
+    "lng": 22.9046073,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Μενελάου 30, Εύοσμος 562 24, Ελλάδα"
+  },
+  "-0400": {
+    "lat": 40.6191435,
+    "lng": 22.9687627,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Γρ. Λαμπράκη 43, Θεσσαλονίκη 546 38, Ελλάδα"
+  },
+  "-0401": {
+    "lat": 40.5838513,
+    "lng": 22.9610372,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Ελ. Βενιζέλου 11, Θεσσαλονίκη 551 33, Ελλάδα"
+  },
+  "-0402": {
+    "lat": 40.7559584,
+    "lng": 23.1354667,
+    "location_type": "RANGE_INTERPOLATED",
+    "formatted_address": "Λαγκαδά 4, Κολχικό 572 00, Ελλάδα"
+  },
+  "-0403": {
+    "lat": 40.6802049,
+    "lng": 22.92033,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Προέκταση Παπάγου, Εύοσμος 562 24, Ελλάδα"
+  },
+  "-0404": {
+    "lat": 40.64054549999999,
+    "lng": 22.9463539,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Κασσάνδρου 57, Θεσσαλονίκη 546 33, Ελλάδα"
+  },
+  "-0405": {
+    "lat": 40.6513374,
+    "lng": 22.9451826,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Λεωφ. Ανδρέα Παπανδρέου 73, Νεάπολη 567 28, Ελλάδα"
+  },
+  "-0406": {
+    "lat": 40.7457782,
+    "lng": 23.0666659,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Τζελίλη 20, Λαγκαδάς 572 00, Ελλάδα"
+  },
+  "-0407": {
+    "lat": 40.60212569999999,
+    "lng": 22.9727602,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Θεσσαλονίκη 542 50, Ελλάδα"
+  },
+  "-0408": {
+    "lat": 40.6502984,
+    "lng": 22.9455246,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Ρήγα Φεραίου 99, Νεάπολη 567 28, Ελλάδα"
+  },
+  "-0409": {
+    "lat": 40.5019396,
+    "lng": 22.9224527,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Γ. Μπακατσέλου 5, Θεσσαλονίκη 570 19, Ελλάδα"
+  },
+  "-0410": {
+    "lat": 40.5521599,
+    "lng": 23.0004664,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "ΘΕΣΣΑΛΟΝΙΚΗΣ-ΜΟΥΔΑΝΙΩΝ, Θέρμη, Ελλάδα"
+  },
+  "-0411": {
+    "lat": 40.2416908,
+    "lng": 23.287199,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Θεσσαλονίκης, Νέα Μουδανιά 632 00, Ελλάδα"
+  },
+  "-0412": {
+    "lat": 40.6698956,
+    "lng": 22.945912,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Μαυρομιχάλη 116, Θεσσαλονίκη 565 33, Ελλάδα"
+  },
+  "-0413": {
+    "lat": 40.8007902,
+    "lng": 22.0510382,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Θεσσαλονίκης, Έδεσσα 582 00, Ελλάδα"
+  },
+  "-0414": {
+    "lat": 40.464007,
+    "lng": 23.216977,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "ΕΟ Θεσσαλονίκης Πολυγύρου, Ελλάδα"
+  },
+  "-0415": {
+    "lat": 40.6400629,
+    "lng": 22.9444191,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Θεσσαλονίκη, Ελλάδα"
+  },
+  "-0416": {
+    "lat": 40.6400629,
+    "lng": 22.9444191,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Θεσσαλονίκη, Ελλάδα"
+  },
+  "-0417": {
+    "lat": 40.9371018,
+    "lng": 24.4060215,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Δαγκλή 10, Καβάλα 654 03, Ελλάδα"
+  },
+  "-0418": {
+    "lat": 40.9271762,
+    "lng": 24.3904265,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Νηλέως 1, Καβάλα 654 04, Ελλάδα"
+  },
+  "-0419": {
+    "lat": 40.9363541,
+    "lng": 24.3999074,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Κομνηνών 35, Καβάλα 654 03, Ελλάδα"
+  },
+  "-0420": {
+    "lat": 40.9425027,
+    "lng": 24.4007748,
+    "location_type": "RANGE_INTERPOLATED",
+    "formatted_address": "Σαπφούς 91, Καβάλα 654 03, Ελλάδα"
+  },
+  "-0421": {
+    "lat": 40.9350375,
+    "lng": 24.3836118,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Κορίνθου 10, Καβάλα 654 04, Ελλάδα"
+  },
+  "-0422": {
+    "lat": 40.9244364,
+    "lng": 24.3823818,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Μίκρας Ασίας, Καβάλα 654 04, Ελλάδα"
+  },
+  "-0423": {
+    "lat": 40.9369782,
+    "lng": 24.4067059,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Ελ. Βενιζέλου 30, Καβάλα 654 03, Ελλάδα"
+  },
+  "-0424": {
+    "lat": 40.939623,
+    "lng": 24.4083734,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Ομόνοιας 110, Καβάλα 653 02, Ελλάδα"
+  },
+  "-0425": {
+    "lat": 40.97116580000001,
+    "lng": 24.1462575,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Αγ. Χριστόφορος 640 01, Ελλάδα"
+  },
+  "-0426": {
+    "lat": 40.2684529,
+    "lng": 22.5155628,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Γεωργούλη 7, Κατερίνη 601 00, Ελλάδα"
+  },
+  "-0427": {
+    "lat": 40.2649177,
+    "lng": 22.5327781,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Παρ. Β Διγενή Ακρίτα, Κατερίνη 601 00, Ελλάδα"
+  },
+  "-0428": {
+    "lat": 40.2632112,
+    "lng": 22.508693,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Τερζόπουλου 117, Κατερίνη 601 00, Ελλάδα"
+  },
+  "-0429": {
+    "lat": 40.2702495,
+    "lng": 22.5121487,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Κατερίνη 601 00, Ελλάδα"
+  },
+  "-0430": {
+    "lat": 40.2766311,
+    "lng": 22.514621,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Θεσσαλονίκης, Κατερίνη 601 00, Ελλάδα"
+  },
+  "-0431": {
+    "lat": 40.2723311,
+    "lng": 22.4875833,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Δημοτικού Σταδίου 18, Κατερίνη 601 33, Ελλάδα"
+  },
+  "-0432": {
+    "lat": 41.09225,
+    "lng": 23.46241,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "ΕΝΑ ΕΟ ΣΕΡΡΩΝ-ΘΕΣΣΑΛΟΝΙΚΗΣ, Lefkonas 621 00, Ελλάδα"
+  },
+  "-0433": {
+    "lat": 41.0857738,
+    "lng": 23.6140687,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "ΕΟ Σερρών Δράμας, Σέρρες 621 00, Ελλάδα"
+  },
+  "-0434": {
+    "lat": 41.0857738,
+    "lng": 23.6140687,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "ΕΟ Σερρών Δράμας, Σέρρες 621 00, Ελλάδα"
+  },
+  "-0435": {
+    "lat": 41.23494710000001,
+    "lng": 23.3938203,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Σιδηρόκαστρο 623 00, Ελλάδα"
+  },
+  "-0436": {
+    "lat": 41.0850372,
+    "lng": 23.5444419,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Μεραρχίας 68, Σέρρες 621 00, Ελλάδα"
+  },
+  "-0437": {
+    "lat": 41.0863854,
+    "lng": 23.5483819,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Σέρρες, Ελλάδα"
+  },
+  "-0438": {
+    "lat": 41.0797663,
+    "lng": 23.5522827,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Μεσολογγίου 9-1, Σέρρες 621 24, Ελλάδα"
+  },
+  "-0439": {
+    "lat": 40.9959443,
+    "lng": 22.8786645,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Τσιρογιάννη 7, Κιλκίς 611 00, Ελλάδα"
+  },
+  "-0440": {
+    "lat": 40.9846307,
+    "lng": 22.8643897,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Δημοκρατίας 10, Κιλκίς 611 00, Ελλάδα"
+  },
+  "-0441": {
+    "lat": 41.0024622,
+    "lng": 22.8802569,
+    "location_type": "ROOFTOP",
+    "formatted_address": "21ης Ιουνίου 363, Κιλκίς 611 00, Ελλάδα"
+  },
+  "-0442": {
+    "lat": 40.9951516,
+    "lng": 22.8772228,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Καπέτα 22, Κιλκίς 611 00, Ελλάδα"
+  },
+  "-0443": {
+    "lat": 40.9975281,
+    "lng": 22.8790999,
+    "location_type": "ROOFTOP",
+    "formatted_address": "21ης Ιουνίου 275, Κιλκίς 611 00, Ελλάδα"
+  },
+  "-0444": {
+    "lat": 40.8077017,
+    "lng": 22.0449161,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Κιλκίς, Έδεσσα 582 00, Ελλάδα"
+  },
+  "-0445": {
+    "lat": 40.8014965,
+    "lng": 22.0442538,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Φλωρίνης 29, Έδεσσα 582 00, Ελλάδα"
+  },
+  "-0446": {
+    "lat": 40.7998718,
+    "lng": 22.050658,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Λεωφ. Φιλίππου 16, Έδεσσα 582 00, Ελλάδα"
+  },
+  "-0447": {
+    "lat": 40.8013915,
+    "lng": 22.039378,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Φλωρίνης 75, Έδεσσα 582 00, Ελλάδα"
+  },
+  "-0448": {
+    "lat": 40.8043279,
+    "lng": 22.0506498,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Λεωφ. 18ης Οκτωβρίου 4, Έδεσσα 582 00, Ελλάδα"
+  },
+  "-0449": {
+    "lat": 40.7920769,
+    "lng": 22.4079792,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "20ης Οκτωβρίου, Γιαννιτσά 581 00, Ελλάδα"
+  },
+  "-0450": {
+    "lat": 40.7954155,
+    "lng": 22.4160421,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Εθ. Αντιστάσεως 26, Γιαννιτσά 581 00, Ελλάδα"
+  },
+  "-0451": {
+    "lat": 40.7943587,
+    "lng": 22.4144481,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Γιαννιτσά 581 00, Ελλάδα"
+  },
+  "-0452": {
+    "lat": 40.8020066,
+    "lng": 22.3622406,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Αξός 581 00, Ελλάδα"
+  },
+  "-0453": {
+    "lat": 40.7841247,
+    "lng": 22.403251,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Εγνατίας 95, Γιαννιτσά 581 00, Ελλάδα"
+  },
+  "-0454": {
+    "lat": 40.5310783,
+    "lng": 22.2058601,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Πλουτάρχου, Βέροια 591 32, Ελλάδα"
+  },
+  "-0455": {
+    "lat": 40.6391255,
+    "lng": 22.1305981,
+    "location_type": "RANGE_INTERPOLATED",
+    "formatted_address": "Ερμού 135, Κοπανός 590 35, Ελλάδα"
+  },
+  "-0456": {
+    "lat": 40.5402498,
+    "lng": 22.2014572,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Σταδίου 97, Βέροια 591 32, Ελλάδα"
+  },
+  "-0457": {
+    "lat": 40.543395,
+    "lng": 22.2001624,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Σταδίου 124, Εργοχώρι 591 31, Ελλάδα"
+  },
+  "-0458": {
+    "lat": 40.5223523,
+    "lng": 22.2131653,
+    "location_type": "RANGE_INTERPOLATED",
+    "formatted_address": "Κουντουριώτου 35, Βέροια 591 32, Ελλάδα"
+  },
+  "-0459": {
+    "lat": 40.52634279999999,
+    "lng": 22.2070601,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Αντωνίου Αντωνιάδη 16, Βέροια 591 32, Ελλάδα"
+  },
+  "-0460": {
+    "lat": 40.5267512,
+    "lng": 22.2030739,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Βέροια 591 31, Ελλάδα"
+  },
+  "-0461": {
+    "lat": 40.5221991,
+    "lng": 22.2010978,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Κεντρικής 29, Βέροια 591 32, Ελλάδα"
+  },
+  "-0462": {
+    "lat": 40.6294406,
+    "lng": 22.0688549,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Νάουσα 592 00, Ελλάδα"
+  },
+  "-0463": {
+    "lat": 40.6294406,
+    "lng": 22.0688549,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Νάουσα 592 00, Ελλάδα"
+  },
+  "-0464": {
+    "lat": 40.6254661,
+    "lng": 22.0777182,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Επαρ.Οδ. Νάουσας-Κάτω Βερμίου 31, Νάουσα 592 00, Ελλάδα"
+  },
+  "-0465": {
+    "lat": 40.6317664,
+    "lng": 22.0688565,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Στουγιαννάκη 13, Νάουσα 592 00, Ελλάδα"
+  },
+  "-0466": {
+    "lat": 40.6319088,
+    "lng": 22.0694428,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Ζαφειράκη 27, Νάουσα 592 00, Ελλάδα"
+  },
+  "-0467": {
+    "lat": 40.3807901,
+    "lng": 23.4466664,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Ασκληπιού 45, Πολύγυρος 631 00, Ελλάδα"
+  },
+  "-0468": {
+    "lat": 40.4133722,
+    "lng": 23.4214079,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "ΕΟ Θεσσαλονίκης Πολυγύρου, Πολύγυρος 631 00, Ελλάδα"
+  },
+  "-0469": {
+    "lat": 40.2861415,
+    "lng": 23.390846,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Καλύβες Πολυγύρου 631 00, Ελλάδα"
+  },
+  "-0470": {
+    "lat": 40.3816836,
+    "lng": 23.4426703,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Πολύγυρος 631 00, Ελλάδα"
+  },
+  "-0471": {
+    "lat": 40.3023916,
+    "lng": 23.4208353,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Πολύγυρος 631 00, Ελλάδα"
+  },
+  "-0472": {
+    "lat": 40.3037217,
+    "lng": 21.8060592,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "κασλά, Κοζάνη 501 00, Ελλάδα"
+  },
+  "-0473": {
+    "lat": 40.3514932,
+    "lng": 21.8342823,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Επαρ.Οδ. Ανατολικού - Αμυγδαλιάς, Κοζάνη 501 00, Ελλάδα"
+  },
+  "-0474": {
+    "lat": 40.2948443,
+    "lng": 21.7850355,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Βελβεντού 4, Κοζάνη 501 32, Ελλάδα"
+  },
+  "-0475": {
+    "lat": 40.302131,
+    "lng": 21.802336,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Κων/νου Καραμανλή, Κοζάνη 501 00, Ελλάδα"
+  },
+  "-0476": {
+    "lat": 40.2965811,
+    "lng": 21.790745,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Γκέρτσου Κωνσταντίνου 41, Κοζάνη 501 00, Ελλάδα"
+  },
+  "-0477": {
+    "lat": 40.2523224,
+    "lng": 21.9258906,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "ΕΟ Κοζάνης - Λάρισας, Ελλάδα"
+  },
+  "-0478": {
+    "lat": 40.2624955,
+    "lng": 21.9064634,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "ΕΟ Κοζάνης - Λάρισας, Κοζάνη 501 00, Ελλάδα"
+  },
+  "-0479": {
+    "lat": 40.5442532,
+    "lng": 21.7478051,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Ανατολικό 502 00, Ελλάδα"
+  },
+  "-0480": {
+    "lat": 40.5116746,
+    "lng": 21.676793,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Δημοκρατίας 65, Πτολεμαΐδα 502 00, Ελλάδα"
+  },
+  "-0481": {
+    "lat": 40.5129968,
+    "lng": 21.6784663,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Πτολεμαΐδα 502 00, Ελλάδα"
+  },
+  "-0482": {
+    "lat": 40.5129968,
+    "lng": 21.6784663,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Πτολεμαΐδα 502 00, Ελλάδα"
+  },
+  "-0483": {
+    "lat": 40.5238194,
+    "lng": 21.6830877,
+    "location_type": "RANGE_INTERPOLATED",
+    "formatted_address": "25ης Μαρτίου 164, Πτολεμαΐδα 502 00, Ελλάδα"
+  },
+  "-0484": {
+    "lat": 40.5112733,
+    "lng": 21.6767205,
+    "location_type": "ROOFTOP",
+    "formatted_address": "28ου Συντάγματος 4, Πτολεμαΐδα 502 00, Ελλάδα"
+  },
+  "-0485": {
+    "lat": 40.503505,
+    "lng": 21.2445959,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Κ. Γκαμπέση 2, Μανιάκοι 521 00, Ελλάδα"
+  },
+  "-0486": {
+    "lat": 40.5568814,
+    "lng": 21.2746379,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Επαρ.Οδ. Φλώρινας-Καστοριάς, Καστοριά 521 00, Ελλάδα"
+  },
+  "-0487": {
+    "lat": 40.5216245,
+    "lng": 21.2624112,
+    "location_type": "ROOFTOP",
+    "formatted_address": "3ης Σεπτεμβρίου 7, Καστοριά 521 00, Ελλάδα"
+  },
+  "-0488": {
+    "lat": 40.5192691,
+    "lng": 21.2687171,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Καστοριά 521 00, Ελλάδα"
+  },
+  "-0489": {
+    "lat": 40.5215574,
+    "lng": 21.2586894,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Γράμμου 53, Καστοριά 521 00, Ελλάδα"
+  },
+  "-0490": {
+    "lat": 40.50577920000001,
+    "lng": 21.2412774,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Νέα Λεύκη 521 00, Ελλάδα"
+  },
+  "-0491": {
+    "lat": 40.7847721,
+    "lng": 21.4201644,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "7ης Νοεμβρίου, Φλώρινα 531 00, Ελλάδα"
+  },
+  "-0492": {
+    "lat": 40.8024032,
+    "lng": 21.4591344,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Αρμενοχώρι 531 00, Ελλάδα"
+  },
+  "-0493": {
+    "lat": 40.78452619999999,
+    "lng": 21.4131222,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Φλώρινα 531 00, Ελλάδα"
+  },
+  "-0494": {
+    "lat": 40.78452619999999,
+    "lng": 21.4131222,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Φλώρινα 531 00, Ελλάδα"
+  },
+  "-0495": {
+    "lat": 40.78452619999999,
+    "lng": 21.4131222,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Φλώρινα 531 00, Ελλάδα"
+  },
+  "-0496": {
+    "lat": 40.0795711,
+    "lng": 21.4233366,
+    "location_type": "ROOFTOP",
+    "formatted_address": "13ης Οκτωβρίου 88, Γρεβενά 511 00, Ελλάδα"
+  },
+  "-0497": {
+    "lat": 40.0837626,
+    "lng": 21.4273299,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Γρεβενά 511 00, Ελλάδα"
+  },
+  "-0498": {
+    "lat": 40.0750805,
+    "lng": 21.4279614,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Καστράκι, Δήμος Γρεβενών 511 00, Ελλάδα"
+  },
+  "-0499": {
+    "lat": 40.0804913,
+    "lng": 21.4240934,
+    "location_type": "ROOFTOP",
+    "formatted_address": "13ης Οκτωβρίου 72, Γρεβενά 511 00, Ελλάδα"
+  },
+  "-0500": {
+    "lat": 40.0804913,
+    "lng": 21.4240934,
+    "location_type": "ROOFTOP",
+    "formatted_address": "13ης Οκτωβρίου 72, Γρεβενά 511 00, Ελλάδα"
+  },
+  "-0501": {
+    "lat": 41.1476485,
+    "lng": 24.1419773,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Δαμασκηνού 6, Δράμα 661 00, Ελλάδα"
+  },
+  "-0502": {
+    "lat": 41.1419672,
+    "lng": 24.143815,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Θεμιστοκλέους 48, Δράμα 661 00, Ελλάδα"
+  },
+  "-0503": {
+    "lat": 41.14889489999999,
+    "lng": 24.1478877,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Δραγούμη 23, Δράμα 661 00, Ελλάδα"
+  },
+  "-0504": {
+    "lat": 41.1532312,
+    "lng": 24.1246888,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Ευξείνου Πόντου, Δράμα 661 00, Ελλάδα"
+  },
+  "-0505": {
+    "lat": 41.1485156,
+    "lng": 24.1421017,
+    "location_type": "ROOFTOP",
+    "formatted_address": "19ης Μαΐου 2, Δράμα 661 32, Ελλάδα"
+  },
+  "-0506": {
+    "lat": 41.145744,
+    "lng": 24.148882,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Επαναστάσεως 1821 10, Δράμα 661 33, Ελλάδα"
+  },
+  "-0507": {
+    "lat": 40.7394011,
+    "lng": 24.5739441,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "ΕΟ Θάσου Λιμεναρίων, Θάσος 640 10, Ελλάδα"
+  },
+  "-0508": {
+    "lat": 40.6908469,
+    "lng": 24.7499112,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Λιμένας Θάσου 640 04, Ελλάδα"
+  },
+  "-0509": {
+    "lat": 40.7394011,
+    "lng": 24.5739441,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "ΕΟ Θάσου Λιμεναρίων, Θάσος 640 10, Ελλάδα"
+  },
+  "-0510": {
+    "lat": 40.7300849,
+    "lng": 24.7270791,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Παναγία 640 04, Ελλάδα"
+  },
+  "-0511": {
+    "lat": 41.1414103,
+    "lng": 24.8943391,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Παναγη Τσαλδαρη 123, Ξάνθη 671 00, Ελλάδα"
+  },
+  "-0512": {
+    "lat": 41.12594410000001,
+    "lng": 24.8885372,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Μιχαηλίδη Τριαντάφυλλου 7, Ξάνθη 671 00, Ελλάδα"
+  },
+  "-0513": {
+    "lat": 41.1413095,
+    "lng": 24.8932933,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Παναγη Τσαλδαρη 117, Ξάνθη 671 00, Ελλάδα"
+  },
+  "-0514": {
+    "lat": 41.133979,
+    "lng": 24.8865556,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Καβάλας, Ξάνθη 671 00, Ελλάδα"
+  },
+  "-0515": {
+    "lat": 41.1265376,
+    "lng": 24.8858343,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Μιχαηλίδη Τριαντάφυλλου 3, Ξάνθη 671 00, Ελλάδα"
+  },
+  "-0516": {
+    "lat": 41.1256832,
+    "lng": 24.88888,
+    "location_type": "RANGE_INTERPOLATED",
+    "formatted_address": "Μιχαηλίδη Τριαντάφυλλου 21, Ξάνθη 671 00, Ελλάδα"
+  },
+  "-0517": {
+    "lat": 41.1399115,
+    "lng": 24.8912668,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Θερμοπυλών 20, Ξάνθη 671 00, Ελλάδα"
+  },
+  "-0518": {
+    "lat": 41.133979,
+    "lng": 24.8865556,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Καβάλας, Ξάνθη 671 00, Ελλάδα"
+  },
+  "-0519": {
+    "lat": 41.1126328,
+    "lng": 25.3763532,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Μεραρχίας Σερρών 55, Κομοτηνή 691 32, Ελλάδα"
+  },
+  "-0520": {
+    "lat": 41.0877773,
+    "lng": 25.5031072,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "ΕΟ Κομοτηνής Αλεξανδρούπολης, Κομοτηνή 691 00, Ελλάδα"
+  },
+  "-0521": {
+    "lat": 41.1122309,
+    "lng": 25.4115864,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Ι. Σισμάνογλου, Κομοτηνή 691 00, Ελλάδα"
+  },
+  "-0522": {
+    "lat": 41.1159657,
+    "lng": 25.3864523,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Μεραρχίας Σερρών 19, Κομοτηνή 691 00, Ελλάδα"
+  },
+  "-0523": {
+    "lat": 41.1109117,
+    "lng": 25.4026528,
+    "location_type": "RANGE_INTERPOLATED",
+    "formatted_address": "Κοσμίου 82, Κομοτηνή 691 00, Ελλάδα"
+  },
+  "-0524": {
+    "lat": 41.1156016,
+    "lng": 25.407871,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Δημ. Μπλέτσα 39, Κομοτηνή 691 00, Ελλάδα"
+  },
+  "-0525": {
+    "lat": 40.8673633,
+    "lng": 25.8708601,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Στενημάχου 14, Αλεξανδρούπολη 681 00, Ελλάδα"
+  },
+  "-0526": {
+    "lat": 40.8455253,
+    "lng": 25.8608366,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Λεωφ. Μάκρης 3, Αλεξανδρούπολη 681 00, Ελλάδα"
+  },
+  "-0527": {
+    "lat": 40.8452815,
+    "lng": 25.870565,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Εθ. Αντιστάσεως 142, Αλεξανδρούπολη 681 00, Ελλάδα"
+  },
+  "-0528": {
+    "lat": 40.8593668,
+    "lng": 25.8723131,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Κονδύλη 39, Αλεξανδρούπολη 681 00, Ελλάδα"
+  },
+  "-0529": {
+    "lat": 40.8468427,
+    "lng": 25.8835715,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Δημ. Καραολή 1, Αλεξανδρούπολη 681 00, Ελλάδα"
+  },
+  "-0530": {
+    "lat": 40.847102,
+    "lng": 25.8799593,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Λεωφ. Δημοκρατίας 148, Αλεξανδρούπολη 681 00, Ελλάδα"
+  },
+  "-0531": {
+    "lat": 41.4928576,
+    "lng": 26.5323922,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Κωνσταντινουπόλεως 88, Ορεστιάδα 682 00, Ελλάδα"
+  },
+  "-0532": {
+    "lat": 41.5102007,
+    "lng": 26.5324052,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Ορεστιάδα 682 00, Ελλάδα"
+  },
+  "-0533": {
+    "lat": 37.4236827,
+    "lng": 24.9467057,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Αεροδρομίου, Μάννα 841 00, Ελλάδα"
+  },
+  "-0534": {
+    "lat": 37.4250257,
+    "lng": 24.937266,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Μάννα 841 00, Ελλάδα"
+  },
+  "-0535": {
+    "lat": 37.4106079,
+    "lng": 24.9617041,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Αζόλιμνος 841 00, Ελλάδα"
+  },
+  "-0536": {
+    "lat": 37.440356,
+    "lng": 24.9373747,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Νεωρίου 22, Ερμούπολη 841 00, Ελλάδα"
+  },
+  "-0537": {
+    "lat": 37.416356,
+    "lng": 24.9051241,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Πάγος 841 00, Ελλάδα"
+  },
+  "-0538": {
+    "lat": 37.4250257,
+    "lng": 24.937266,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Μάννα 841 00, Ελλάδα"
+  },
+  "-0539": {
+    "lat": 37.444367,
+    "lng": 25.335546,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Μύκονος 846 00, Ελλάδα"
+  },
+  "-0540": {
+    "lat": 37.4433683,
+    "lng": 25.3303196,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Επαρ.Οδ. Μυκόνου, Μύκονος 846 00, Ελλάδα"
+  },
+  "-0541": {
+    "lat": 37.444658,
+    "lng": 25.3262531,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Μύκονος 846 00, Ελλάδα"
+  },
+  "-0542": {
+    "lat": 37.444658,
+    "lng": 25.3262531,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Μύκονος 846 00, Ελλάδα"
+  },
+  "-0543": {
+    "lat": 37.444658,
+    "lng": 25.3262531,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Μύκονος 846 00, Ελλάδα"
+  },
+  "-0544": {
+    "lat": 36.35734619999999,
+    "lng": 25.4459308,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Εμπορείο 847 03, Ελλάδα"
+  },
+  "-0545": {
+    "lat": 36.4115625,
+    "lng": 25.4464635,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Καρτεραδος 847 00, Ελλάδα"
+  },
+  "-0546": {
+    "lat": 36.3990884,
+    "lng": 25.4477265,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Μεσαριά 847 00, Ελλάδα"
+  },
+  "-0547": {
+    "lat": 36.3990884,
+    "lng": 25.4477265,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Μεσαριά 847 00, Ελλάδα"
+  },
+  "-0548": {
+    "lat": 36.35734619999999,
+    "lng": 25.4459308,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Εμπορείο 847 03, Ελλάδα"
+  },
+  "-0549": {
+    "lat": 36.4024271,
+    "lng": 25.4729596,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Κρατικός Αερολιμένας Σαντορίνης (JTR), Φηρά 847 00, Ελλάδα"
+  },
+  "-0550": {
+    "lat": 37.0436365,
+    "lng": 25.2284277,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Πάρος 844 00, Ελλάδα"
+  },
+  "-0551": {
+    "lat": 37.0856514,
+    "lng": 25.1512444,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Παροικιά 844 00, Ελλάδα"
+  },
+  "-0552": {
+    "lat": 37.0856514,
+    "lng": 25.1512444,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Παροικιά 844 00, Ελλάδα"
+  },
+  "-0553": {
+    "lat": 37.0972663,
+    "lng": 25.1812493,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Επαρ.Οδ. Παροικιάς-Νάουσας, Πάρος 844 00, Ελλάδα"
+  },
+  "-0554": {
+    "lat": 37.0972663,
+    "lng": 25.1812493,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Επαρ.Οδ. Παροικιάς-Νάουσας, Πάρος 844 00, Ελλάδα"
+  },
+  "-0555": {
+    "lat": 37.1189027,
+    "lng": 25.2432055,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Επαρχιακή Οδός Νάουσας-Μάρπισσας, Νάουσα, Ελλάδα"
+  },
+  "-0556": {
+    "lat": 37.1024982,
+    "lng": 25.3799397,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Νάξος, Ελλάδα"
+  },
+  "-0557": {
+    "lat": 37.097287,
+    "lng": 25.3797648,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Ανδρέα Παπανδρέου, Νάξος 843 00, Ελλάδα"
+  },
+  "-0558": {
+    "lat": 37.0991573,
+    "lng": 25.3775475,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Γλινάδου, Νάξος 843 00, Ελλάδα"
+  },
+  "-0559": {
+    "lat": 37.0577867,
+    "lng": 25.40794,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Βίβλος 843 00, Ελλάδα"
+  },
+  "-0560": {
+    "lat": 37.1024982,
+    "lng": 25.3799397,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Νάξος, Ελλάδα"
+  },
+  "-0561": {
+    "lat": 37.0514525,
+    "lng": 25.4982396,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Φιλότι 843 02, Ελλάδα"
+  },
+  "-0562": {
+    "lat": 37.5876505,
+    "lng": 25.1207974,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Τήνος 842 00, Ελλάδα"
+  },
+  "-0563": {
+    "lat": 37.534428,
+    "lng": 25.1645059,
+    "location_type": "ROOFTOP",
+    "formatted_address": "25ης Μαρτίου 26, Τήνος 842 00, Ελλάδα"
+  },
+  "-0564": {
+    "lat": 37.5876505,
+    "lng": 25.1207974,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Τήνος 842 00, Ελλάδα"
+  },
+  "-0565": {
+    "lat": 37.5366888,
+    "lng": 25.1679887,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Γάφου 15, Τήνος 842 00, Ελλάδα"
+  },
+  "-0566": {
+    "lat": 37.53811340000001,
+    "lng": 25.1634218,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Τριών Ιεραρχών 42, Τήνος 842 00, Ελλάδα"
+  },
+  "-0567": {
+    "lat": 37.88444580000001,
+    "lng": 24.7370121,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Γαύριο 845 01, Ελλάδα"
+  },
+  "-0568": {
+    "lat": 37.8619594,
+    "lng": 24.7797488,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Επαρ.Οδ. Άνδρου-Λιμάνι Γαυρίου, Άνδρος 845 01, Ελλάδα"
+  },
+  "-0569": {
+    "lat": 37.8396936,
+    "lng": 24.9354932,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Επαρ.Οδ. Άνδρου-Μπατσίου, Άνδρος, Ελλάδα"
+  },
+  "-0570": {
+    "lat": 37.8738964,
+    "lng": 24.8136906,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Άνδρος 845 01, Ελλάδα"
+  },
+  "-0571": {
+    "lat": 37.8719936,
+    "lng": 24.7700723,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Άνδρος 845 01, Ελλάδα"
+  },
+  "-0572": {
+    "lat": 36.7255629,
+    "lng": 24.4466973,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Αδάμας, Ελλάδα"
+  },
+  "-0573": {
+    "lat": 36.7450409,
+    "lng": 24.4332482,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Τριοβασαλος 848 00, Ελλάδα"
+  },
+  "-0574": {
+    "lat": 36.7351343,
+    "lng": 24.441738,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Κατήφορα 848 00, Ελλάδα"
+  },
+  "-0575": {
+    "lat": 36.7437537,
+    "lng": 24.4251077,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Πλάκα 848 00, Ελλάδα"
+  },
+  "-0576": {
+    "lat": 36.6914464,
+    "lng": 24.3935655,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Πλάκα 848 00, Ελλάδα"
+  },
+  "-0577": {
+    "lat": 36.9879566,
+    "lng": 24.6769323,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Καμάρες 840 03, Ελλάδα"
+  },
+  "-0578": {
+    "lat": 36.9733563,
+    "lng": 24.7239075,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Απολλωνία 840 03, Ελλάδα"
+  },
+  "-0579": {
+    "lat": 36.959964,
+    "lng": 24.740416,
+    "location_type": "ROOFTOP",
+    "formatted_address": "XP5R+X5, Σίφνος 840 03, Ελλάδα"
+  },
+  "-0580": {
+    "lat": 36.72177670000001,
+    "lng": 25.2819385,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Ίος 840 01, Ελλάδα"
+  },
+  "-0581": {
+    "lat": 37.659186,
+    "lng": 24.3114688,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Κορησσία 840 02, Ελλάδα"
+  },
+  "-0582": {
+    "lat": 37.60758,
+    "lng": 24.3103718,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Κέα, 840 02, Ελλάδα"
+  },
+  "-0583": {
+    "lat": 37.659186,
+    "lng": 24.3114688,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Κορησσία 840 02, Ελλάδα"
+  },
+  "-0584": {
+    "lat": 36.8265829,
+    "lng": 25.8634674,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Κατάπολα, Ελλάδα"
+  },
+  "-0585": {
+    "lat": 36.8318961,
+    "lng": 25.8953852,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Αμοργός 840 08, Ελλάδα"
+  },
+  "-0586": {
+    "lat": 36.8265829,
+    "lng": 25.8634674,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Κατάπολα, Ελλάδα"
+  },
+  "-0587": {
+    "lat": 36.4185187,
+    "lng": 28.2042635,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Ηλία Βενέζη 143, Ρόδος 851 00, Ελλάδα"
+  },
+  "-0588": {
+    "lat": 36.3352536,
+    "lng": 28.1974316,
+    "location_type": "RANGE_INTERPOLATED",
+    "formatted_address": "ΕΟ Ρόδου Λίνδου 194, Φαληράκι 851 00, Ελλάδα"
+  },
+  "-0589": {
+    "lat": 36.42968219999999,
+    "lng": 28.2109616,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Σπάρτης 1, Ρόδος 851 00, Ελλάδα"
+  },
+  "-0590": {
+    "lat": 36.3352046,
+    "lng": 28.1974108,
+    "location_type": "RANGE_INTERPOLATED",
+    "formatted_address": "ΕΟ Ρόδου Λίνδου 136, Φαληράκι 851 00, Ελλάδα"
+  },
+  "-0591": {
+    "lat": 36.427949,
+    "lng": 28.2288018,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Λεωφ. Καλλιθέας 9, Ρόδος 851 00, Ελλάδα"
+  },
+  "-0592": {
+    "lat": 36.4359325,
+    "lng": 28.2172676,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Ρόδος, Ελλάδα"
+  },
+  "-0593": {
+    "lat": 36.429936,
+    "lng": 28.2162597,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Αποστόλου Παύλου 2, Ρόδος 851 00, Ελλάδα"
+  },
+  "-0594": {
+    "lat": 36.4340533,
+    "lng": 28.2176379,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Ρόδος, Ελλάδα"
+  },
+  "-0595": {
+    "lat": 36.4340533,
+    "lng": 28.2176379,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Ρόδος, Ελλάδα"
+  },
+  "-0596": {
+    "lat": 36.8920579,
+    "lng": 27.2889478,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Κως 853 00, Ελλάδα"
+  },
+  "-0597": {
+    "lat": 36.8897507,
+    "lng": 27.2728612,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Επαρ.Οδ. Κώ-Κέφαλου, Κως, Ελλάδα"
+  },
+  "-0598": {
+    "lat": 36.8897507,
+    "lng": 27.2728612,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Επαρ.Οδ. Κώ-Κέφαλου, Κως, Ελλάδα"
+  },
+  "-0599": {
+    "lat": 36.8920579,
+    "lng": 27.2889478,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Κως 853 00, Ελλάδα"
+  },
+  "-0600": {
+    "lat": 36.8889299,
+    "lng": 27.2673756,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Επαρ.Οδ. Κώ-Κέφαλου 412, Κως 853 00, Ελλάδα"
+  },
+  "-0601": {
+    "lat": 36.8149324,
+    "lng": 27.1019668,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Επαρ.Οδ. Κώ-Κέφαλου, Κως 853 02, Ελλάδα"
+  },
+  "-0602": {
+    "lat": 36.8755596,
+    "lng": 27.2864059,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Κως 853 00, Ελλάδα"
+  },
+  "-0603": {
+    "lat": 36.8915064,
+    "lng": 27.2877228,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Κως, Ελλάδα"
+  },
+  "-0604": {
+    "lat": 36.9533092,
+    "lng": 26.9798133,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Κάλυμνος, 852 00, Ελλάδα"
+  },
+  "-0605": {
+    "lat": 36.9555556,
+    "lng": 27.1658333,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Νησίδα Βασιλική, Ελλάδα"
+  },
+  "-0606": {
+    "lat": 36.9657291,
+    "lng": 26.9563743,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Χωριό 852 00, Ελλάδα"
+  },
+  "-0607": {
+    "lat": 36.9657291,
+    "lng": 26.9563743,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Χωριό 852 00, Ελλάδα"
+  },
+  "-0608": {
+    "lat": 36.9533092,
+    "lng": 26.9798133,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Κάλυμνος, 852 00, Ελλάδα"
+  },
+  "-0609": {
+    "lat": 35.5065632,
+    "lng": 27.2123511,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Κάρπαθος, 857 00, Ελλάδα"
+  },
+  "-0610": {
+    "lat": 35.5065632,
+    "lng": 27.2123511,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Κάρπαθος, 857 00, Ελλάδα"
+  },
+  "-0611": {
+    "lat": 35.5065632,
+    "lng": 27.2123511,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Κάρπαθος, 857 00, Ελλάδα"
+  },
+  "-0612": {
+    "lat": 35.5067306,
+    "lng": 27.212942,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Κάρπαθος 857 00, Ελλάδα"
+  },
+  "-0613": {
+    "lat": 37.13217059999999,
+    "lng": 26.8529432,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Λακκί 854 00, Ελλάδα"
+  },
+  "-0614": {
+    "lat": 37.1563012,
+    "lng": 26.8516412,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Αγ. Μαρίνα 854 00, Ελλάδα"
+  },
+  "-0615": {
+    "lat": 37.1602418,
+    "lng": 26.8249547,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Καμάρα 854 00, Ελλάδα"
+  },
+  "-0616": {
+    "lat": 37.1563012,
+    "lng": 26.8516412,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Αγ. Μαρίνα 854 00, Ελλάδα"
+  },
+  "-0617": {
+    "lat": 37.3221873,
+    "lng": 26.5433618,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Σκάλα 855 00, Ελλάδα"
+  },
+  "-0618": {
+    "lat": 37.3221873,
+    "lng": 26.5433618,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Σκάλα 855 00, Ελλάδα"
+  },
+  "-0619": {
+    "lat": 37.3129763,
+    "lng": 26.5468773,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Πάτμος, 855 00, Ελλάδα"
+  },
+  "-0620": {
+    "lat": 36.585572,
+    "lng": 27.8428651,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Σύμη, 856 00, Ελλάδα"
+  },
+  "-0621": {
+    "lat": 36.585572,
+    "lng": 27.8428651,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Σύμη, 856 00, Ελλάδα"
+  },
+  "-0622": {
+    "lat": 39.1071603,
+    "lng": 26.557385,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Αθανασίου Μητρέλια 26, Μυτιλήνη 811 00, Ελλάδα"
+  },
+  "-0623": {
+    "lat": 39.1897595,
+    "lng": 26.4924366,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Λέσβος 811 00, Ελλάδα"
+  },
+  "-0624": {
+    "lat": 39.0963069,
+    "lng": 26.5499336,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Χατζημιχαηλ, Μυτιλήνη 811 00, Ελλάδα"
+  },
+  "-0625": {
+    "lat": 39.1039362,
+    "lng": 26.5545168,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Μυτιλήνη 811 00, Ελλάδα"
+  },
+  "-0626": {
+    "lat": 39.0946322,
+    "lng": 26.5537633,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Βαλαωρίτου 35, Μυτιλήνη 811 00, Ελλάδα"
+  },
+  "-0627": {
+    "lat": 39.0898182,
+    "lng": 26.556312,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Αναπαύσεως 16, Μυτιλήνη 811 00, Ελλάδα"
+  },
+  "-0628": {
+    "lat": 38.3420237,
+    "lng": 26.1415686,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Λεωφ. Ενώσεως 112, Χίος 821 00, Ελλάδα"
+  },
+  "-0629": {
+    "lat": 38.3605808,
+    "lng": 26.1345548,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Νεοφύτου, Χίος 821 00, Ελλάδα"
+  },
+  "-0630": {
+    "lat": 38.3712527,
+    "lng": 26.1360248,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Χίος 821 00, Ελλάδα"
+  },
+  "-0631": {
+    "lat": 38.369367,
+    "lng": 26.1320267,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Καλοπλύτου 42, Χίος 821 00, Ελλάδα"
+  },
+  "-0632": {
+    "lat": 38.3665509,
+    "lng": 26.1417449,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Λεωφ. Αιγαίου 116, Χίος 821 00, Ελλάδα"
+  },
+  "-0633": {
+    "lat": 38.3588585,
+    "lng": 26.1348286,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Μαυράκη Πίττα 1-5, Χίος 821 00, Ελλάδα"
+  },
+  "-0634": {
+    "lat": 37.7497172,
+    "lng": 26.981879,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Βαθύ 831 00, Ελλάδα"
+  },
+  "-0635": {
+    "lat": 37.7272485,
+    "lng": 26.906704,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Μυτιληνιοί 831 01, Ελλάδα"
+  },
+  "-0636": {
+    "lat": 37.7920861,
+    "lng": 26.7049,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Νέο Καρλόβασι, Ελλάδα"
+  },
+  "-0637": {
+    "lat": 37.7920861,
+    "lng": 26.7049,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Νέο Καρλόβασι, Ελλάδα"
+  },
+  "-0638": {
+    "lat": 37.75407999999999,
+    "lng": 26.9800214,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Γυμνασιάρχου Κατεβαίνη 49, Σάμος 831 00, Ελλάδα"
+  },
+  "-0639": {
+    "lat": 37.694049,
+    "lng": 26.9210024,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Νέα Πόλη 831 03, Ελλάδα"
+  },
+  "-0640": {
+    "lat": 37.6028114,
+    "lng": 26.1679688,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Ικαρία 833 02, Ελλάδα"
+  },
+  "-0641": {
+    "lat": 37.6300808,
+    "lng": 26.1772922,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Επαρ.Οδ. Αγίου Κηρύκου - Αρμενιστή, Ικαρία 833 02, Ελλάδα"
+  },
+  "-0642": {
+    "lat": 37.6250589,
+    "lng": 26.0928221,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Λομβαρδαδες 833 01, Ελλάδα"
+  },
+  "-0643": {
+    "lat": 37.6115518,
+    "lng": 26.2914441,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Αγ. Κήρυκος 833 00, Ελλάδα"
+  },
+  "-0644": {
+    "lat": 39.8743467,
+    "lng": 25.2690527,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Μούδρος, Ελλάδα"
+  },
+  "-0645": {
+    "lat": 39.1661351,
+    "lng": 23.4853134,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Περιφεριακός Σκιάθου, Σκιάθος 370 02, Ελλάδα"
+  },
+  "-0646": {
+    "lat": 39.2387227,
+    "lng": 20.4842425,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Αμμουδιά, Ελλάδα"
+  },
+  "-0647": {
+    "lat": 39.1661351,
+    "lng": 23.4853134,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Περιφεριακός Σκιάθου, Σκιάθος 370 02, Ελλάδα"
+  },
+  "-0648": {
+    "lat": 39.1626627,
+    "lng": 23.4909759,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Σκιάθος 370 02, Ελλάδα"
+  },
+  "-0649": {
+    "lat": 39.1960357,
+    "lng": 23.6175773,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Σκόπελος 370 03, Ελλάδα"
+  },
+  "-0650": {
+    "lat": 39.1223106,
+    "lng": 23.7281233,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Σκόπελος, Ελλάδα"
+  },
+  "-0651": {
+    "lat": 39.1960357,
+    "lng": 23.6175773,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Σκόπελος 370 03, Ελλάδα"
+  },
+  "-0652": {
+    "lat": 39.1960357,
+    "lng": 23.6175773,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Σκόπελος 370 03, Ελλάδα"
+  },
+  "-0653": {
+    "lat": 39.1496707,
+    "lng": 23.8438543,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Αλόννησος 370 05, Ελλάδα"
+  },
+  "-0654": {
+    "lat": 38.9195922,
+    "lng": 24.5757227,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Κών Παναγος, Μώλος 340 07, Ελλάδα"
+  },
+  "-0655": {
+    "lat": 38.8162965,
+    "lng": 24.5955356,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Σκύρος, 340 07, Ελλάδα"
+  },
+  "-0656": {
+    "lat": 38.8162965,
+    "lng": 24.5955356,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Σκύρος, 340 07, Ελλάδα"
+  },
+  "-0657": {
+    "lat": 35.3464244,
+    "lng": 24.4660087,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Τρία Μοναστήρια 741 50, Ελλάδα"
+  },
+  "-0658": {
+    "lat": 35.3668445,
+    "lng": 24.5206421,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Λεωφ. Μάχης Κρήτης 89, Ρέθυμνο 741 33, Ελλάδα"
+  },
+  "-0659": {
+    "lat": 35.3656603,
+    "lng": 24.4677111,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Χανίων 3, Ρέθυμνο 741 32, Ελλάδα"
+  },
+  "-0660": {
+    "lat": 35.3605049,
+    "lng": 24.4745937,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Γ. Κουρμούλη 62, Ρέθυμνο 741 32, Ελλάδα"
+  },
+  "-0661": {
+    "lat": 35.3644371,
+    "lng": 24.5174496,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Μισίρια, Ρέθυμνο 741 33, Ελλάδα"
+  },
+  "-0662": {
+    "lat": 35.3275708,
+    "lng": 24.5005038,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Δήμος Ρεθύμνης 741 50, Ελλάδα"
+  },
+  "-0663": {
+    "lat": 35.3656916,
+    "lng": 24.4718852,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Κουμουνδούρου 1, Ρέθυμνο 741 32, Ελλάδα"
+  },
+  "-0664": {
+    "lat": 35.3668279,
+    "lng": 24.5041671,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Λεωφ. Εμμανουήλ Παχλά 73, Ρέθυμνο 741 33, Ελλάδα"
+  },
+  "-0665": {
+    "lat": 35.3751952,
+    "lng": 24.706199,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Επαρ.Οδ. Περάματος-Πάνορμου, Πέραμα, Ελλάδα"
+  },
+  "-0666": {
+    "lat": 35.3751952,
+    "lng": 24.706199,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Επαρ.Οδ. Περάματος-Πάνορμου, Πέραμα, Ελλάδα"
+  },
+  "-0667": {
+    "lat": 35.3632143,
+    "lng": 24.4412577,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Θερίσου 4, Βιολί Χαράκι 741 50, Ελλάδα"
+  },
+  "-0668": {
+    "lat": 35.3032668,
+    "lng": 24.4599937,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Αρμένοι 741 50, Ελλάδα"
+  },
+  "-0669": {
+    "lat": 35.5092942,
+    "lng": 24.0223576,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Νικ. Σκουλά 10, Χανιά 731 35, Ελλάδα"
+  },
+  "-0670": {
+    "lat": 35.491168,
+    "lng": 23.6642678,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "ΠΕΟ Κισσάμου Χανίων, Κίσσαμος, Ελλάδα"
+  },
+  "-0671": {
+    "lat": 35.4821928,
+    "lng": 24.013563,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Μεγιστης Λαύρας, Μουρνιές 733 00, Ελλάδα"
+  },
+  "-0672": {
+    "lat": 35.512272,
+    "lng": 24.0039591,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Χανιά 731 31, Ελλάδα"
+  },
+  "-0673": {
+    "lat": 35.4926912,
+    "lng": 24.0463571,
+    "location_type": "RANGE_INTERPOLATED",
+    "formatted_address": "Λεωφ. Καραμανλή 100, Χανιά 731 00, Ελλάδα"
+  },
+  "-0674": {
+    "lat": 35.5109117,
+    "lng": 24.0146039,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Κωνσταντινουπόλεως, Χανιά 731 00, Ελλάδα"
+  },
+  "-0675": {
+    "lat": 35.4991029,
+    "lng": 24.0439694,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Δεληγιαννάκη 114, Χανιά 731 34, Ελλάδα"
+  },
+  "-0676": {
+    "lat": 35.5043279,
+    "lng": 24.0023835,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Λεωφ. Καζαντζάκη 29, Χανιά 731 31, Ελλάδα"
+  },
+  "-0677": {
+    "lat": 35.5079351,
+    "lng": 24.0247558,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Χανιά 731 34, Ελλάδα"
+  },
+  "-0678": {
+    "lat": 35.4909481,
+    "lng": 23.9784458,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Λεωφ. Καζαντζάκη 191, Βαμβακόπουλο 731 31, Ελλάδα"
+  },
+  "-0679": {
+    "lat": 35.3171648,
+    "lng": 25.1405623,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Λεωφ. Παπαναστασίου 117, Ηράκλειο 714 09, Ελλάδα"
+  },
+  "-0680": {
+    "lat": 35.324491,
+    "lng": 25.1037239,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Μενελαου Παρλαμα 117, Ηράκλειο 714 10, Ελλάδα"
+  },
+  "-0681": {
+    "lat": 35.3312715,
+    "lng": 25.1464561,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Λαγκαδά 15, Ηράκλειο 713 07, Ελλάδα"
+  },
+  "-0682": {
+    "lat": 35.304006,
+    "lng": 25.084364,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Λεωφ. Πανεπιστημίου, Ηράκλειο 715 00, Ελλάδα"
+  },
+  "-0683": {
+    "lat": 35.323601,
+    "lng": 25.1451087,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Κλεάνθη 17, Ηράκλειο 713 07, Ελλάδα"
+  },
+  "-0684": {
+    "lat": 35.3332869,
+    "lng": 25.159566,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Τιμοθέου 9, Νέα Αλικαρνασσός 716 01, Ελλάδα"
+  },
+  "-0685": {
+    "lat": 35.3310264,
+    "lng": 25.085439,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Ελ. Βενιζέλου 64, Γάζι 714 14, Ελλάδα"
+  },
+  "-0686": {
+    "lat": 35.313458,
+    "lng": 25.108421,
+    "location_type": "RANGE_INTERPOLATED",
+    "formatted_address": "Παναγίας Μαλεβή 28, Ηράκλειο 714 10, Ελλάδα"
+  },
+  "-0687": {
+    "lat": 35.3311936,
+    "lng": 25.1054336,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Λεωφ. 62 Μαρτύρων 228, Ξεροπόταμος 713 03, Ελλάδα"
+  },
+  "-0688": {
+    "lat": 35.3226774,
+    "lng": 25.1056506,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Εσταυρωμένος, Ηράκλειο 714 10, Ελλάδα"
+  },
+  "-0689": {
+    "lat": 35.3283861,
+    "lng": 25.1437629,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Ξυλούρη 48, Ηράκλειο 713 07, Ελλάδα"
+  },
+  "-0690": {
+    "lat": 35.3204359,
+    "lng": 25.109449,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Τρεις Βάγιες, Ηράκλειο 714 10, Ελλάδα"
+  },
+  "-0691": {
+    "lat": 35.3091827,
+    "lng": 25.1573304,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Μοιρών, Ηράκλειο 715 00, Ελλάδα"
+  },
+  "-0692": {
+    "lat": 35.3285686,
+    "lng": 25.0718277,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Μαλεβίζι 714 14, Ελλάδα"
+  },
+  "-0693": {
+    "lat": 35.3164087,
+    "lng": 25.1033197,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Ηράκλειο 714 10, Ελλάδα"
+  },
+  "-0694": {
+    "lat": 35.3216343,
+    "lng": 25.1657825,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "ΟΔΟΣ Α, Νέα Αλικαρνασσός 716 01, Ελλάδα"
+  },
+  "-0695": {
+    "lat": 35.3227764,
+    "lng": 25.1419235,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Λεωφ. Κνωσού 93, Ηράκλειο 713 07, Ελλάδα"
+  },
+  "-0696": {
+    "lat": 35.2061585,
+    "lng": 25.7014299,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Ξηρόκαμπος 721 00, Ελλάδα"
+  },
+  "-0697": {
+    "lat": 35.1891335,
+    "lng": 25.7171054,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Αγ. Νικόλαος, Ελλάδα"
+  },
+  "-0698": {
+    "lat": 35.1863814,
+    "lng": 25.7087676,
+    "location_type": "RANGE_INTERPOLATED",
+    "formatted_address": "Κωνσταντίνου Καραμανλῆ 42, Αγ. Νικόλαος 721 00, Ελλάδα"
+  },
+  "-0699": {
+    "lat": 35.1942831,
+    "lng": 25.7128274,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Ανδρέα Παπανδρέου 9, Αγ. Νικόλαος 721 00, Ελλάδα"
+  },
+  "-0700": {
+    "lat": 35.1862663,
+    "lng": 25.7086464,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Κωνσταντίνου Καραμανλῆ, Αγ. Νικόλαος 721 00, Ελλάδα"
+  },
+  "-0701": {
+    "lat": 35.2230333,
+    "lng": 25.7221123,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Αγ. Νικόλαος 721 00, Ελλάδα"
+  },
+  "-0702": {
+    "lat": 35.2086503,
+    "lng": 26.1052329,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Σητεία 723 00, Ελλάδα"
+  },
+  "-0703": {
+    "lat": 35.2086503,
+    "lng": 26.1052329,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Σητεία 723 00, Ελλάδα"
+  },
+  "-0704": {
+    "lat": 35.2086503,
+    "lng": 26.1052329,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Σητεία 723 00, Ελλάδα"
+  },
+  "-0705": {
+    "lat": 35.2053124,
+    "lng": 26.1014151,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Γεωρ. Γεννηματά 5, Σητεία 723 00, Ελλάδα"
+  },
+  "-0706": {
+    "lat": 35.0103309,
+    "lng": 25.7404068,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Ιεράπετρα 722 00, Ελλάδα"
+  },
+  "-0707": {
+    "lat": 34.8782604,
+    "lng": 25.7004299,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Ιεράπετρα - Χρυσή, Ιεράπετρα 722 00, Ελλάδα"
+  },
+  "-0708": {
+    "lat": 35.0088604,
+    "lng": 25.7343619,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Δημοκρατίας 54, Ιεράπετρα 722 00, Ελλάδα"
+  },
+  "-0709": {
+    "lat": 35.1092697,
+    "lng": 25.8051977,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Παχεία Άμμος 722 00, Ελλάδα"
+  },
+  "-0710": {
+    "lat": 35.008961,
+    "lng": 25.7327635,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Π. Κούπερ, Ιεράπετρα 722 00, Ελλάδα"
+  },
+  "-0711": {
+    "lat": 35.0496395,
+    "lng": 24.877685,
+    "location_type": "ROOFTOP",
+    "formatted_address": "28ης Ὀκτωβρίου 35, Μοίρες 704 00, Ελλάδα"
+  },
+  "-0712": {
+    "lat": 35.0494693,
+    "lng": 24.8813329,
+    "location_type": "ROOFTOP",
+    "formatted_address": "25ης Μαρτίου 35, Μοίρες 704 00, Ελλάδα"
+  },
+  "-0713": {
+    "lat": 35.049785,
+    "lng": 24.8747463,
+    "location_type": "ROOFTOP",
+    "formatted_address": "28ης Ὀκτωβρίου 103, Μοίρες 704 00, Ελλάδα"
+  },
+  "-0714": {
+    "lat": 35.2140421,
+    "lng": 24.5353281,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Επαρ.Οδ. Ρέθυμνου-Αγίας Γαλήνης, Σπήλι, Ελλάδα"
+  },
+  "-0715": {
+    "lat": 35.4943551,
+    "lng": 23.6538478,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Κίσσαμος 734 00, Ελλάδα"
+  },
+  "-0716": {
+    "lat": 35.4169596,
+    "lng": 24.2271616,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Βάμος 730 08, Ελλάδα"
+  },
+  "-0717": {
+    "lat": 40.3148432,
+    "lng": 23.0638756,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Οσιας Παρασκευής 56, Νέα Καλλικράτεια 630 80, Ελλάδα"
+  },
+  "-0718": {
+    "lat": 40.2183086,
+    "lng": 23.6754646,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Νικήτη 630 88, Ελλάδα"
+  },
+  "-0719": {
+    "lat": 40.2409723,
+    "lng": 23.2865614,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Νέα Μουδανιά 632 00, Ελλάδα"
+  },
+  "-0720": {
+    "lat": 40.3132313,
+    "lng": 23.0582311,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Αμπατζόγλου Λ., Νέα Καλλικράτεια 630 80, Ελλάδα"
+  },
+  "-0721": {
+    "lat": 40.0369937,
+    "lng": 23.4198844,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Επαρ.Οδ. Παλιούριου-Άφυτου, Κασσανδρεία 630 77, Ελλάδα"
+  },
+  "-0722": {
+    "lat": 40.2861415,
+    "lng": 23.390846,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Καλύβες Πολυγύρου 631 00, Ελλάδα"
+  },
+  "-0723": {
+    "lat": 40.2177978,
+    "lng": 23.6752967,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Λεωφ. Σιθωνίας, Νικήτη 630 88, Ελλάδα"
+  },
+  "-0724": {
+    "lat": 40.0007701,
+    "lng": 23.5748398,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Χανιώτης 630 85, Ελλάδα"
+  },
+  "-0725": {
+    "lat": 40.2407954,
+    "lng": 23.2843172,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Δημ. Τζαβούρα 11, Νέα Μουδανιά 632 00, Ελλάδα"
+  },
+  "-0726": {
+    "lat": 40.0484804,
+    "lng": 23.4111835,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Κασσανδρεία 630 77, Ελλάδα"
+  },
+  "-0727": {
+    "lat": 40.0011932,
+    "lng": 23.4204919,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Κασσανδρεία 630 77, Ελλάδα"
+  },
+  "-0728": {
+    "lat": 40.3131226,
+    "lng": 23.0632227,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Νέα Καλλικράτεια 630 80, Ελλάδα"
+  },
+  "-0729": {
+    "lat": 40.0356617,
+    "lng": 23.3599669,
+    "location_type": "ROOFTOP",
+    "formatted_address": "29P6+CV, Σίβηρη 630 77, Ελλάδα"
+  },
+  "-0730": {
+    "lat": 40.2183086,
+    "lng": 23.6754646,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Νικήτη 630 88, Ελλάδα"
+  },
+  "-0731": {
+    "lat": 40.3222969,
+    "lng": 23.0664096,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Είσοδος Νέας, Νέα Καλλικράτεια 630 80, Ελλάδα"
+  },
+  "-0732": {
+    "lat": 40.3298219,
+    "lng": 23.0416484,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Λεωφ. Αγίου Παύλου, Καλλικράτεια 630 80, Ελλάδα"
+  },
+  "-0733": {
+    "lat": 40.3131226,
+    "lng": 23.0632227,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Νέα Καλλικράτεια 630 80, Ελλάδα"
+  },
+  "-0734": {
+    "lat": 40.2369716,
+    "lng": 23.3039123,
+    "location_type": "GEOMETRIC_CENTER",
+    "formatted_address": "Νέα Μουδανιά, Μουδανιά 632 00, Ελλάδα"
+  },
+  "-0735": {
+    "lat": 40.3975466,
+    "lng": 23.8766837,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Ιερισσός 630 75, Ελλάδα"
+  },
+  "-0736": {
+    "lat": 40.5912607,
+    "lng": 22.9668519,
+    "location_type": "ROOFTOP",
+    "formatted_address": "Κανελλοπούλου 11, Θεσσαλονίκη 542 48, Ελλάδα"
+  },
+  "-0737": {
+    "lat": 40.3694997,
+    "lng": 23.287085,
+    "location_type": "APPROXIMATE",
+    "formatted_address": "Χαλκιδική, Ελλάδα"
+  }
+}
