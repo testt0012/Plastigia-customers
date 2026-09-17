@@ -1,6 +1,6 @@
 import { create } from "zustand";
 import { supabase } from "@/lib/supabaseClient";
-import type { Store, StoreStatus } from "@/lib/types";
+import type { Store, StoreStatus, StoreNote } from "@/lib/types";
 
 interface AppState {
   stores: Store[];
@@ -11,15 +11,23 @@ interface AppState {
   searchQuery: string;
   filterRegion: string;
   filterStatus: StoreStatus | "all";
+  filterCategory: string;
+  showOverdueOnly: boolean;
 
   fetchStores: () => Promise<void>;
   selectStore: (id: string | null) => void;
   setSearchQuery: (q: string) => void;
   setFilterRegion: (region: string) => void;
   setFilterStatus: (status: StoreStatus | "all") => void;
+  setFilterCategory: (category: string) => void;
+  setShowOverdueOnly: (value: boolean) => void;
   updateStatus: (id: string, status: StoreStatus) => Promise<void>;
   updateNotes: (id: string, notes: string) => Promise<void>;
   updateWebsite: (id: string, website: string) => Promise<void>;
+  updateNextContactDate: (id: string, date: string | null) => Promise<void>;
+  fetchStoreNotes: (storeId: string) => Promise<StoreNote[]>;
+  addStoreNote: (storeId: string, note: string) => Promise<StoreNote>;
+  deleteStoreNote: (noteId: string) => Promise<void>;
   addStore: (input: NewStoreInput) => Promise<Store>;
   addStoresBulk: (
     inputs: NewStoreInput[],
@@ -47,6 +55,8 @@ export const useAppStore = create<AppState>((set, get) => ({
   searchQuery: "",
   filterRegion: "all",
   filterStatus: "all",
+  filterCategory: "all",
+  showOverdueOnly: false,
 
   fetchStores: async () => {
     set({ loading: true, error: null });
@@ -66,6 +76,8 @@ export const useAppStore = create<AppState>((set, get) => ({
   setSearchQuery: (q) => set({ searchQuery: q }),
   setFilterRegion: (region) => set({ filterRegion: region }),
   setFilterStatus: (status) => set({ filterStatus: status }),
+  setFilterCategory: (category) => set({ filterCategory: category }),
+  setShowOverdueOnly: (value) => set({ showOverdueOnly: value }),
 
   updateStatus: async (id, status) => {
     const previous = get().stores;
@@ -113,6 +125,49 @@ export const useAppStore = create<AppState>((set, get) => ({
     if (error) {
       set({ stores: previous, error: error.message });
     }
+  },
+
+  updateNextContactDate: async (id, date) => {
+    const previous = get().stores;
+    set({
+      stores: previous.map((s) => (s.id === id ? { ...s, next_contact_date: date } : s)),
+    });
+
+    const { error } = await supabase
+      .from("stores")
+      .update({ next_contact_date: date, updated_at: new Date().toISOString() })
+      .eq("id", id);
+
+    if (error) {
+      set({ stores: previous, error: error.message });
+    }
+  },
+
+  fetchStoreNotes: async (storeId) => {
+    const { data, error } = await supabase
+      .from("store_notes")
+      .select("*")
+      .eq("store_id", storeId)
+      .order("created_at", { ascending: false });
+
+    if (error) throw error;
+    return (data ?? []) as StoreNote[];
+  },
+
+  addStoreNote: async (storeId, note) => {
+    const { data, error } = await supabase
+      .from("store_notes")
+      .insert({ store_id: storeId, note })
+      .select()
+      .single();
+
+    if (error) throw error;
+    return data as StoreNote;
+  },
+
+  deleteStoreNote: async (noteId) => {
+    const { error } = await supabase.from("store_notes").delete().eq("id", noteId);
+    if (error) throw error;
   },
 
   addStore: async (input) => {

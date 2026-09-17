@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import { useAppStore } from "@/store/useAppStore";
 import { useFilteredStores } from "@/lib/useFilteredStores";
 import { STATUS_STYLES } from "@/lib/types";
+import { isOverdue } from "@/lib/date";
 import type { Store } from "@/lib/types";
 
 function StoreCard({ store }: { store: Store }) {
@@ -11,6 +12,7 @@ function StoreCard({ store }: { store: Store }) {
   const selectStore = useAppStore((s) => s.selectStore);
   const isSelected = selectedStoreId === store.id;
   const styles = STATUS_STYLES[store.status];
+  const overdue = isOverdue(store.next_contact_date);
 
   return (
     <button
@@ -22,6 +24,11 @@ function StoreCard({ store }: { store: Store }) {
     >
       <div className="flex items-start justify-between gap-2">
         <span className="font-semibold leading-tight">{store.name}</span>
+        {overdue && (
+          <span className="shrink-0 rounded-full bg-red-600 px-1.5 py-0.5 text-[10px] font-semibold text-white">
+            ⏰ εκπρόθεσμο
+          </span>
+        )}
       </div>
       <div className="mt-0.5 text-xs opacity-80">
         {store.city} · {store.region}

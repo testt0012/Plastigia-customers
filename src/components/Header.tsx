@@ -1,7 +1,12 @@
 "use client";
 
 import Image from "next/image";
+import dynamic from "next/dynamic";
 import StatsWidget from "./StatsWidget";
+
+// Code-split: pulls in the ~200KB xlsx (SheetJS) writer, so keep it out of
+// the initial page bundle and only load it when someone exports.
+const ExportButton = dynamic(() => import("./ExportButton"), { ssr: false });
 
 export default function Header() {
   return (
@@ -25,7 +30,10 @@ export default function Header() {
           </p>
         </div>
       </div>
-      <StatsWidget />
+      <div className="flex items-center gap-3">
+        <ExportButton />
+        <StatsWidget />
+      </div>
     </header>
   );
 }

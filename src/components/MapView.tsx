@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
+import MarkerClusterGroup from "react-leaflet-cluster";
 import L from "leaflet";
 import { useAppStore } from "@/store/useAppStore";
 import { useFilteredStores } from "@/lib/useFilteredStores";
@@ -46,36 +47,31 @@ function InvalidateSizeOnVisible({ visible }: { visible: boolean }) {
   return null;
 }
 
-function FlyToSelected({ stores }: { stores: Store[] }) {
-  const map = useMap();
-  const selectedStoreId = useAppStore((s) => s.selectedStoreId);
-
-  useEffect(() => {
-    if (!selectedStoreId) return;
-    const store = stores.find((s) => s.id === selectedStoreId);
-    if (store?.lat != null && store?.lng != null) {
-      map.flyTo([store.lat, store.lng], Math.max(map.getZoom(), 12), {
-        duration: 0.6,
-      });
-    }
-  }, [selectedStoreId, stores, map]);
-
-  return null;
-}
-
 export default function MapView({ visible = true }: { visible?: boolean }) {
   const filteredStores = useFilteredStores();
   const selectedStoreId = useAppStore((s) => s.selectedStoreId);
   const selectStore = useAppStore((s) => s.selectStore);
   const markerRefs = useRef<Record<string, L.Marker | null>>({});
+  const clusterGroupRef = useRef<L.MarkerClusterGroup | null>(null);
 
   const storesWithCoords = filteredStores.filter(
     (s) => s.lat != null && s.lng != null
   );
 
+  // A selected marker may be hidden inside a collapsed cluster — a plain
+  // marker.openPopup() wouldn't reveal it. zoomToShowLayer() zooms/pans just
+  // enough to break the cluster open (or does nothing extra if the marker
+  // is already visible) and only then is it safe to open its popup.
   useEffect(() => {
-    if (selectedStoreId && markerRefs.current[selectedStoreId]) {
-      markerRefs.current[selectedStoreId]?.openPopup();
+    if (!selectedStoreId) return;
+    const marker = markerRefs.current[selectedStoreId];
+    const group = clusterGroupRef.current;
+    if (!marker) return;
+
+    if (group) {
+      group.zoomToShowLayer(marker, () => marker.openPopup());
+    } else {
+      marker.openPopup();
     }
   }, [selectedStoreId]);
 
@@ -90,33 +86,34 @@ export default function MapView({ visible = true }: { visible?: boolean }) {
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> συνεισφέροντες'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
-      <FlyToSelected stores={storesWithCoords} />
       <InvalidateSizeOnVisible visible={visible} />
-      {storesWithCoords.map((store) => (
-        <Marker
-          key={store.id}
-          position={[store.lat as number, store.lng as number]}
-          icon={makeIcon(store.status, store.id === selectedStoreId)}
-          ref={(ref) => {
-            markerRefs.current[store.id] = ref;
-          }}
-          eventHandlers={{
-            click: () => selectStore(store.id),
-          }}
-        >
-          <Popup>
-            <div className="min-w-[180px] text-sm">
-              <p className="font-semibold">{store.name}</p>
-              <p className="text-neutral-600">
-                {store.city} · {store.region}
-              </p>
-              <p className="mt-1 text-xs font-medium">
-                {STATUS_LABELS[store.status]}
-              </p>
-            </div>
-          </Popup>
-        </Marker>
-      ))}
+      <MarkerClusterGroup ref={clusterGroupRef} chunkedLoading maxClusterRadius={60}>
+        {storesWithCoords.map((store) => (
+          <Marker
+            key={store.id}
+            position={[store.lat as number, store.lng as number]}
+            icon={makeIcon(store.status, store.id === selectedStoreId)}
+            ref={(ref) => {
+              markerRefs.current[store.id] = ref;
+            }}
+            eventHandlers={{
+              click: () => selectStore(store.id),
+            }}
+          >
+            <Popup>
+              <div className="min-w-[180px] text-sm">
+                <p className="font-semibold">{store.name}</p>
+                <p className="text-neutral-600">
+                  {store.city} · {store.region}
+                </p>
+                <p className="mt-1 text-xs font-medium">
+                  {STATUS_LABELS[store.status]}
+                </p>
+              </div>
+            </Popup>
+          </Marker>
+        ))}
+      </MarkerClusterGroup>
     </MapContainer>
   );
 }

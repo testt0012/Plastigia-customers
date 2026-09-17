@@ -145,6 +145,33 @@ customers/
 εγκαθίσταται από το επίσημο CDN της SheetJS (`cdn.sheetjs.com`), όχι από το
 npm registry — η εκδοχή στο npm έχει γνωστά ανεπιδιόρθωτα security advisories.
 
+## Αξιοπιστία & πωλήσεις (reliability / sales)
+
+- **Error boundary** (`src/app/error.tsx`, `global-error.tsx`) — ένα απρόσμενο
+  σφάλμα δείχνει πλέον ένα φιλικό μήνυμα με κουμπί "Δοκιμή Ξανά" αντί για το
+  γενικό "Application error" του browser.
+- **Marker clustering** στον χάρτη (`react-leaflet-cluster`) — απαραίτητο με
+  εκατοντάδες pins σε πανελλαδικό zoom. Το click σε επιλεγμένο κατάστημα
+  χρησιμοποιεί `zoomToShowLayer` ώστε να «σπάει» σωστά το cluster πριν
+  ανοίξει το popup.
+- **Ιστορικό σημειώσεων** (πίνακας `store_notes`) — κάθε σημείωση είναι μια
+  ξεχωριστή, χρονοσημασμένη εγγραφή αντί να αντικαθιστά την προηγούμενη.
+  Το παλιό πεδίο `stores.notes` παραμένει στη βάση για συμβατότητα αλλά δεν
+  ενημερώνεται πια.
+- **Υπενθύμιση επόμενης επαφής** (`stores.next_contact_date`) — πεδίο
+  ημερομηνίας στο detail panel· όταν περάσει, το κατάστημα εμφανίζεται με
+  κόκκινη ένδειξη "⏰ εκπρόθεσμο" στη λίστα, και υπάρχει φίλτρο
+  "⏰ Εκπρόθεσμα" στο FilterBar για να τα βλέπεις όλα μαζί.
+- **Φίλτρο κατηγορίας** στο FilterBar, δίπλα σε διαμέρισμα/κατάσταση.
+- **Export σε Excel** (κουμπί στο Header) — κατεβάζει τη **φιλτραρισμένη**
+  λίστα καταστημάτων ως `.xlsx`, client-side (ίδιο SheetJS με το import).
+
+⚠️ Αν το project σου δημιουργήθηκε πριν από αυτές τις αλλαγές, τρέξε το
+[`supabase/migrations/003_notes_history_and_reminders.sql`](supabase/migrations/003_notes_history_and_reminders.sql)
+στο SQL editor του Supabase — προσθέτει τη στήλη `next_contact_date`, τον
+πίνακα `store_notes`, και διορθώνει μια **λείπουσα DELETE policy** που
+έκανε το κουμπί διαγραφής καταστήματος να αποτυγχάνει σιωπηλά.
+
 ## Εγκατάσταση & εκτέλεση
 
 ### 1. Δημιουργία project στο Supabase

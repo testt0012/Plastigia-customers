@@ -15,7 +15,15 @@ export interface Store {
   lng: number | null;
   status: StoreStatus;
   notes: string;
+  next_contact_date: string | null;
   updated_at: string | null;
+}
+
+export interface StoreNote {
+  id: string;
+  store_id: string;
+  note: string;
+  created_at: string;
 }
 
 export const STATUS_LABELS: Record<StoreStatus, string> = {
