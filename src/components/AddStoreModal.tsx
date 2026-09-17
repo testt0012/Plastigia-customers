@@ -6,7 +6,7 @@ import { GREEK_REGIONS } from "@/lib/regions";
 import { normalizeWebsiteUrl } from "@/lib/url";
 import { normalizeText } from "@/lib/text";
 
-type Tab = "manual" | "smart";
+type Tab = "manual" | "smart" | "website";
 
 interface FormState {
   name: string;

@@ -61,15 +61,21 @@ function FitToRegion({ stores }: { stores: Store[] }) {
   const filterRegion = useAppStore((s) => s.filterRegion);
 
   useEffect(() => {
-    if (filterRegion === "all") {
-      map.flyToBounds(GREECE_BOUNDS, { padding: [20, 20], duration: 0.6 });
-      return;
+    try {
+      if (filterRegion === "all") {
+        map.flyToBounds(GREECE_BOUNDS, { padding: [20, 20], duration: 0.6 });
+        return;
+      }
+      const points = stores
+        .map((s): [number, number] => [s.lat as number, s.lng as number])
+        .filter(([lat, lng]) => Number.isFinite(lat) && Number.isFinite(lng));
+      if (points.length === 0) return;
+      const bounds = L.latLngBounds(points);
+      map.flyToBounds(bounds, { padding: [40, 40], maxZoom: 12, duration: 0.6 });
+    } catch (err) {
+      // Never let a bad coordinate crash the whole map view.
+      console.error("FitToRegion failed:", err);
     }
-    if (stores.length === 0) return;
-    const bounds = L.latLngBounds(
-      stores.map((s) => [s.lat as number, s.lng as number])
-    );
-    map.flyToBounds(bounds, { padding: [40, 40], maxZoom: 12, duration: 0.6 });
   }, [filterRegion, stores, map]);
 
   return null;
@@ -83,7 +89,7 @@ export default function MapView({ visible = true }: { visible?: boolean }) {
   const clusterGroupRef = useRef<L.MarkerClusterGroup | null>(null);
 
   const storesWithCoords = filteredStores.filter(
-    (s) => s.lat != null && s.lng != null
+    (s) => Number.isFinite(s.lat) && Number.isFinite(s.lng)
   );
 
   // A selected marker may be hidden inside a collapsed cluster — a plain
@@ -96,10 +102,15 @@ export default function MapView({ visible = true }: { visible?: boolean }) {
     const group = clusterGroupRef.current;
     if (!marker) return;
 
-    if (group) {
-      group.zoomToShowLayer(marker, () => marker.openPopup());
-    } else {
-      marker.openPopup();
+    try {
+      if (group) {
+        group.zoomToShowLayer(marker, () => marker.openPopup());
+      } else {
+        marker.openPopup();
+      }
+    } catch (err) {
+      // Never let a bad coordinate crash the whole map view.
+      console.error("Failed to focus selected marker:", err);
     }
   }, [selectedStoreId]);
 
