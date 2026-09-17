@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useFilteredStores } from "@/lib/useFilteredStores";
 import { STATUS_LABELS } from "@/lib/types";
 
-export default function ExportButton() {
+export default function ExportButton({ fullWidth = false }: { fullWidth?: boolean }) {
   const filteredStores = useFilteredStores();
   const [exporting, setExporting] = useState(false);
 
@@ -40,7 +40,9 @@ export default function ExportButton() {
     <button
       onClick={handleExport}
       disabled={exporting || filteredStores.length === 0}
-      className="flex items-center gap-1.5 rounded-lg border border-neutral-300 px-3 py-2 text-xs font-medium text-neutral-700 transition hover:bg-neutral-50 disabled:cursor-not-allowed disabled:opacity-50 sm:text-sm"
+      className={`flex items-center gap-1.5 rounded-lg border border-neutral-300 px-3 py-2 text-xs font-medium text-neutral-700 transition hover:bg-neutral-50 disabled:cursor-not-allowed disabled:opacity-50 sm:text-sm ${
+        fullWidth ? "w-full justify-start" : ""
+      }`}
     >
       {exporting ? "Εξαγωγή…" : `⬇ Excel (${filteredStores.length})`}
     </button>

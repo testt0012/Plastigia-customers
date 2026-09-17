@@ -3,7 +3,13 @@
 import { useMemo } from "react";
 import { useAppStore } from "@/store/useAppStore";
 
-export default function StatsWidget({ onClick }: { onClick?: () => void }) {
+export default function StatsWidget({
+  onClick,
+  compact = false,
+}: {
+  onClick?: () => void;
+  compact?: boolean;
+}) {
   const stores = useAppStore((s) => s.stores);
 
   const { total, active, percentage } = useMemo(() => {
@@ -12,6 +18,18 @@ export default function StatsWidget({ onClick }: { onClick?: () => void }) {
     const percentage = total === 0 ? 0 : (active / total) * 100;
     return { total, active, percentage };
   }, [stores]);
+
+  if (compact) {
+    return (
+      <button
+        onClick={onClick}
+        title="Διείσδυση αγοράς — δες αναλυτικά στατιστικά"
+        className="flex shrink-0 items-center gap-1 rounded-lg border border-neutral-200 bg-white px-2 py-1.5 text-xs font-semibold text-red-600 shadow-sm"
+      >
+        📈 {percentage.toFixed(1)}%
+      </button>
+    );
+  }
 
   return (
     <button

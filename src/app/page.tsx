@@ -29,6 +29,7 @@ export default function Home() {
   const selectedStoreId = useAppStore((s) => s.selectedStoreId);
   const [addModalOpen, setAddModalOpen] = useState(false);
   const [importModalOpen, setImportModalOpen] = useState(false);
+  const [fabOpen, setFabOpen] = useState(false);
   const [mobileView, setMobileView] = useState<"list" | "map">("list");
 
   useEffect(() => {
@@ -92,18 +93,43 @@ export default function Home() {
         </div>
       </main>
 
-      <button
-        onClick={() => setImportModalOpen(true)}
-        className="fixed right-5 bottom-[calc(max(1.25rem,env(safe-area-inset-bottom))+3.25rem)] z-[900] flex items-center gap-2 rounded-full bg-white px-4 py-2.5 text-sm font-medium text-neutral-700 shadow-lg ring-1 ring-neutral-200 transition hover:bg-neutral-50"
-      >
-        📁 Εισαγωγή Αρχείου
-      </button>
+      {fabOpen && (
+        <>
+          <button
+            aria-hidden
+            tabIndex={-1}
+            onClick={() => setFabOpen(false)}
+            className="fixed inset-0 z-[890]"
+          />
+          <div className="fixed right-5 bottom-[calc(max(1.25rem,env(safe-area-inset-bottom))+4rem)] z-[900] flex flex-col items-end gap-2">
+            <button
+              onClick={() => {
+                setImportModalOpen(true);
+                setFabOpen(false);
+              }}
+              className="flex items-center gap-2 whitespace-nowrap rounded-full bg-white px-4 py-2.5 text-sm font-medium text-neutral-700 shadow-lg ring-1 ring-neutral-200 hover:bg-neutral-50"
+            >
+              📁 Εισαγωγή Αρχείου
+            </button>
+            <button
+              onClick={() => {
+                setAddModalOpen(true);
+                setFabOpen(false);
+              }}
+              className="flex items-center gap-2 whitespace-nowrap rounded-full bg-white px-4 py-2.5 text-sm font-medium text-neutral-700 shadow-lg ring-1 ring-neutral-200 hover:bg-neutral-50"
+            >
+              ✏️ Νέο Κατάστημα
+            </button>
+          </div>
+        </>
+      )}
 
       <button
-        onClick={() => setAddModalOpen(true)}
-        className="fixed right-5 bottom-[max(1.25rem,env(safe-area-inset-bottom))] z-[900] flex items-center gap-2 rounded-full bg-red-600 px-4 py-3 text-sm font-medium text-white shadow-lg transition hover:bg-red-700"
+        onClick={() => setFabOpen((v) => !v)}
+        aria-label={fabOpen ? "Κλείσιμο μενού" : "Προσθήκη καταστήματος"}
+        className="fixed right-5 bottom-[max(1.25rem,env(safe-area-inset-bottom))] z-[900] flex h-14 w-14 items-center justify-center rounded-full bg-red-600 text-2xl leading-none text-white shadow-lg transition hover:bg-red-700"
       >
-        <span className="text-lg leading-none">+</span> Νέο Κατάστημα
+        {fabOpen ? "✕" : "+"}
       </button>
 
       {selectedStoreId && <StoreDetailPanel />}

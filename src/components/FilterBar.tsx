@@ -1,10 +1,11 @@
 "use client";
 
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import { useAppStore } from "@/store/useAppStore";
 import { STATUS_OPTIONS } from "@/lib/types";
 
 export default function FilterBar() {
+  const [filtersOpen, setFiltersOpen] = useState(false);
   const stores = useAppStore((s) => s.stores);
   const searchQuery = useAppStore((s) => s.searchQuery);
   const setSearchQuery = useAppStore((s) => s.setSearchQuery);
@@ -43,16 +44,40 @@ export default function FilterBar() {
     ).sort((a, b) => a.localeCompare(b, "el"));
   }, [stores, filterRegion]);
 
+  const activeFilterCount = [
+    filterRegion !== "all",
+    filterPrefecture !== "all",
+    filterStatus !== "all",
+    filterCategory !== "all",
+    showOverdueOnly,
+  ].filter(Boolean).length;
+
   return (
     <div className="flex flex-col gap-2 border-b border-neutral-200 bg-white p-3 sm:flex-row sm:items-center">
-      <input
-        type="text"
-        value={searchQuery}
-        onChange={(e) => setSearchQuery(e.target.value)}
-        placeholder="Αναζήτηση με όνομα, πόλη, διεύθυνση ή κατηγορία…"
-        className="w-full flex-1 rounded-lg border border-neutral-300 px-3 py-2 text-sm outline-none focus:border-red-500 focus:ring-1 focus:ring-red-500"
-      />
-      <div className="grid grid-cols-2 gap-2 sm:flex sm:flex-wrap sm:gap-2">
+      <div className="flex gap-2">
+        <input
+          type="text"
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          placeholder="Αναζήτηση με όνομα, πόλη, διεύθυνση ή κατηγορία…"
+          className="w-full flex-1 rounded-lg border border-neutral-300 px-3 py-2 text-sm outline-none focus:border-red-500 focus:ring-1 focus:ring-red-500"
+        />
+        <button
+          type="button"
+          onClick={() => setFiltersOpen((v) => !v)}
+          className="flex shrink-0 items-center gap-1 rounded-lg border border-neutral-300 px-3 py-2 text-sm font-medium text-neutral-700 sm:hidden"
+        >
+          Φίλτρα
+          {activeFilterCount > 0 && (
+            <span className="rounded-full bg-red-600 px-1.5 py-0.5 text-[10px] font-semibold text-white">
+              {activeFilterCount}
+            </span>
+          )}
+        </button>
+      </div>
+      <div
+        className={`${filtersOpen ? "grid" : "hidden"} grid-cols-2 gap-2 sm:flex sm:flex-wrap sm:gap-2`}
+      >
         <select
           value={filterRegion}
           onChange={(e) => setFilterRegion(e.target.value)}

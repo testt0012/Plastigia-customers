@@ -159,24 +159,9 @@ export default function StoreDetailPanel() {
                 </dd>
               </div>
             )}
-            {store.website && (
-              <div>
-                <dt className="text-xs font-medium uppercase text-neutral-400">Ιστοσελίδα</dt>
-                <dd>
-                  <a
-                    href={store.website}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-red-600 hover:underline"
-                  >
-                    Επίσκεψη Ιστοσελίδας ↗
-                  </a>
-                </dd>
-              </div>
-            )}
           </dl>
 
-          <div className="mt-5">
+          <div className="mt-4">
             <span className="mb-2 block text-xs font-medium uppercase text-neutral-400">
               Κατάσταση Πελάτη
             </span>
@@ -201,13 +186,25 @@ export default function StoreDetailPanel() {
             </div>
           </div>
 
-          <div className="mt-5">
-            <label
-              htmlFor="website"
-              className="mb-2 block text-xs font-medium uppercase text-neutral-400"
-            >
-              Ιστοσελίδα
-            </label>
+          <div className="mt-4">
+            <div className="mb-2 flex items-center justify-between">
+              <label
+                htmlFor="website"
+                className="text-xs font-medium uppercase text-neutral-400"
+              >
+                Ιστοσελίδα
+              </label>
+              {store.website && (
+                <a
+                  href={store.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs font-medium text-red-600 hover:underline"
+                >
+                  Επίσκεψη ↗
+                </a>
+              )}
+            </div>
             <input
               id="website"
               type="text"
@@ -233,7 +230,7 @@ export default function StoreDetailPanel() {
             </div>
           </div>
 
-          <div className="mt-5">
+          <div className="mt-4">
             <label
               htmlFor="next-contact"
               className="mb-2 block text-xs font-medium uppercase text-neutral-400"
@@ -264,7 +261,7 @@ export default function StoreDetailPanel() {
             </div>
           </div>
 
-          <div className="mt-5">
+          <div className="mt-4">
             <span className="mb-2 block text-xs font-medium uppercase text-neutral-400">
               Σημειώσεις
             </span>
