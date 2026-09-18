@@ -38,6 +38,23 @@ function makeIcon(status: Store["status"], isSelected: boolean) {
   });
 }
 
+// Only 8 distinct icons ever exist (4 statuses x selected/unselected), so
+// build them once and hand out the same instance every time instead of
+// creating a fresh L.divIcon per marker on every render. Passing a stable
+// icon reference lets react-leaflet skip its setIcon() DOM update for every
+// marker whose selection state didn't actually change — without this, e.g.
+// clicking one marker was touching all ~700 markers instead of just two.
+const iconCache = new Map<string, L.DivIcon>();
+function getIcon(status: Store["status"], isSelected: boolean) {
+  const key = `${status}:${isSelected}`;
+  let icon = iconCache.get(key);
+  if (!icon) {
+    icon = makeIcon(status, isSelected);
+    iconCache.set(key, icon);
+  }
+  return icon;
+}
+
 // Leaflet computes its tile layout from the container's on-screen size at
 // init time. On mobile the map starts out CSS-hidden (behind the list tab),
 // so it initializes with a stale/zero size — this nudges it to recompute
@@ -102,6 +119,29 @@ export default function MapView({ visible = true }: { visible?: boolean }) {
     [filteredStores]
   );
 
+  // Keyed by store id and only rebuilt when the filtered list itself
+  // changes (not on every selection change), so clicking a marker doesn't
+  // make react-leaflet unbind/rebind click listeners on every other marker.
+  const eventHandlersById = useMemo(() => {
+    const map: Record<string, { click: () => void }> = {};
+    for (const store of storesWithCoords) {
+      map[store.id] = { click: () => selectStore(store.id) };
+    }
+    return map;
+  }, [storesWithCoords, selectStore]);
+
+  const setMarkerRef = useMemo(() => {
+    const cache: Record<string, (ref: L.Marker | null) => void> = {};
+    return (id: string) => {
+      if (!cache[id]) {
+        cache[id] = (ref) => {
+          markerRefs.current[id] = ref;
+        };
+      }
+      return cache[id];
+    };
+  }, []);
+
   // A selected marker may be hidden inside a collapsed cluster — a plain
   // marker.openPopup() wouldn't reveal it. zoomToShowLayer() zooms/pans just
   // enough to break the cluster open (or does nothing extra if the marker
@@ -145,13 +185,9 @@ export default function MapView({ visible = true }: { visible?: boolean }) {
           <Marker
             key={store.id}
             position={[store.lat as number, store.lng as number]}
-            icon={makeIcon(store.status, store.id === selectedStoreId)}
-            ref={(ref) => {
-              markerRefs.current[store.id] = ref;
-            }}
-            eventHandlers={{
-              click: () => selectStore(store.id),
-            }}
+            icon={getIcon(store.status, store.id === selectedStoreId)}
+            ref={setMarkerRef(store.id)}
+            eventHandlers={eventHandlersById[store.id]}
           >
             <Popup>
               <div className="min-w-[180px] text-sm">
