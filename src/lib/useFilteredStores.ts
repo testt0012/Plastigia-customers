@@ -10,7 +10,6 @@ export function useFilteredStores(): Store[] {
   const filterRegion = useAppStore((s) => s.filterRegion);
   const filterPrefecture = useAppStore((s) => s.filterPrefecture);
   const filterStatus = useAppStore((s) => s.filterStatus);
-  const filterCategory = useAppStore((s) => s.filterCategory);
   const showOverdueOnly = useAppStore((s) => s.showOverdueOnly);
 
   return useMemo(() => {
@@ -20,7 +19,6 @@ export function useFilteredStores(): Store[] {
       if (filterRegion !== "all" && store.region !== filterRegion) return false;
       if (filterPrefecture !== "all" && store.prefecture !== filterPrefecture) return false;
       if (filterStatus !== "all" && store.status !== filterStatus) return false;
-      if (filterCategory !== "all" && store.category !== filterCategory) return false;
       if (showOverdueOnly && !isOverdue(store.next_contact_date)) return false;
       if (q.length === 0) return true;
 
@@ -29,5 +27,5 @@ export function useFilteredStores(): Store[] {
       );
       return haystack.includes(q);
     });
-  }, [stores, searchQuery, filterRegion, filterPrefecture, filterStatus, filterCategory, showOverdueOnly]);
+  }, [stores, searchQuery, filterRegion, filterPrefecture, filterStatus, showOverdueOnly]);
 }

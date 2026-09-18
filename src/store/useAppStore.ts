@@ -12,7 +12,6 @@ interface AppState {
   filterRegion: string;
   filterPrefecture: string;
   filterStatus: StoreStatus | "all";
-  filterCategory: string;
   showOverdueOnly: boolean;
 
   fetchStores: () => Promise<void>;
@@ -21,7 +20,6 @@ interface AppState {
   setFilterRegion: (region: string) => void;
   setFilterPrefecture: (prefecture: string) => void;
   setFilterStatus: (status: StoreStatus | "all") => void;
-  setFilterCategory: (category: string) => void;
   setShowOverdueOnly: (value: boolean) => void;
   updateStatus: (id: string, status: StoreStatus) => Promise<void>;
   updateNotes: (id: string, notes: string) => Promise<void>;
@@ -58,7 +56,6 @@ export const useAppStore = create<AppState>((set, get) => ({
   filterRegion: "all",
   filterPrefecture: "all",
   filterStatus: "all",
-  filterCategory: "all",
   showOverdueOnly: false,
 
   fetchStores: async () => {
@@ -80,7 +77,6 @@ export const useAppStore = create<AppState>((set, get) => ({
   setFilterRegion: (region) => set({ filterRegion: region, filterPrefecture: "all" }),
   setFilterPrefecture: (prefecture) => set({ filterPrefecture: prefecture }),
   setFilterStatus: (status) => set({ filterStatus: status }),
-  setFilterCategory: (category) => set({ filterCategory: category }),
   setShowOverdueOnly: (value) => set({ showOverdueOnly: value }),
 
   updateStatus: async (id, status) => {

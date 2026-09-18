@@ -9,6 +9,13 @@ function dupKey(name: string, city: string): string {
   return `${normalizeText(name)}::${normalizeText(city)}`;
 }
 
+// Phone formatting varies (country code, spaces) even for the same store,
+// so comparing the last 8 digits catches duplicates that name+city misses.
+function phoneKey(phone: string): string | null {
+  const digits = phone.replace(/\D/g, "");
+  return digits.length >= 8 ? digits.slice(-8) : null;
+}
+
 interface Issue {
   label: string;
   stores: Store[];
@@ -33,9 +40,23 @@ export default function DataQualityPanel({ onClose }: { onClose: () => void }) {
       .filter((g) => g.length > 1)
       .flat();
 
+    const phoneGroups = new Map<string, Store[]>();
+    for (const s of stores) {
+      if (!s.phone) continue;
+      const key = phoneKey(s.phone);
+      if (!key) continue;
+      if (!phoneGroups.has(key)) phoneGroups.set(key, []);
+      phoneGroups.get(key)!.push(s);
+    }
+    const dupIds = new Set(duplicates.map((s) => s.id));
+    const phoneDuplicates = Array.from(phoneGroups.values())
+      .filter((g) => g.length > 1 && !g.every((s) => dupIds.has(s.id)))
+      .flat();
+
     return [
       { label: "Χωρίς συντεταγμένες (δεν φαίνονται στον χάρτη)", stores: noCoords },
       { label: "Πιθανά διπλότυπα (ίδια επωνυμία + πόλη)", stores: duplicates },
+      { label: "Πιθανά διπλότυπα (ίδιο τηλέφωνο, διαφορετική επωνυμία)", stores: phoneDuplicates },
       { label: "Χωρίς πόλη", stores: noCity },
       { label: "Χωρίς γεωγραφικό διαμέρισμα", stores: noRegion },
     ].filter((issue) => issue.stores.length > 0);

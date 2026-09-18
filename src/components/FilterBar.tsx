@@ -15,20 +15,12 @@ export default function FilterBar() {
   const setFilterPrefecture = useAppStore((s) => s.setFilterPrefecture);
   const filterStatus = useAppStore((s) => s.filterStatus);
   const setFilterStatus = useAppStore((s) => s.setFilterStatus);
-  const filterCategory = useAppStore((s) => s.filterCategory);
-  const setFilterCategory = useAppStore((s) => s.setFilterCategory);
   const showOverdueOnly = useAppStore((s) => s.showOverdueOnly);
   const setShowOverdueOnly = useAppStore((s) => s.setShowOverdueOnly);
 
   const regions = useMemo(() => {
     return Array.from(new Set(stores.map((s) => s.region))).sort((a, b) =>
       a.localeCompare(b, "el")
-    );
-  }, [stores]);
-
-  const categories = useMemo(() => {
-    return Array.from(new Set(stores.map((s) => s.category).filter((c): c is string => !!c))).sort(
-      (a, b) => a.localeCompare(b, "el")
     );
   }, [stores]);
 
@@ -48,7 +40,6 @@ export default function FilterBar() {
     filterRegion !== "all",
     filterPrefecture !== "all",
     filterStatus !== "all",
-    filterCategory !== "all",
     showOverdueOnly,
   ].filter(Boolean).length;
 
@@ -115,18 +106,6 @@ export default function FilterBar() {
           {STATUS_OPTIONS.map((opt) => (
             <option key={opt.value} value={opt.value}>
               {opt.label}
-            </option>
-          ))}
-        </select>
-        <select
-          value={filterCategory}
-          onChange={(e) => setFilterCategory(e.target.value)}
-          className="w-full rounded-lg border border-neutral-300 px-2 py-2 text-sm outline-none focus:border-red-500 focus:ring-1 focus:ring-red-500 sm:w-auto sm:px-3"
-        >
-          <option value="all">Όλες οι κατηγορίες</option>
-          {categories.map((category) => (
-            <option key={category} value={category}>
-              {category}
             </option>
           ))}
         </select>
