@@ -89,7 +89,7 @@ export default function Home() {
             mobileView === "map" ? "flex-1" : "hidden"
           }`}
         >
-          <MapView visible={mobileView === "map"} />
+          <MapView />
         </div>
       </main>
 

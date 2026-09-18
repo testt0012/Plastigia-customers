@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useRef } from "react";
+import { useCallback, useEffect, useMemo, useRef } from "react";
 import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
 import MarkerClusterGroup from "react-leaflet-cluster";
 import L from "leaflet";
@@ -55,59 +55,85 @@ function getIcon(status: Store["status"], isSelected: boolean) {
   return icon;
 }
 
-// Leaflet computes its tile layout from the container's on-screen size at
-// init time. On mobile the map starts out CSS-hidden (behind the list tab),
-// so it initializes with a stale/zero size — this nudges it to recompute
-// once the tab becomes visible again.
-function InvalidateSizeOnVisible({ visible }: { visible: boolean }) {
-  const map = useMap();
-
-  useEffect(() => {
-    if (!visible) return;
-    const id = requestAnimationFrame(() => map.invalidateSize());
-    return () => cancelAnimationFrame(id);
-  }, [visible, map]);
-
-  return null;
-}
-
-// Zooms the map to fit the currently filtered region whenever the region
-// filter itself changes; resets to the whole-country view when it's
-// cleared. Deliberately depends only on filterRegion (not the stores
-// array) — selecting/deselecting a store on the map re-renders MapView
-// with a fresh `storesWithCoords` array on every render, and if that array
-// were a dependency here, opening or closing a store would keep re-firing
-// this effect and flying the map back to the whole-country view instead of
-// leaving it where the user had zoomed/panned it.
-function FitToRegion({ stores }: { stores: Store[] }) {
+// Handles both fitting the map to the current region filter and providing
+// a "reset view" button. Deliberately keys its region-change effect only
+// on filterRegion (not the stores array) — selecting/deselecting a store
+// on the map re-renders MapView with a fresh `storesWithCoords` array on
+// every render, and if that array were a dependency here, opening or
+// closing a store would keep re-firing this effect and flying the map
+// back to the region view instead of leaving it where the user had
+// zoomed/panned it.
+function MapHomeControl({ stores }: { stores: Store[] }) {
   const map = useMap();
   const filterRegion = useAppStore((s) => s.filterRegion);
   const storesRef = useRef(stores);
   storesRef.current = stores;
+  const hasFitRef = useRef(false);
 
-  useEffect(() => {
-    try {
-      if (filterRegion === "all") {
-        map.flyToBounds(GREECE_BOUNDS, { padding: [20, 20], duration: 0.6 });
-        return;
+  const flyHome = useCallback(
+    (animate: boolean) => {
+      const duration = animate ? 0.6 : 0;
+      try {
+        const points = storesRef.current
+          .map((s): [number, number] => [s.lat as number, s.lng as number])
+          .filter(([lat, lng]) => Number.isFinite(lat) && Number.isFinite(lng));
+        if (filterRegion === "all" || points.length === 0) {
+          map.flyToBounds(GREECE_BOUNDS, { padding: [20, 20], duration });
+          return;
+        }
+        const bounds = L.latLngBounds(points);
+        map.flyToBounds(bounds, { padding: [40, 40], maxZoom: 12, duration });
+      } catch (err) {
+        // Never let a bad coordinate crash the whole map view.
+        console.error("flyHome failed:", err);
       }
-      const points = storesRef.current
-        .map((s): [number, number] => [s.lat as number, s.lng as number])
-        .filter(([lat, lng]) => Number.isFinite(lat) && Number.isFinite(lng));
-      if (points.length === 0) return;
-      const bounds = L.latLngBounds(points);
-      map.flyToBounds(bounds, { padding: [40, 40], maxZoom: 12, duration: 0.6 });
-    } catch (err) {
-      // Never let a bad coordinate crash the whole map view.
-      console.error("FitToRegion failed:", err);
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [filterRegion, map]);
+    },
+    [map, filterRegion]
+  );
 
-  return null;
+  // Leaflet computes its layout from the container's on-screen pixel size.
+  // On mobile the map starts out CSS-hidden (behind the "Λίστα" tab) with
+  // a zero-size container, so fitting bounds before it's actually visible
+  // produces a corrupted, effectively random view — this was the "opens
+  // zoomed into the sea" bug. A ResizeObserver waits for a real, non-zero
+  // size (whenever that happens — tab switch, breakpoint change) before
+  // invalidating the size and doing the very first fit.
+  useEffect(() => {
+    const container = map.getContainer();
+    const observer = new ResizeObserver(() => {
+      const { width, height } = container.getBoundingClientRect();
+      if (width === 0 || height === 0) return;
+      map.invalidateSize();
+      if (!hasFitRef.current) {
+        hasFitRef.current = true;
+        flyHome(false);
+      }
+    });
+    observer.observe(container);
+    return () => observer.disconnect();
+  }, [map, flyHome]);
+
+  // Re-fit whenever the region filter changes after that initial fit.
+  useEffect(() => {
+    if (!hasFitRef.current) return;
+    flyHome(true);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [filterRegion]);
+
+  return (
+    <button
+      type="button"
+      onClick={() => flyHome(true)}
+      aria-label="Επαναφορά αρχικής προβολής χάρτη"
+      title="Επαναφορά αρχικής προβολής"
+      className="absolute right-3 top-3 z-[1000] flex h-10 w-10 items-center justify-center rounded-full bg-white text-base shadow-md ring-1 ring-black/10 transition hover:bg-neutral-50"
+    >
+      🎯
+    </button>
+  );
 }
 
-export default function MapView({ visible = true }: { visible?: boolean }) {
+export default function MapView() {
   const filteredStores = useFilteredStores();
   const selectedStoreId = useAppStore((s) => s.selectedStoreId);
   const selectStore = useAppStore((s) => s.selectStore);
@@ -178,8 +204,7 @@ export default function MapView({ visible = true }: { visible?: boolean }) {
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> συνεισφέροντες'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
-      <InvalidateSizeOnVisible visible={visible} />
-      <FitToRegion stores={storesWithCoords} />
+      <MapHomeControl stores={storesWithCoords} />
       <MarkerClusterGroup ref={clusterGroupRef} chunkedLoading maxClusterRadius={60}>
         {storesWithCoords.map((store) => (
           <Marker
