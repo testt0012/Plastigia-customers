@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useAppStore } from "@/store/useAppStore";
 import { STATUS_OPTIONS, STATUS_STYLES } from "@/lib/types";
 import type { StoreStatus, StoreNote } from "@/lib/types";
-import { normalizeWebsiteUrl } from "@/lib/url";
+import { googleMapsUrl, normalizeWebsiteUrl } from "@/lib/url";
 import { isOverdue } from "@/lib/date";
 
 function formatNoteDate(iso: string): string {
@@ -146,7 +146,16 @@ export default function StoreDetailPanel() {
             {store.address && (
               <div className="sm:col-span-2">
                 <dt className="text-xs font-medium uppercase text-neutral-400">Διεύθυνση</dt>
-                <dd className="text-neutral-800">{store.address}</dd>
+                <dd>
+                  <a
+                    href={googleMapsUrl(store)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-red-600 hover:underline"
+                  >
+                    📍 {store.address}
+                  </a>
+                </dd>
               </div>
             )}
             {store.phone && (

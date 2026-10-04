@@ -7,6 +7,7 @@ import L from "leaflet";
 import { useAppStore } from "@/store/useAppStore";
 import { useFilteredStores } from "@/lib/useFilteredStores";
 import { STATUS_STYLES, STATUS_LABELS } from "@/lib/types";
+import { googleMapsUrl } from "@/lib/url";
 import type { Store } from "@/lib/types";
 
 const GREECE_CENTER: [number, number] = [38.9, 23.7];
@@ -220,6 +221,16 @@ export default function MapView() {
                 <p className="text-neutral-600">
                   {store.city} · {store.region}
                 </p>
+                {store.address && (
+                  <a
+                    href={googleMapsUrl(store)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-1 block text-xs text-red-600 underline"
+                  >
+                    📍 {store.address}
+                  </a>
+                )}
                 <p className="mt-1 text-xs font-medium">
                   {STATUS_LABELS[store.status]}
                 </p>

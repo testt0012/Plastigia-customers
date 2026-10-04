@@ -8,3 +8,17 @@ export function normalizeWebsiteUrl(input: string | null | undefined): string | 
   if (/^https?:\/\//i.test(trimmed)) return trimmed;
   return `https://${trimmed}`;
 }
+
+// Opens Google Maps (app on mobile, web on desktop) searching for the text
+// address rather than the stored pin: many pins are only city-level, so the
+// street address finds the real shop more reliably than the coordinates.
+export function googleMapsUrl(store: {
+  name: string;
+  address: string | null;
+  city: string;
+}): string {
+  const query = store.address?.trim()
+    ? `${store.address.trim()}, ${store.city}, Ελλάδα`
+    : `${store.name}, ${store.city}, Ελλάδα`;
+  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
+}
